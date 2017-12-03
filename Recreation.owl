@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/GCI/ISO37120/Recreation.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Recreation.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl</Import>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO37120 Recreation Theme Indicators Definitions</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ontology.eil.utoronto.ca/GCI/ISO37120/Recreation.owl</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology implements the definitions of the ISO37120 Recreation Theme Indicators using the following ontologys:
+
+GCI Foundation Ontologies:
+    http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl
+    (http://eil.utoronto.ca/smartcities/papers/GCI-Foundation-Ontology.pdf)
+
+GCI Recreation Ontologies:
+    http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl
+    (http://eil.utoronto.ca/smartcities/papers/GCI-Recreation.pdf)
+  
+Developed by the Enterprise Engineering Lab (eil.utoronto.ca), Mechanical &amp; Industrial Engineering, University of Toronto. 
+
+Contact:  Tawfiq D. Abdulai, tawfiq.abdulai@mail.utoronto.ca
+                 Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tawfiq D. Abdulai, tawfiq.abdulai@mail.utoronto.ca
+Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1.0 September 20, 2017</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isor</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#OutdoorSpace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Recreation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#FloorArea_Measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#13.1_Things"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Unit_Summation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#NonBuildingStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#13.1_Indoor_Recreation_Area_Sum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#square_metre_per_pc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City_Population_Size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#FloorArea_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#13.1_Indoor_Recreation_Population"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#13.2_Things"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#RecreationalActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#Public"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recreation_GCI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#BuildingLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#IndoorSpace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/square_metre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ISO37120_Recreation_Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#13.2_Outdoor_Recreation_Population"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City_Population_Size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Area_Sum"/>
+        <Class IRI="#13.1_Things"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Area_Sum"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Area_Sum"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#floorAreaVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Area_Sum"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Area_Sum"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#13.1_Indoor_Recreation_Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Population"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Population"/>
+        <Class IRI="#13.1_Things"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#RecreationRoom"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#is_composed_of"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#RecreationRoom"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Indoor_Recreation_Population"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#located_in"/>
+            <Class IRI="http://schema.org/City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.1_Things"/>
+        <Class IRI="#ISO37120_Recreation_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+        <Class IRI="#13.2_Things"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#floorAreaVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#13.2_Outdoor_Recreation_Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Population"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Population"/>
+        <Class IRI="#13.2_Things"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl#OutdoorSpace"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Outdoor_Recreation_Population"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#located_in"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#13.2_Things"/>
+        <Class IRI="#ISO37120_Recreation_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Recreation"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#ISO37120_Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+        <Class IRI="#Recreation_GCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+        <Class IRI="#13.1_Things"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Recreation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#square_metre_per_pc"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#denominator"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City_Population_Size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city"/>
+            <Class IRI="http://schema.org/City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.1"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#13.1_Indoor_Recreation_Area_Sum"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+        <Class IRI="#Recreation_GCI"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+        <Class IRI="#13.2_Things"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Recreation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#square_metre_per_pc"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#denominator"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City_Population_Size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#13.2"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#13.2_Outdoor_Recreation_Area_Sum"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#square_metre_per_pc"/>
+    </ClassAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#13.1_Indoor_Recreation_Area_Sum</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The sum of all Indoor Recreation spaces</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#13.1_Indoor_Recreation_Population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The available indoor recreation spaces in a city that is defined by the rooms in each building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#13.2_Outdoor_Recreation_Area_Sum</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The sum of all Outdoor Recreation spaces</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#13.2_Outdoor_Recreation_Population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The available indoor recreation spaces in a city that is defined by the outdoor spaces</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#Recreation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recreation Indicators</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#13.1</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Square meters of public indoor recreation space per capita shall be calculated as the square meters of indoor public recreation space (numerator) divided by the population of the city (denominator), and shall be expressed as the number of square meters of indoor recreation space per capita. 
+NOTE The need for indoor public recreational spaces varies depending on local climatic and cultural conditions. Public recreation space is defined broadly to mean land and buildings open to the public for recreation. Recreation space shall include only space that primarily serves a recreation purpose. 
+Indoor public recreation space should include: 
+a) city-owned or maintained buildings; 
+b) other recreation buildings within the city not owned or operated by the city, provided they are open to the public. This category may include state or provincially owned buildings, schools and colleges, as well as non-profit. If cities report only city-owned recreation space, this shall be noted.
+
+For multi-story buildings the floor area of all floors in the building should be counted if known. For multi-use facilities only the portion of the building devoted to recreation shall be counted (the play areas at a school or college, for example, not the entire school site). The area of the entire recreation site shall be included (including, for example, building maintenance and utility areas) but shall exclude parking areas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#13.1</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Square meters of public indoor recreation space per capita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#13.2</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Square meters of public outdoor recreation space per capita shall be calculated as square meters of outdoor public recreation space (numerator) divided by the population of the city (denominator), and shall be expressed as the number of square meters of outdoor recreation space per capita. Public recreation space is defined broadly to mean land and open space available to the public for recreation. Recreation space shall include only space that primarily serves a recreation purpose.
+Outdoor recreation space should include: 
+a) city-owned or maintained land; 
+b) other-recreation lands within the city not owned or operated by the city, provided they are open to the public. This category may include state or provincially owned lands, school and college grounds, as well as non-profit. If cities report only city-owned recreation space, this shall be noted. 
+
+For multi-use facilities, only the portion of the land devoted to recreation shall be counted (the play areas at a school or college, for example, not the entire school site). Double counting shall be avoided. For example, do not include indoor facilities on parkland.
+The area of the entire outdoor recreation site shall be included (including, for example wooded areas of parks, building maintenance and utility areas) but shall exclude parking areas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#13.2</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Square meters of public outdoor recreation space per capita</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

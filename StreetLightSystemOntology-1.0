@@ -1,0 +1,1516 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/StreetLightSystemOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/StreetLightSystemOntology"
+     versionIRI="https://w3id.org/seas/StreetLightSystemOntology-1.0">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/seas/CityOntology</Import>
+    <Import>https://w3id.org/seas/DeviceOntology</Import>
+    <Import>https://w3id.org/seas/BuildingOntology</Import>
+    <Import>https://w3id.org/seas/EvaluationOntology</Import>
+    <Import>https://w3id.org/seas/ElectricLightSourceOntology</Import>
+    <Import>https://w3id.org/seas/BooleanPropertyOntology</Import>
+    <Import>https://w3id.org/seas/BatteryOntology</Import>
+    <Import>https://w3id.org/seas/PhotovoltaicOntology</Import>
+    <Import>https://w3id.org/seas/ElectricPowerSystemOntology</Import>
+    <Import>https://w3id.org/seas/ZoneLightingOntology</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-05-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <AnonymousIndividual nodeID="_:genid766"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Electric Street Light System ontology describes Electric Street Light Systems.
+                        Figure below shows an overview on the street light taxonomy. 
+                        [![StreetlightTaxonomy](https://w3id.org/seas/lighting-taxonomy-1.png)](https://w3id.org/seas/lighting-taxonomy-1.png)
+                        </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>-1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Electric Street Light System Ontology.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-05-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/RecessedFloorStreetLight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EquipableStreetLight"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/isEquipable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLightFixing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FacadeFixingStreetLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/LightActuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/RecessedFloorLightSupport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ArmFixing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/facadeFixedTo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/TrafficSignalsLighting"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/TrafficControlSignal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/topFixedTo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/TopFixing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/member"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLightColumnSupport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Lighting"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/isMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLightPole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/armFixedTo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/PublicLighting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/TopFixingStreetLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricOutdoorLightingSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Spotlight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLightFacadeSupport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FacadeFixing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystemGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SolarStreetLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/NotEquipableStreetLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Highlighting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricLightFixtureSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLightBollardSupport"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/StreetLightCandelabra"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/RecessedFloorFixing"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ArmFixingStreetLight"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricPowerSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/PowerBox"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/isPoweredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/usedProcedure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/height"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/LengthProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/madeBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ConditionProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/onState"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/ArmFixingStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/armFixedTo"/>
+                <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/ArmFixingStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/connectedThrough"/>
+                <Class IRI="https://w3id.org/seas/ArmFixing"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/ElectricLightFixtureSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <Class IRI="https://w3id.org/seas/Lighting"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/FacadeFixingStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/connectedThrough"/>
+                <Class IRI="https://w3id.org/seas/FacadeFixing"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/FacadeFixingStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/facadeFixedTo"/>
+                <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/LightActuation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/usedProcedure"/>
+            <Class IRI="https://w3id.org/seas/Lighting"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/RecessedFloorStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+                <Class IRI="https://w3id.org/seas/RecessedFloorLightSupport"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/SolarStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/isPoweredBy"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="https://w3id.org/seas/Battery"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="https://w3id.org/seas/isPoweredBy"/>
+                        <Class IRI="https://w3id.org/seas/SolarPanel"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/TopFixingStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/connectedThrough"/>
+                <Class IRI="https://w3id.org/seas/TopFixing"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/TopFixingStreetLight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/seas/StreetLight"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="https://w3id.org/seas/topFixedTo"/>
+                <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ArmFixing"/>
+        <Class IRI="https://w3id.org/seas/StreetLightFixing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ArmFixingStreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricLightFixtureSystem"/>
+        <Class IRI="https://w3id.org/seas/LightActuator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricLightFixtureSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <Class IRI="https://w3id.org/seas/Lighting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricLightFixtureSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/illuminates"/>
+            <Class IRI="https://w3id.org/seas/IlluminableZone"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricOutdoorLightingSystem"/>
+        <Class IRI="https://w3id.org/seas/ElectricLightFixtureSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <Class IRI="https://w3id.org/seas/ElectricOutdoorLightingSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/condition"/>
+            <Class IRI="https://w3id.org/seas/ConditionProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+            <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/hasSubSystem"/>
+            <Class IRI="https://w3id.org/seas/ElectricLightSource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/height"/>
+            <Class IRI="https://w3id.org/seas/LengthProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/location"/>
+            <Class IRI="https://w3id.org/seas/Zone"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/onState"/>
+            <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+            <Class IRI="https://w3id.org/seas/PowerBox"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystemGroup"/>
+        <Class IRI="https://w3id.org/seas/ElectricPowerSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystemGroup"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/member"/>
+            <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EquipableStreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EquipableStreetLight"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/isEquipable"/>
+            <DataHasValue>
+                <DataProperty IRI="https://w3id.org/seas/simpleValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/FacadeFixing"/>
+        <Class IRI="https://w3id.org/seas/StreetLightFixing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/FacadeFixingStreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Highlighting"/>
+        <Class IRI="https://w3id.org/seas/Lighting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LightActuation"/>
+        <Class IRI="https://w3id.org/seas/Actuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LightActuation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/madeBy"/>
+            <Class IRI="https://w3id.org/seas/LightActuator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LightActuation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/usedProcedure"/>
+            <Class IRI="https://w3id.org/seas/Lighting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LightActuation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/illuminates"/>
+            <Class IRI="https://w3id.org/seas/IlluminableZone"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Lighting"/>
+        <Class IRI="https://w3id.org/seas/Actuating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/NotEquipableStreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/NotEquipableStreetLight"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/isEquipable"/>
+            <DataHasValue>
+                <DataProperty IRI="https://w3id.org/seas/simpleValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+            </DataHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/PublicLighting"/>
+        <Class IRI="https://w3id.org/seas/Lighting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RecessedFloorFixing"/>
+        <Class IRI="https://w3id.org/seas/StreetLightFixing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RecessedFloorLightSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RecessedFloorStreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RecessedFloorStreetLight"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+            <Class IRI="https://w3id.org/seas/RecessedFloorLightSupport"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SolarStreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SolarStreetLight"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/isPoweredBy"/>
+            <Class IRI="https://w3id.org/seas/Battery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Spotlight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightBollardSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightCandelabra"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightColumnSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightFacadeSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightFixing"/>
+        <Class IRI="https://w3id.org/seas/Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightPole"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+        <Class IRI="https://w3id.org/seas/System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/condition"/>
+            <Class IRI="https://w3id.org/seas/ConditionProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/height"/>
+            <Class IRI="https://w3id.org/seas/LengthProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/location"/>
+            <Class IRI="https://w3id.org/seas/Property"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/TopFixing"/>
+        <Class IRI="https://w3id.org/seas/StreetLightFixing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/TopFixingStreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/TrafficControlSignal"/>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/TrafficSignalsLighting"/>
+        <Class IRI="https://w3id.org/seas/Lighting"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/seas/ArmFixingStreetLight"/>
+        <Class IRI="https://w3id.org/seas/FacadeFixingStreetLight"/>
+        <Class IRI="https://w3id.org/seas/RecessedFloorStreetLight"/>
+        <Class IRI="https://w3id.org/seas/TopFixingStreetLight"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/seas/ElectricLightSource"/>
+        <Class IRI="https://w3id.org/seas/ElectricPublicLightingSystemGroup"/>
+        <Class IRI="https://w3id.org/seas/PowerBox"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+        <Class IRI="https://w3id.org/seas/StreetLightFixing"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/seas/EquipableStreetLight"/>
+        <Class IRI="https://w3id.org/seas/NotEquipableStreetLight"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/seas/RecessedFloorLightSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightBollardSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightCandelabra"/>
+        <Class IRI="https://w3id.org/seas/StreetLightColumnSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightFacadeSupport"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid766"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid766"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lynda TEMAL</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/armFixedTo"/>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/facadeFixedTo"/>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/topFixedTo"/>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://w3id.org/seas/isMemberOf"/>
+        <ObjectProperty IRI="https://w3id.org/seas/member"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/isMemberOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/member"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/armFixedTo"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/facadeFixedTo"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/isEquipable"/>
+        <Class IRI="https://w3id.org/seas/System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/topFixedTo"/>
+        <Class IRI="https://w3id.org/seas/StreetLight"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/armFixedTo"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/facadeFixedTo"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/isEquipable"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/isMemberOf"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/member"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/topFixedTo"/>
+        <Class IRI="https://w3id.org/seas/StreetLightSupport"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ArmFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Arm Fixing is a Street Light Fixing which allows to arm-fix a street light to the support.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ArmFixing</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ArmFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arm Fixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ArmFixing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ArmFixingStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Arm fixing Street light is a Street light which is fixed via an arm of the support through Arm fixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ArmFixingStreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ArmFixingStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arm Fixing Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ArmFixingStreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ElectricLightFixtureSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Electric Light Fixture System, light fixture (US English), light fitting (UK English), or luminaire is an electrical device used to create 
+  artificial light by use of an electric lamp. All light fixtures have a fixture body and a light socket to hold the lamp and allow for its replacement.
+  Fixtures may also have a switch to control the light, either attached to the lamp body or attached to the power cable. (source: Wikipedia)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ElectricLightFixtureSystem</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ElectricLightFixtureSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electric Light Fixture System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ElectricLightFixtureSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>https://w3id.org/seas/ElectricLightFixtureSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Luminaire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ElectricOutdoorLightingSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Electric Outdoor Lighting System, is an Electric Light Fixture System which is used to light exterior areas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ElectricOutdoorLightingSystem</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ElectricOutdoorLightingSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electric Outdoor Lighting System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ElectricOutdoorLightingSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Public Electric Lighting System is an Electric Outdoor Lighting System that is used to light a public area like a road, street, public place, garden etc.
+  The figure below shows some relevant connections for the Electric Public Lighting System: 
+  [![lightgActuator](https://w3id.org/seas/StreetLightConnections-1.png)](https://w3id.org/seas/StreetLightConnections-1.png)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystem</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"> Electric Public Lighting System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystemGroup</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electric Public Lighting System Group is a group system which has member only Electric Public Lighting Systems.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystemGroup</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystemGroup</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electric Public Lighting System Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ElectricPublicLightingSystemGroup</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EquipableStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Equipable Street light, is a Street light which can be equipable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EquipableStreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EquipableStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Equipable Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EquipableStreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/FacadeFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Facade fixing is a Street Light Fixing which allows a street light to be fixed to a facade support.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/FacadeFixing</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/FacadeFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Facade Fixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/FacadeFixing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/FacadeFixingStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Facade fixing Street light is a Street light which is fixed to the facade support through facade fixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/FacadeFixingStreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/FacadeFixingStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Facade Fixing Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/FacadeFixingStreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Highlighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Highlighting is the procedure that allows to highlight some public zone (places, buildings,...).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Highlighting</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Highlighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Highlighting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Highlighting</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/LightActuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Light Actuation is the execution of the action of lighting or light Actuating.
+    The figure below shows how the Streetlight are modeled like the Procedure executor execution Pattern.
+    [![lightgActuator](https://w3id.org/seas/lighting-0.1-1.png)](https://w3id.org/seas/lighting-0.1-1.png)
+                     </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/LightActuation</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/LightActuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Light Actuation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/LightActuation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Lighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A lighting is the procedure that allows to illuminate some zone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Lighting</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Lighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lighting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Lighting</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/NotEquipableStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Not Equipable Street light, is a Street light which is not equipable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/NotEquipableStreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/NotEquipableStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Not Equipable Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/NotEquipableStreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/PublicLighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A public lighting is the procedure that allows to illuminate some public zone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/PublicLighting</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/PublicLighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Public Lighting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/PublicLighting</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/RecessedFloorFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Recessed Floor Fixing is a Street Light Fixing which allows a street light to be recessed in the floor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/RecessedFloorFixing</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/RecessedFloorFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recessed Floor Fixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/RecessedFloorFixing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/RecessedFloorLightSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Recessed Floor Light Support is a Lighting Support which is used to fix a recessed floor light.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/RecessedFloorLightSupport</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/RecessedFloorLightSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recessed Floor Light Support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/RecessedFloorLightSupport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/RecessedFloorStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Recessed Floor Street Light is a StreetLight which is recessed in the floor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/RecessedFloorStreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/RecessedFloorStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recessed Floor Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/RecessedFloorStreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SolarStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Solar street lights are raised light sources which are powered by photovoltaic panels generally mounted on the lighting structure or integrated in the 
+                pole itself. The photovoltaic panels charge a rechargeable battery, which powers a fluorescent or LED lamp during the night. (source: Wikipedia)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SolarStreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SolarStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Solar Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SolarStreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Spotlight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A spotlight  (or searchlight) is a Street light that combines an extremely luminous source (traditionally a carbon arc lamp) with a mirrored
+                   parabolic reflector to project a powerful beam of light of approximately parallel rays in a particular direction, usually constructed so that 
+                   it can be swiveled about. (source: Wikipedia)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Spotlight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Spotlight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Spotlight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Spotlight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street Light is a lighting fixture used to distribute, filter or transform light from lamps. Also called lanterns, their function is to emit, 
+  distribute and control light emitted by a light source. Usually used for light tracking, they consist of an optics, electrical devices that 
+  allow the connection of the lamp (s), a body on which these different elements are based, and makes it possible to be fixed to a support. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street light, light pole, lamppost, street lamp, light standard, or lamp standard is an Public Electric Lighting System which   
+  is a raised source of light on the edge of a road or path.(source: Wikipedia)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLight</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Un luminaire est un appareil d&apos;éclairage servant à répartir, filtrer ou transformer la lumière des lampes. Egalement appelés lanternes, 
+  leur fonction est d&apos;émettre, de distribuer et de contrôler la lumière émise par une source lumineuse. Généralement utilisés pour l&apos;éclairage des 
+  voies, ils se composent d&apos;une optique, d&apos;appareils électriques qui permettent le branchement de la (les) lampe(s), d&apos;un corps sur lequel 
+  s&apos;appuient ces différents éléments, et qui permet d&apos;être fixé à un support.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLightBollardSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street Light Bollard Support is a Lighting Support which is used to fix the street light.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLightBollardSupport</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLightBollardSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light Bollard Support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLightBollardSupport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLightCandelabra</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Candelabra Street Light is a Lighting Support which is used to fix one or more street light to it. It is generally designed like a Candelabra .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLightCandelabra</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLightCandelabra</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light Candelabra</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLightCandelabra</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLightColumnSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street Light Column Support is a column shaped Lighting Support which is used to fix the street light.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLightColumnSupport</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLightColumnSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light Column Support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLightColumnSupport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLightFacadeSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street Light Facade Support is a Lighting Support which is used to fix a facade fixing street light.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLightFacadeSupport</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLightFacadeSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light Facade Support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLightFacadeSupport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLightFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street Light Fixing is a connection which allows to fix a street light to the support.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLightFixing</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLightFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light Fixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLightFixing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLightPole</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street Light Pole is a Lighting Support which is used to fix one or more street light to it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLightPole</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLightPole</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light Pole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLightPole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/StreetLightSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Street Light Support is a support on which one or more street light is fixed.
+                  Figure below shows the taxonomy of the street light support.
+                   [![StreetlightSupportTaxonomy](https://w3id.org/seas/LightSupportTaxonomy-1.png)](https://w3id.org/seas/LightSupportTaxonomy-1.png)
+              </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/StreetLightSupport</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/StreetLightSupport</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Light Support</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/StreetLightSupport</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/TopFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Top fixing is a Streetlight Fixing which allows to fix a street light to the support on the top.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/TopFixing</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/TopFixing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Top Fixing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/TopFixing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/TopFixingStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Top fixing Street light,  is a Street light which is fixed to the top of the support through Top fixing.
+  The figure below shows fixing modes of the Street light on the support. This figures is about the case where the Street light is in top of the support.
+  [![topFixingStreetLight](https://w3id.org/seas/StreetLightAccordingToFixingType-1.png)](https://w3id.org/seas/StreetLightAccordingToFixingType-1.png)
+                  </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/TopFixingStreetLight</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/TopFixingStreetLight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Top Fixing Street Light</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/TopFixingStreetLight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/TrafficControlSignal</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Traffic lights, also known as traffic signals, traffic lamps, traffic semaphore, signal lights, stop lights, robots (in South Africa), 
+  and traffic control signals (in technical parlance), are signaling devices positioned at road intersections, pedestrian crossings, and other 
+  locations to control flows of traffic. (source: Wikipedia)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/TrafficControlSignal</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/TrafficControlSignal</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Traffic Control Signal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/TrafficControlSignal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/TrafficSignalsLighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The traffic signals Lighting is the procedure that give lighting signals to control the traffic flow.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/TrafficSignalsLighting</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/TrafficSignalsLighting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Traffic Signals Lighting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/TrafficSignalsLighting</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/armFixedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">means that the street light is arm-fixed to the support.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/armFixedTo</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/armFixedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">arm fixed to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/armFixedTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/facadeFixedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">means that the street light is fixed to the facade support via a top fixing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/facadeFixedTo</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/facadeFixedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">facade fixed to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/facadeFixedTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/isEquipable</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is equipable to check if the system is equipable or not.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/isEquipable</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/isEquipable</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/isMemberOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is member of some collection or group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/isMemberOf</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/isMemberOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isMemberOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/isMemberOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/member</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collection or group has member some FeatureOfInterest. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/member</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/member</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/member</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/topFixedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">means that the street light is top-fixed to the support.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/topFixedTo</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/topFixedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">top fixed to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/topFixedTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,787 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/BooleanPropertyOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/BooleanPropertyOntology"
+     versionIRI="https://w3id.org/seas/BooleanPropertyOntology-1.0">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/seas/DeviceOntology</Import>
+    <Import>https://w3id.org/seas/EvaluationOntology</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-08-04</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>-1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid514"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-10-30</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology applies the design patterns defined in the Feature of Interest ontology and the Evaluation ontology for boolean-valued properties. 
+</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Boolean Property ontology.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BooleanActuating"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnumeratedProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/openStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/refreshedStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/installedStatus"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BooleanSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/recognizedByGatewayStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/supportedByAPIStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BooleanActuator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BooleanActuation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/onServiceStatus"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BooleanSensing"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BooleanObservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/seas/value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/seas/evaluatedValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanActuating"/>
+        <Class IRI="https://w3id.org/seas/Actuating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanActuating"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/actsOn"/>
+            <ObjectUnionOf>
+                <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+                <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanActuation"/>
+        <Class IRI="https://w3id.org/seas/Actuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanActuation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/actsOn"/>
+            <ObjectUnionOf>
+                <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+                <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanActuator"/>
+        <Class IRI="https://w3id.org/seas/Actuator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanActuator"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/actsOn"/>
+            <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanObservation"/>
+        <Class IRI="https://w3id.org/seas/Observation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanObservation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/observes"/>
+            <ObjectUnionOf>
+                <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+                <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+        <Class IRI="https://w3id.org/seas/EnumeratedProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/evaluation"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="https://w3id.org/seas/evaluatedValue"/>
+                <Datatype abbreviatedIRI="xsd:boolean"/>
+            </DataAllValuesFrom>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="https://w3id.org/seas/value"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanSensing"/>
+        <Class IRI="https://w3id.org/seas/Sensing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanSensing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/observes"/>
+            <ObjectUnionOf>
+                <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+                <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanSensor"/>
+        <Class IRI="https://w3id.org/seas/Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BooleanSensor"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/observes"/>
+            <ObjectUnionOf>
+                <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+                <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnumeratedProperty"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid514"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid514"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lynda TEMAL</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/installedStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/onServiceStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/openStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/recognizedByGatewayStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/refreshedStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/supportedByAPIStatus"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/installedStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/onServiceStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/openStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/recognizedByGatewayStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/refreshedStatus"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/supportedByAPIStatus"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/installedStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/onServiceStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/openStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/recognizedByGatewayStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/refreshedStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/supportedByAPIStatus"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/installedStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/installedStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/onServiceStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/onServiceStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/onStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/openStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/openStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/recognizedByGatewayStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/recognizedByGatewayStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/refreshedStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/refreshedStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/supportedByAPIStatus"/>
+        <Class IRI="https://w3id.org/seas/BooleanProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/supportedByAPIStatus"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BooleanActuating</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Procedure of actuating on the physical world, with an input that is a *boolean resource*, i.e., an [information resource](https://www.w3.org/TR/webarch/#def-information-resource) whose essential characteristics can be be conveyed in a boolean.
+
+This class combines boolean actuating processes such as on/off, open/close or start/stop, where no intermediary state is possible for the command.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BooleanActuating</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BooleanActuating</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boolean Actuating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BooleanActuating</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BooleanActuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actuation on the physical world, with an input that is a *boolean resource*, i.e., an [information resource](https://www.w3.org/TR/webarch/#def-information-resource) whose essential characteristics can be be conveyed in a boolean.
+
+This class combines boolean actuations such as on/off, open/close or start/stop, where no intermediary state is possible for the command.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BooleanActuation</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BooleanActuation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boolean Actuation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BooleanActuation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BooleanActuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actuator with an input that is a *boolean resource*, i.e., an [information resource](https://www.w3.org/TR/webarch/#def-information-resource) whose essential characteristics can be be conveyed in a boolean.
+
+This class combines boolean actuators such as on/off, open/close or start/stop, where no intermediary state is possible for the command.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BooleanActuator</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BooleanActuator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boolean Actuator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BooleanActuator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BooleanObservation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation with an output that is a *boolean resource*, i.e., an [information resource](https://www.w3.org/TR/webarch/#def-information-resource) whose essential characteristics can be be conveyed in a boolean.
+
+This class combines boolean observations such as on/off, open/close or start/stop, where no intermediary state is possible for the output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BooleanObservation</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BooleanObservation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boolean Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BooleanObservation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BooleanProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A property that can be true of false. May be used to model commands like on/off.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BooleanProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BooleanProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boolean Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BooleanProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BooleanSensing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Procedure of sensing, with an output that is a *boolean resource*, i.e., an [information resource](https://www.w3.org/TR/webarch/#def-information-resource) whose essential characteristics can be be conveyed in a boolean.
+
+This class combines boolean sensing processes such as on/off, open/close or start/stop, where no intermediary state is possible for the output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BooleanSensing</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BooleanSensing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boolean Sensing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BooleanSensing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BooleanSensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sensor with an output that is a *boolean resource*, i.e., an [information resource](https://www.w3.org/TR/webarch/#def-information-resource) whose essential characteristics can be be conveyed in a boolean.
+
+This class combines boolean sensors that output on/off, open/close or start/stop, where no intermediary state is possible for the output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BooleanSensor</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BooleanSensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boolean Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BooleanSensor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnumeratedProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A property that can have one of multiple enumerated values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnumeratedProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnumeratedProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Enumerated Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnumeratedProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/connectedStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/connectedStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">connected status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/connectedStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its connected status, which is a boolean property.
+
+If the property is true, then the feature of interest is connected. Else, it is disconnected.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/connectedStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/installedStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/installedStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">installed status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/installedStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its installed status, which is a boolean property.
+
+If the property is true, then the feature of interest is installed. Else, it is not installed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/installedStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/onServiceStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/onServiceStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its on service status, which is a boolean property.
+
+If the property is true, then the feature of interest is on service. Else, it is out of service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/onServiceStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">on service status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/onServiceStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/onStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/onStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its on status, which is a boolean property.
+
+If the property is true, then the feature of interest is on. Else, it is off.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/onStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">on status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/onStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/openStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/openStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its open status, which is a boolean property.
+
+If the property is true, then the feature of interest is open. Else, it is close.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/openStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">open status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/openStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/recognizedByGatewayStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/recognizedByGatewayStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its recognized by the gateway status, which is a boolean property.
+
+If the property is true, then the feature of interest is recognized by the gateway. Else, it is not recognized by the Gateway.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/recognizedByGatewayStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recognized  by gateway status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/recognizedByGatewayStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/refreshedStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/refreshedStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its refreshed status, which is a boolean property.
+
+If the property is true, then the feature of interest is refreshed. Else, it is unrefreshed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/refreshedStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refreshed status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/refreshedStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/supportedByAPIStatus</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/supportedByAPIStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">links a feature of interest to its supported by API status, which is a boolean property.
+
+If the property is true, then the feature of interest is supported by the API. Else, it is not supported by the API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/supportedByAPIStatus</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">supported by API status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/supportedByAPIStatus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

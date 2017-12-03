@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/SSNAlignment"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/SSNAlignment"
+     versionIRI="https://w3id.org/seas/SSNAlignment-1.0">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/pep/SSNAlignment</Import>
+    <Import>https://w3id.org/seas/DeviceOntology</Import>
+    <Import>http://www.w3.org/ns/ssn</Import>
+    <Import>https://w3id.org/seas/FeatureOfInterestOntology</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SSN Alignment.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-09-19</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-09-19</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology defines proposed alignemnts with the SSN ontology.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>-1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/ssn/Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/ssn/Device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://www.w3.org/ns/ssn/hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/ssn/FeatureOfInterest"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/Device"/>
+        <Class IRI="https://www.w3.org/ns/ssn/Device"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+        <Class IRI="https://www.w3.org/ns/ssn/FeatureOfInterest"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/Property"/>
+        <Class IRI="https://www.w3.org/ns/ssn/Property"/>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://www.w3.org/ns/ssn/hasProperty"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasProperty"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/FeatureOfInterest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This concept is equivalent to ssn:FeatureOfInterest, which in the first version of the SSN ontology is defined as a subclass of the union of dul:Event and dul:Object. A dul:Event is any physical, social, or mental process, event, or state. A dul:Object is any physical, social, or mental object, or a substance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Property</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas:Property is equivalent to ssn:Property, which in the first version of the SSN ontology is a subclass of dul:Quality. dul:Quality is any aspect of an Entity (but not a part of it), which cannot exist without that Entity. </Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

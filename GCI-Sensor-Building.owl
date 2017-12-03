@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/hussaibi/ontologies/2017/11/GCI-Sensor-Building"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/hussaibi/ontologies/2017/11/GCI-Sensor-Building">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/seas/SmartMeterOntology-1.1</Import>
+    <Import>https://w3id.org/seas/SSNAlignment-1.0</Import>
+    <Import>https://w3id.org/seas/CommunicationOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ElectricLightSourceOntology-1.0</Import>
+    <Import>https://w3id.org/seas/BooleanPropertyOntology-1.0</Import>
+    <Import>https://w3id.org/seas/StatisticsOntology-1.0</Import>
+    <Import>https://w3id.org/saref</Import>
+    <Import>https://w3id.org/seas/StreetLightSystemOntology-1.0</Import>
+    <Import>https://w3id.org/seas/OfferingOntology-1.1</Import>
+    <Import>https://w3id.org/seas/ElectricPowerSystemOntology-1.0</Import>
+    <Import>https://w3id.org/seas/OptimizationOntology-1.1</Import>
+    <Import>https://w3id.org/seas/FailableSystemOntology-1.0</Import>
+    <Import>https://w3id.org/seas/seas-1.1</Import>
+    <Import>https://w3id.org/seas/FeatureOfInterestOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ThermodynamicSystemOntology-1.0</Import>
+    <Import>http://qudt.org/1.1/vocab/quantity</Import>
+    <Import>https://w3id.org/seas/ComfortOntology-1.0</Import>
+    <Import>https://w3id.org/seas/PhotovoltaicOntology-1.0</Import>
+    <Import>http://www.w3.org/ns/sosa/prov</Import>
+    <Import>https://w3id.org/seas/ArchitectureOntology-2.0</Import>
+    <Import>https://w3id.org/seas/TradingOntology-1.1</Import>
+    <Import>http://www.wurvoc.org/vocabularies/om-1.8/</Import>
+    <Import>https://w3id.org/seas/GreenKPIOntology-1.0</Import>
+    <Import>https://w3id.org/seas/FlexibilityOntology-1.0</Import>
+    <Import>http://qudt.org/1.1/vocab/dimensionalunit</Import>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl</Import>
+    <Import>http://qudt.org/1.1/schema/qudt</Import>
+    <Import>https://w3id.org/seas/CityOntology-1.0</Import>
+    <Import>http://ontology.eil.utoronto.ca/GCI/ISO37120/Recreation.owl</Import>
+    <Import>https://w3id.org/seas/OperatingOntology-1.0</Import>
+    <Import>https://w3id.org/seas/TimeOntology-1.0</Import>
+    <Import>https://w3id.org/seas/SystemOntology-1.1</Import>
+    <Import>https://w3id.org/seas/ZoneLightingOntology-1.0</Import>
+    <Import>https://w3id.org/pep/pep-1.0</Import>
+    <Import>http://www.w3.org/ns/sosa/</Import>
+    <Import>https://w3id.org/seas/EnergyFormOntology-1.0</Import>
+    <Import>https://w3id.org/seas/QUDTAlignment-1.0</Import>
+    <Import>https://w3id.org/seas/ForecastingOntology-1.0</Import>
+    <Import>https://w3id.org/seas/GenericPropertyOntology-1.0</Import>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl</Import>
+    <Import>http://qudt.org/1.1/vocab/unit</Import>
+    <Import>https://w3id.org/seas/ComplexOntology-1.0</Import>
+    <Import>https://w3id.org/seas/BuildingOntology-1.0</Import>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl</Import>
+    <Import>https://w3id.org/seas/PricingOntology-1.0</Import>
+    <Import>http://qudt.org/1.1/vocab/dimension</Import>
+    <Import>http://purl.org/goodrelations/v1</Import>
+    <Import>https://w3id.org/seas/BatteryOntology-1.0</Import>
+    <Import>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl</Import>
+    <Import>http://www.w3.org/ns/ssn/</Import>
+    <Import>https://w3id.org/seas/ElectricVehicleOntology-1.0</Import>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actuator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Procedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statistic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Commodity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#unit_of_measure"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://micra.com/COSMO/COSMO.owl#FixedStructure"/>
+        <Class IRI="#Building"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Observation"/>
+        <Class IRI="#Observation"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Parameter"/>
+        <Class IRI="#Parameter"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sample"/>
+        <Class IRI="#Sample"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Statistic"/>
+        <Class IRI="#Statistic"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Actuator"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Actuator"/>
+        <Class IRI="https://w3id.org/saref#Actuator"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Actuator"/>
+        <Class IRI="https://w3id.org/seas/Actuator"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Building"/>
+        <Class IRI="https://w3id.org/seas/Building"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Commodity"/>
+        <Class IRI="https://w3id.org/saref#Commodity"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Commodity"/>
+        <Class IRI="https://w3id.org/seas/Commodity"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Device"/>
+        <Class IRI="https://w3id.org/saref#Device"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Device"/>
+        <Class IRI="https://w3id.org/seas/Device"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Observation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Observation"/>
+        <Class IRI="https://w3id.org/seas/Observation"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Procedure"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Procedure"/>
+        <Class IRI="https://w3id.org/pep/Procedure"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Property"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Property"/>
+        <Class IRI="https://w3id.org/saref#Property"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Property"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sample"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sensor"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sensor"/>
+        <Class IRI="https://w3id.org/saref#Sensor"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sensor"/>
+        <Class IRI="https://w3id.org/seas/Sensor"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#System"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#System"/>
+        <Class IRI="https://w3id.org/seas/System"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#unit_of_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#unit_of_measure"/>
+        <Class IRI="https://w3id.org/saref#UnitOfMeasure"/>
+    </EquivalentClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://qudt.org/1.1/schema/dimension"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://qudt.org/1.1/schema/dimension"
+     versionIRI="http://qudt.org/1.1/schema/dimension">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.linkedmodel.org/1.0/schema/dtype</Import>
+    <Import>http://qudt.org/1.1/schema/qudt</Import>
+    <Import>http://www.linkedmodel.org/1.2/schema/vaem</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasAspectScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Basic treatment of quantities and units. No dimensional treatment in this graph.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT Dimension Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ralph Hodgson</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$Id: OSG_dimension-(v1.1).ttl 4988 2011-06-01 20:34:19Z RalphHodgson $</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDomainScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Science, Medicine and Engineering</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">James E. Masters</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasCatalogEntry"/>
+        <IRI>http://qudt.org/catalog/qudt#QUDT-DIMENSION-SchemaCatalogEntry</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The QUDT Ontologies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to NASA Ames Research Center and TopQuadrant, Inc.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantities, Units, and Dimensions</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasRole"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#SchemaGraph</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+        <IRI>voag:CC-SHAREALIKE_3PT0-US</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">David Price</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Irene Polikoff</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDisciplineScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">All disciplines</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT Dimension Ontology Version 1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The intent of the QUDT Dimensions Ontology is to provide an OWL Schema for dimensional specificaiton and analysis of units of measure.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#DimensionVector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#referenceQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionInverse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionVector"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDomainScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#TopQuadrantAttribution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasRole"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDisciplineScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="xsd:float"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasAspectScope"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#NASA-ARC-Attribution"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasCatalogEntry"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+        <Class IRI="http://qudt.org/schema/qudt#EnumeratedValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionVector"/>
+            <Class IRI="http://qudt.org/schema/qudt#DimensionVector"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#referenceQuantity"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionVector"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#referenceQuantity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DimensionVector"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#basisElement"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DimensionVector"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#vectorMagnitude"/>
+            <Class abbreviatedIRI="xsd:float"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DimensionVector"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#basisElement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DimensionVector"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#vectorMagnitude"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#NASA-ARC-Attribution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#TopQuadrantAttribution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2010-12-30T11:17:52</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT, or the &apos;Quantity, Unit, Dimension and Types&apos; ontology defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. In physics and science, dimensional analysis is a tool to find or check relations among physical quantities by using their dimensions. The dimension of a physical quantity is the combination of the basic physical dimensions (usually mass, length, time, electric charge, and temperature) which describe it; for example, speed has the dimension length / time, and may be measured in meters per second, miles per hour, or other units.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$LastChangedDate: 2011-06-01 13:34:19 -0700 (Wed, 01 Jun 2011) $</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">http://qudt.org/schema/dimension</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">dimension</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#referenceQuantity"/>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#referenceThing"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionInverse"/>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionInverse"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionInverse"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionInverse"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#dimensionInverse"/>
+    </SymmetricObjectProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#Dimension</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A dimension is a relationship between a quantity system, a quantity kind of that system, and one or more dimension vectors. There is one dimension vector for each of the system&apos;s base quantity kinds. The vector&apos;s magnitude determines the exponent of the base dimension for the referenced quantity kind.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#Dimension</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#DimensionVector</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A dimension vector is an association between a quantity kind and a rational number. The quantity kind serves as the basis vector in an abstract vector space, and the rational number is the vector magnitude. The abstract vector space is determined by the chosen set of base quantity kinds for a quantity system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#DimensionVector</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Dimension Vector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#dimensionInverse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">dimension inverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#dimensionVector</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">dimension vector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#referenceQuantity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">reference quantity</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

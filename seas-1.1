@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/FlexibilityOntology-1.0"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/FlexibilityOntology-1.0"
+     versionIRI="https://w3id.org/seas/seas-1.1">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/seas/FlexibilityOntology-1.0</Import>
+    <Import>https://w3id.org/seas/PlayerOntology-1.1</Import>
+    <Import>https://w3id.org/seas/SmartMeterOntology-1.1</Import>
+    <Import>https://w3id.org/seas/CommunicationOntology-1.0</Import>
+    <Import>https://w3id.org/seas/CityOntology-1.0</Import>
+    <Import>https://w3id.org/seas/OperatingOntology-1.0</Import>
+    <Import>https://w3id.org/seas/TimeOntology-1.0</Import>
+    <Import>https://w3id.org/seas/SystemOntology-1.1</Import>
+    <Import>https://w3id.org/seas/ZoneLightingOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ElectricLightSourceOntology-1.0</Import>
+    <Import>https://w3id.org/seas/BooleanPropertyOntology-1.0</Import>
+    <Import>https://w3id.org/seas/StatisticsOntology-1.0</Import>
+    <Import>https://w3id.org/seas/StreetLightSystemOntology-1.0</Import>
+    <Import>https://w3id.org/seas/OfferingOntology-1.1</Import>
+    <Import>https://w3id.org/seas/EnergyFormOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ElectricPowerSystemOntology-1.0</Import>
+    <Import>https://w3id.org/seas/OptimizationOntology-1.1</Import>
+    <Import>https://w3id.org/seas/FailableSystemOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ForecastingOntology-1.1</Import>
+    <Import>https://w3id.org/seas/GenericPropertyOntology-1.0</Import>
+    <Import>https://w3id.org/seas/PeriodicSignalOntology-1.0</Import>
+    <Import>https://w3id.org/seas/FeatureOfInterestOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ComplexOntology-1.0</Import>
+    <Import>https://w3id.org/seas/BuildingOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ThermodynamicSystemOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ComfortOntology-1.0</Import>
+    <Import>https://w3id.org/seas/PhotovoltaicOntology-1.0</Import>
+    <Import>https://w3id.org/seas/DeviceOntology-1.1</Import>
+    <Import>https://w3id.org/seas/PricingOntology-1.0</Import>
+    <Import>https://w3id.org/seas/EvaluationOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ZoneOntology-1.0</Import>
+    <Import>https://w3id.org/seas/BatteryOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ArchitectureOntology-2.0</Import>
+    <Import>https://w3id.org/seas/TradingOntology-1.1</Import>
+    <Import>https://w3id.org/seas/GreenKPIOntology-1.0</Import>
+    <Import>https://w3id.org/seas/ElectricVehicleOntology-1.0</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid545"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1344"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-08-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1423"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1368"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1314"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1370"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <IRI>http://www.vtt.fi/JarmoKalaoja</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1340"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1394"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>https://w3id.org/seas/seas-1.1</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <AnonymousIndividual nodeID="_:genid1342"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>https://w3id.org/seas/seas-1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SEAS Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The main SEAS ontology glues together all of the SEAS modules.
+
+**To cite the SEAS ontologies:**
+
+&gt; Maxime Lefrançois, Planned ETSI SAREF Extensions based on the W3C&amp;OGC SOSA/SSN-compatible SEAS Ontology Patterns. In Proceedings of Workshop on Semantic Interoperability and Standardization in the IoT, SIS-IoT, Amsterdam, Netherlands, July 2017 ([PDF](http://www.maxime-lefrancois.info/docs/Lefrancois-SIS-IoT2017-Planned.pdf) - [BibTex](SEAS-SIS-IoT-2017.bib))
+
+&gt; Maxime Lefrançois, Jarmo Kalaoja, Takoua Ghariani, Antoine Zimmermann, The SEAS Knowledge Model, ITEA2 12004 Smart Energy Aware Systems Deliverable 2.2, Jan 2017 ([PDF](http://www.maxime-lefrancois.info/docs/SEAS-D2_2-SEAS-Knowledge-Model.pdf) - [BibTex](SEAS-D2_2-SEAS-Knowledge-Model.bib))
+
+SEAS ontology modules are organized on top of a core of three main modules:
+
+- the [seas:FeatureOfInterestOntology](https://w3id.org/seas/FeatureOfInterestOntology) describes feature of interests and their properties;
+- the [seas:EvaluationOntology](https://w3id.org/seas/EvaluationOntology) describes evaluations of these properties;
+- the [seas:SystemOntology](https://w3id.org/seas/SystemOntology) describes virtually isolated systems that share connections with other systems;
+
+On top of the seas:SystemOntology module, various vertical domain ontologies are defined for specific sub classes of systems and why they may be connected:
+
+- the [`seas:AreaOntology`](https://w3id.org/seas/AreaOntology) describes Zone systems:
+    - a zone may be linked by a crossable connection with another zone;
+    - a zone may be a sub-zone of another zone;
+    - zones are quantified in terms of area, population, and humidity.
+- more module descriptions to come soon...
+
+We furthermore encourage the use of the following external ontologies:
+
+- [the RDFP Presentation ontology](https://w3id.org/rdfp/) describes how RDF graphs can be validated, interpreted from web resource representations, or serialized as resource representations;
+- [the Process Execution Platform ontology](https://w3id.org/pep/) generalizes the core of the [SSN](http://www.w3.org/TR/vocab-ssn/) and the [SAN](https://www.irit.fr/recherches/MELODI/ontologies/SAN.owl) ontologies.
+</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/seas/seas-1.1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI="https://w3id.org/seas/seas-1.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1314"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1340"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1342"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1344"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1368"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1370"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1394"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid1423"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid545"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1314"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lynda Temal</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1340"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gabriel Santos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1342"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Francisco Silva</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1344"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Erkki Siira</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1368"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hannu Järvinen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1370"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Brigida Teixeira</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1394"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Antoine Zimmermann</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1423"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Marc Girod-Genet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid545"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Takoua Ghariani</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

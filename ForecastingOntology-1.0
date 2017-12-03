@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/ForecastingOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/ForecastingOntology"
+     versionIRI="https://w3id.org/seas/ForecastingOntology-1.0">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/pep/pep-1.0</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-11-22</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-11-22</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>-1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Forecasting ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Forecasting ontology extends the [Process Execution ontology (PEP)](https://w3id.org/pep/) and defines:
+
+- `seas:Forecaster` that implement `seas:Forecasting` processes and do `seas:Forecast`s
+
+Sub types of `seas:Forecaster`, `seas:Forecasting`, and `seas:Forecast`, may constrain the type of the value of the property. For instance ontology `seas:BooleanOntology` may define `seas:BooleanForecaster`,  `seas:BooleanForecasting`, and  `seas:BooleanForecast`, that constrain the forecasted property to be a `seas:BooleanProperty`.
+
+
+Figure below provides an overview of some concepts in this ontology:
+
+[![Overview of the Forecasting ontology](https://w3id.org/seas/forecasting.png)](https://w3id.org/seas/forecasting.png)
+
+</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Forecasting"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/forecasts"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Forecaster"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Forecast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/ProcessExecutor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/executedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/Process"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/methodUsed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/ProcessExecution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/Forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/methodUsed"/>
+            <Class IRI="https://w3id.org/seas/Forecasting"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/Forecaster"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <Class IRI="https://w3id.org/seas/Forecasting"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Forecast"/>
+        <Class IRI="https://w3id.org/pep/ProcessExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/executedBy"/>
+            <Class IRI="https://w3id.org/seas/Forecaster"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/methodUsed"/>
+            <Class IRI="https://w3id.org/seas/Forecasting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+            <Class IRI="https://w3id.org/seas/Property"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Forecaster"/>
+        <Class IRI="https://w3id.org/pep/ProcessExecutor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Forecaster"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <Class IRI="https://w3id.org/seas/Forecasting"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Forecasting"/>
+        <Class IRI="https://w3id.org/pep/Process"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/forecasts"/>
+        <ObjectUnionOf>
+            <Class IRI="https://w3id.org/seas/Forecast"/>
+            <Class IRI="https://w3id.org/seas/Forecaster"/>
+            <Class IRI="https://w3id.org/seas/Forecasting"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+        <ObjectUnionOf>
+            <Class IRI="https://w3id.org/seas/Forecast"/>
+            <Class IRI="https://w3id.org/seas/Forecaster"/>
+            <Class IRI="https://w3id.org/seas/Forecasting"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/forecasts"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="https://w3id.org/pep/executedBy"/>
+            <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="https://w3id.org/pep/methodUsed"/>
+            <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="https://w3id.org/seas/forecastsProperty"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Forecast</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Forecast is the execution of some Forecasting process by some Forecaster.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Forecast</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Forecast</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Forecast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Forecast</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Forecaster</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Forecaster implements some Forecasting process, and may generate forecasts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Forecaster</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Forecaster</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Forecaster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Forecaster</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Forecasting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Forecasting is the process of forecasting the state of a property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Forecasting</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Forecasting</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Forecasting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Forecasting</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/forecasts</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an Forecasting, Forecaster, or Forecast, to the feature of interest a property of which it forecasts.
+
+If `x` forecasts a property, then it also forecasts the feature of interest of this property:
+
+```
+seas:forecastsProperty &lt; seas:forecasts o seas:isPropertyOf .
+```
+
+If a forecasting forecasts a feature of interest, then any Forecaster that implements this forecasting also forecasts this feature of interest, and any Forecast that used this forecasting also forecasts this feature of interest. Furthermore, if a Forecaster forecasts a feature of interest, then any Forecast executed by this Forecaster also forecasts this feature of interest:
+
+```
+seas:forecasts &lt; pep:methodUsed o seas:forecasts .
+seas:forecasts &lt; pep:methodUsed o seas:forecasts .
+seas:forecasts &lt; pep:executedBy o seas:forecasts .
+```
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/forecasts</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/forecasts</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">forecasts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/forecasts</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/forecastsProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an Forecasting, Forecaster, or Forecast, to the property it forecasts.
+
+If a forecasting forecasts a property, then any Forecaster that implements this forecasting also forecasts this property, and any Forecast that used this forecasting also forecasts this property. Furthermore, if a Forecaster forecasts a property, then any Forecast executed by this Forecaster also forecasts this property:
+
+```
+seas:forecastsProperty &lt; pep:implements o seas:forecastsProperty .
+seas:forecastsProperty &lt; pep:methodUsed o seas:forecastsProperty .
+seas:forecastsProperty &lt; pep:executedBy o seas:forecastsProperty .
+```</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/forecastsProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/forecastsProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">forecasts property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/forecastsProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

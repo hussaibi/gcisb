@@ -1,0 +1,1326 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/icontact.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/icontact.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ic</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">16 April 2015</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ontology.eil.utoronto.ca/icontact.html</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ontology.eil.utoronto.ca/icontact.owl#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">International Contact (Address) Ontology: Addresses, phone numbers and emails.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">International Contact Ontology: 
+
+http://ontology.eil.utoronto.ca/icontact.html
+
+This ontology provides basic classes and more detailed properties for  representating international street addresses, phone numbers and emails.  Rather than using existing ontologies, such as vcard, it was decided to create a new one as the vcard and foaf ignore the details of international addresses, phone numbers, etc.
+
+The important part of the ontology are the object and data properties used to describe addresses primarily and phone numbers.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mark S. Fox, http://eil.utoronto.ca/profiles/foxpro.html
+Enterprise Integration Laboratory, http://eil.utoronto.ca
+University of Toronto, 
+msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Declaration>
+        <DataProperty IRI="#emailDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#telephoneDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#addressProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasClosingTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#iContactThing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCountryCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HomeNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#operatingDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TollFreePhone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Avenue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Work"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StreetType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStreetDirection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorkNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOpeningTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wednesday"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boulevard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CottageAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasContactDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Saturday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AddressType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WorkPhone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Monday"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#addressDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWorkEmail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhoneType"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAreaCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCitySection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tuesday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StreetDirection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/GeoCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#South"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTelephone"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhoneNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStreet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCountry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Street"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPersonalEmail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TollFreeNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Crescent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorkAddress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Friday"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasState"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUnitNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Address"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#West"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWebSite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thursday"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStreetType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStreetNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CellPhone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#East"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Road"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cottage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPostalCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SchemaOrgThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddressType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Circle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HomeAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contactProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPhoneType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/City"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dayofWeek"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGeoCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOperatingHours"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HoursOfOperation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Home"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HomePhone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/State"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#North"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OperatingProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CellNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBuilding"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FaxPhone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sunday"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DaysOfWeek"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FaxNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhoneNumber"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AddressType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Work"/>
+            <NamedIndividual IRI="#Cottage"/>
+            <NamedIndividual IRI="#Home"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PhoneType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#CellPhone"/>
+            <NamedIndividual IRI="#TollFreePhone"/>
+            <NamedIndividual IRI="#HomePhone"/>
+            <NamedIndividual IRI="#WorkPhone"/>
+            <NamedIndividual IRI="#FaxPhone"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StreetDirection"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#South"/>
+            <NamedIndividual IRI="#West"/>
+            <NamedIndividual IRI="#North"/>
+            <NamedIndividual IRI="#East"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StreetType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Crescent"/>
+            <NamedIndividual IRI="#Avenue"/>
+            <NamedIndividual IRI="#Road"/>
+            <NamedIndividual IRI="#Circle"/>
+            <NamedIndividual IRI="#Boulevard"/>
+            <NamedIndividual IRI="#Street"/>
+            <NamedIndividual IRI="#Drive"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasStreetDirection"/>
+            <Class IRI="#StreetDirection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasStreetType"/>
+            <Class IRI="#StreetType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCity"/>
+            <Class IRI="http://schema.org/City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCountry"/>
+            <Class IRI="http://schema.org/Country"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasState"/>
+            <Class IRI="http://schema.org/State"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasBuilding"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasCitySection"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasPostalCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasStreet"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasUnitNumber"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasStreetNumber"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Address"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AddressType"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CellNumber"/>
+        <Class IRI="#PhoneNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CellNumber"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasPhoneType"/>
+            <NamedIndividual IRI="#CellPhone"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CottageAddress"/>
+        <Class IRI="#Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CottageAddress"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAddressType"/>
+            <NamedIndividual IRI="#Cottage"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DaysOfWeek"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FaxNumber"/>
+        <Class IRI="#PhoneNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FaxNumber"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasPhoneType"/>
+            <NamedIndividual IRI="#FaxPhone"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeAddress"/>
+        <Class IRI="#Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeAddress"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAddressType"/>
+            <NamedIndividual IRI="#Home"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeNumber"/>
+        <Class IRI="#PhoneNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeNumber"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasPhoneType"/>
+            <NamedIndividual IRI="#HomePhone"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HoursOfOperation"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HoursOfOperation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dayofWeek"/>
+            <Class IRI="#DaysOfWeek"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HoursOfOperation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasClosingTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HoursOfOperation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasOpeningTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhoneNumber"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhoneNumber"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPhoneType"/>
+            <Class IRI="#PhoneType"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhoneNumber"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasAreaCode"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhoneNumber"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasCountryCode"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhoneNumber"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPhoneNumber"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhoneType"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StreetDirection"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StreetType"/>
+        <Class IRI="#iContactThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TollFreeNumber"/>
+        <Class IRI="#PhoneNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TollFreeNumber"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasPhoneType"/>
+            <NamedIndividual IRI="#TollFreePhone"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkAddress"/>
+        <Class IRI="#Address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkAddress"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasAddressType"/>
+            <NamedIndividual IRI="#Work"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkNumber"/>
+        <Class IRI="#PhoneNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkNumber"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasPhoneType"/>
+            <NamedIndividual IRI="#WorkPhone"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/City"/>
+        <Class IRI="#SchemaOrgThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/Country"/>
+        <Class IRI="#SchemaOrgThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/GeoCoordinates"/>
+        <Class IRI="#SchemaOrgThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/State"/>
+        <Class IRI="#SchemaOrgThing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Address"/>
+        <Class IRI="#AddressType"/>
+        <Class IRI="#DaysOfWeek"/>
+        <Class IRI="#HoursOfOperation"/>
+        <Class IRI="#PhoneNumber"/>
+        <Class IRI="#PhoneType"/>
+        <Class IRI="#StreetDirection"/>
+        <Class IRI="#StreetType"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#DaysOfWeek"/>
+        <NamedIndividual IRI="#Friday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DaysOfWeek"/>
+        <NamedIndividual IRI="#Monday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DaysOfWeek"/>
+        <NamedIndividual IRI="#Saturday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DaysOfWeek"/>
+        <NamedIndividual IRI="#Sunday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DaysOfWeek"/>
+        <NamedIndividual IRI="#Thursday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DaysOfWeek"/>
+        <NamedIndividual IRI="#Tuesday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DaysOfWeek"/>
+        <NamedIndividual IRI="#Wednesday"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#OperatingProperty"/>
+        <ObjectProperty IRI="#contactProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#addressProperty"/>
+        <ObjectProperty IRI="#contactProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#dayofWeek"/>
+        <ObjectProperty IRI="#OperatingProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAddress"/>
+        <ObjectProperty IRI="#contactProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAddressType"/>
+        <ObjectProperty IRI="#addressProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCity"/>
+        <ObjectProperty IRI="#addressProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCountry"/>
+        <ObjectProperty IRI="#addressProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEmail"/>
+        <ObjectProperty IRI="#contactProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGeoCoordinates"/>
+        <ObjectProperty IRI="#addressProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOperatingHours"/>
+        <ObjectProperty IRI="#OperatingProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPhoneType"/>
+        <ObjectProperty IRI="#contactProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasState"/>
+        <ObjectProperty IRI="#addressProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStreetDirection"/>
+        <ObjectProperty IRI="#addressProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStreetType"/>
+        <ObjectProperty IRI="#addressProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTelephone"/>
+        <ObjectProperty IRI="#contactProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#addressProperty"/>
+        <Class IRI="#Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStreetDirection"/>
+        <Class IRI="#Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStreetType"/>
+        <Class IRI="#Address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dayofWeek"/>
+        <Class IRI="#DaysOfWeek"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddress"/>
+        <Class IRI="#Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddressType"/>
+        <Class IRI="#AddressType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOperatingHours"/>
+        <Class IRI="#HoursOfOperation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPhoneType"/>
+        <Class IRI="#PhoneType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStreetDirection"/>
+        <Class IRI="#StreetDirection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStreetType"/>
+        <Class IRI="#StreetType"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#addressDataProperty"/>
+        <DataProperty IRI="#hasContactDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#emailDataProperty"/>
+        <DataProperty IRI="#hasContactDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAreaCode"/>
+        <DataProperty IRI="#telephoneDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBuilding"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCitySection"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasClosingTime"/>
+        <DataProperty IRI="#operatingDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCountryCode"/>
+        <DataProperty IRI="#telephoneDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDate"/>
+        <DataProperty IRI="#operatingDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLocation"/>
+        <DataProperty IRI="#hasContactDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOpeningTime"/>
+        <DataProperty IRI="#operatingDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPersonalEmail"/>
+        <DataProperty IRI="#emailDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPhoneNumber"/>
+        <DataProperty IRI="#telephoneDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPostalCode"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasStreet"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasStreetNumber"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasUnitNumber"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasWebSite"/>
+        <DataProperty IRI="#hasContactDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasWorkEmail"/>
+        <DataProperty IRI="#emailDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#operatingDataProperty"/>
+        <DataProperty IRI="#hasContactDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#telephoneDataProperty"/>
+        <DataProperty IRI="#hasContactDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <DataProperty IRI="#addressDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasClosingTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLocation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOpeningTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWebSite"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Address</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Address is the main concept for a contact.  It has been designed to represent any type of address in the world, including India and the UK.  For example, the property hasBuilding is important in many UK and Indian addresses to further identify the person or business location.
+
+Street information is divided into separate properties to fully indentify direction (hasStreetDirection), Type (hasStreetType), etc.  See the associated list of properties for more.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Address</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#AddressType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Different type for home, office, cottage, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AddressType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Address Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Avenue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Avenue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Boulevard</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boulevard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CellNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mobile Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CellPhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cell Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Circle</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Circle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cottage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cottage Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CottageAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cottage Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Crescent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Crescent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DaysOfWeek</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Days of the Week</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Drive</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#East</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">East</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FaxNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fax Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FaxPhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fax Line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Friday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Friday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Home</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HomeAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HomeNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HomePhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#HoursOfOperation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HoursOfOperation class provides the ability to define when the contact &quot;opens&quot; and &quot;closes&quot;. Used for businesses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Monday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Monday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#North</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">North</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#OperatingProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Properties that define the hours of operation of the contact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#PhoneNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhoneNumber is another core class. It is divided into country code, and phone number.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhoneNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#PhoneType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Types of phoned include home, cell, work, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhoneType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phone Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Road</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Road</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Saturday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Saturday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#South</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">South</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Street</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StreetDirection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Direction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StreetType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sunday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sunday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Thursday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thursday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TollFreeNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toll  Free Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TollFreePhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toll Free Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tuesday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tuesday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wednesday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wednesday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#West</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">West</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Work</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WorkAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorkAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Work Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorkNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Work Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorkPhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Work Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dayofWeek</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies the day of the week, e.g., Monday, that the times apply to.  This is the default for that day and can be overidden by the &quot;hasDate&quot; property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasAddress links any class to the Address class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAddressType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Address Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAreaCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Area Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#hasBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The building where the address is located.  Often used in countries like England, India and Japan.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#hasCity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#hasCitySection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The section of the city where the address is located.  Often used in countries like England, India and Japan.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCitySection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has City Section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasClosingTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Closing Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCountry</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCountryCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Country Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#hasDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies the opening and closing times for a specific date.  For example, used to provide times for a holiday which deviates from the norm.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGeoCoordinates</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Geo Coordinates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#hasLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Closet street intersection for the organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOpeningTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Opening Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOperatingHours</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Operating Hours</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPersonalEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Personal Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPhoneNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Phone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPhoneType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Phone Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPostalCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Postal Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStreet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStreetDirection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street Direction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStreetNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStreetType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTelephone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Telephone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasUnitNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Unit Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWebSite</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Web Site</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWorkEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Work Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#lat</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lattitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#long</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">longitude</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

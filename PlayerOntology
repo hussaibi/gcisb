@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/pep/pep-1.0"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/pep/pep-1.0"
+     versionIRI="https://w3id.org/seas/PlayerOntology-1.1">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/pep/pep-1.0</Import>
+    <Import>https://w3id.org/seas/SystemOntology</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-08-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-08-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Player ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>https://w3id.org/seas/PlayerOntology-1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+        <IRI>http://www.vtt.fi/JarmoKalaoja</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Seas Player Ontology defines business players related to the SEAS domain.
+
+A Player can offer services, and execute these services resulting in payment.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Aggregator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/HomeAndBuildingManagementSystem"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/DataManagementSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BalanceResponsibleParty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricityMarket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ForecastProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricityTrader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Operator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/IntradayElectricityMarket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnergyProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/MarketOperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WholesaleElectricityMarket"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/DistributionSystemOperator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/CurtailmentServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Consumer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ClearingHouse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ElectricityCapacityMarket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnergyProducerOperator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ChargeServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BalanceServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/DataBroker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/DistributedEnergyResourcesInformationProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SmartChargingProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/TransmissionSystemOperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/GenerationEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/DayAheadElectricityMarket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ChargingStationOperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnergyRetailer"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnergyEndCustomer"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Authority"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/LongTermElectricityMarket"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/seas/PlayerOntology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Aggregator"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Authority"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BalanceResponsibleParty"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BalanceServiceProvider"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ChargeServiceProvider"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ChargingStationOperator"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ClearingHouse"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Consumer"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CurtailmentServiceProvider"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/DataBroker"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/DataManagementSystem"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/DayAheadElectricityMarket"/>
+        <Class IRI="https://w3id.org/seas/WholesaleElectricityMarket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/DistributedEnergyResourcesInformationProvider"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/DistributionSystemOperator"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricityCapacityMarket"/>
+        <Class IRI="https://w3id.org/seas/ElectricityMarket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricityMarket"/>
+        <Class IRI="https://w3id.org/seas/Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ElectricityTrader"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnergyEndCustomer"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnergyProducerOperator"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnergyProvider"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnergyRetailer"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ForecastProvider"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/GenerationEquipment"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/HomeAndBuildingManagementSystem"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/IntradayElectricityMarket"/>
+        <Class IRI="https://w3id.org/seas/WholesaleElectricityMarket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LongTermElectricityMarket"/>
+        <Class IRI="https://w3id.org/seas/WholesaleElectricityMarket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/MarketOperator"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Operator"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Player"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/Player"/>
+        <Class IRI="https://w3id.org/seas/System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SmartChargingProvider"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/TransmissionSystemOperator"/>
+        <Class IRI="https://w3id.org/seas/Player"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WholesaleElectricityMarket"/>
+        <Class IRI="https://w3id.org/seas/ElectricityMarket"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI="https://w3id.org/seas/PlayerOntology"/>
+    </ClassAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Aggregator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Aggregator SEAS players. An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator&apos;s portfolio of seller and/or buyers.
+
+     Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Aggregator</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Aggregator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aggregator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Aggregator</IRI>
+        <Literal xml:lang="pt" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Agregador</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Aggregator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Authority</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Authority SEAS players.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Authority</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Authority</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Authority</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Authority</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BalanceResponsibleParty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of BalanceResponsibleParty SEAS players. A party that has a contract proving financial security and identifying balance responsibility with the Imbalance Settlement Responsible of the Market Balance Zone entitling the party to operate in the market. This is the only role allowing a party to nominate energy on a wholesale level.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BalanceResponsibleParty</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BalanceResponsibleParty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Balance Responsible Party</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BalanceResponsibleParty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BalanceServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of BalanceServiceProvider SEAS players. Also called Balance Responsible Parties (BRP). The balance responsible party is the only role allowing a party to buy or sell energy on a wholesale level. The balance responsible party must declare to the TSO the production and consumption plans for the next day on its balance perimeter. It undertakes to pay financial compensation to the TSO for negative imbalances (production-consumption) and is financially compensated for positive imbalances.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BalanceServiceProvider</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BalanceServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Balance Service Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BalanceServiceProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ChargeServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of ChargeServiceProvider SEAS players. The CSP offers e-mobility services to Electric Vehicle users (may include charging, search &amp;amp; find, routing and other services). It operates a contract party for the EV user, taking care of the authentication and billing procedure. It provides an access card available for many EVSE whose CSO have an agreement with the CSP, and may have some roaming agreement with other CSP registered by a clearing house.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ChargeServiceProvider</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ChargeServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Charge Service Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ChargeServiceProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ChargingStationOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of ChargingStationOperator SEAS players. A Charging Station Operator is a party delivering and managing physical equipment to supply the charging procedure of the electrical vehicle (EVSE). The CSO is generally investor, owner and operator of EVSE and the private electricity network to which they are connected : which is defined as the charging station.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ChargingStationOperator</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ChargingStationOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Charging Station Operator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ChargingStationOperator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ClearingHouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of ClearingHouse SEAS players. The clearing house records all the roaming agreements between CSP and CSO (EV service roaming). It facilitates data exchange between roaming partners : authentication, validation of contracts, charge retail records (duration, energy, load...)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ClearingHouse</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ClearingHouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Clearing House</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ClearingHouse</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Consumer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Consumer SEAS players. Person for whom something was ultimately created or intended. NOTE: legal issues in dealing with privacy and market legislation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Consumer</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Consumer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Consumer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Consumer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/CurtailmentServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of CurtailmentServiceProvider SEAS players. A company that serves as an intermediary between utilities and customers, pooling together groups of customers who participate in demand response programs to reduce energy usage during periods of peak demand. Aggregate load profiles of small and medium consumers to have a better support for the participation in DR events.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/CurtailmentServiceProvider</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/CurtailmentServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Curtailment Service Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/CurtailmentServiceProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/DataBroker</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of DataBroker SEAS players. An entity that collects data from a variety of sources, including Internet and online sources as well as databases, print documentation, and surveys to package and sell as a product or service to other entities. It can include personal consumer data or business data to serve information needs of private sector and governmental agencies, and could include information generated by Smart Grid or M2M applications. Also known as an information broker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/DataBroker</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/DataBroker</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data Broker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/DataBroker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/DataManagementSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of DataManagementSystem SEAS players. Retrieves, procedurees and recovers data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/DataManagementSystem</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/DataManagementSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data Management System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/DataManagementSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/DayAheadElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The day-ahead market is an auction where power is traded for delivery during the next day.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/DayAheadElectricityMarket</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/DayAheadElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Day-ahead Electricity Market</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/DayAheadElectricityMarket</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/DistributedEnergyResourcesInformationProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of DistributedEnergyResourcesInformationProvider SEAS players. Provides information of power system variables such as loads and production from renewables, forecasts, information on electric vehicles etc... It can act as a trusted third party responsible for dispatching the consumption between many energy suppliers and sharing a registry for metering data (electric roaming).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/DistributedEnergyResourcesInformationProvider</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/DistributedEnergyResourcesInformationProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Distributed Energy Resources Information Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/DistributedEnergyResourcesInformationProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/DistributionSystemOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of DistributionSystemOperator SEAS players. Has the responsibility of operating the distribution network, ensuring the maintenance and development of the infrastructure and the respect of the quality of supply (reduced disconnection time, voltage within bands, etc...). The DSO is also responsible for the metering.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/DistributionSystemOperator</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/DistributionSystemOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Distributed System Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/DistributionSystemOperator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ElectricityCapacityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electricity Capacity markets provide an additional incentive for developers and owners of generating capacity (i.e. power plants or demand response providers) to make their capacity available to electric markets where price signals alone would not. Capacity providers are paid on a kilowatt per year basis for the capacity that a power plant can generate or, in the case of demand response, the capacity of power that can be reduced.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ElectricityCapacityMarket</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ElectricityCapacityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electricity Capacity Market</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ElectricityCapacityMarket</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Electricity Market SEAS players</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ElectricityMarket</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electricity Market</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ElectricityMarket</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ElectricityTrader</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of players that trade electricity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ElectricityTrader</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ElectricityTrader</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Electricity Trader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ElectricityTrader</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnergyEndCustomer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of EnergyEndCustomer SEAS players. Consumer, prosumer, End-user, Home-User, EV user, Buyer, Seller.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnergyEndCustomer</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnergyEndCustomer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy end-customer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnergyEndCustomer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnergyProducerOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of EnergyProducerOperator SEAS players. Produces energy. Either buys, sells or “lends” energy. Manages the electricity production and sells the electricity to the electricity market. He gives information (forecast (production, weather), real time production, price...).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnergyProducerOperator</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnergyProducerOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy Producer Operator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnergyProducerOperator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnergyProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Energy Provider SEAS players</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnergyProvider</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnergyProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnergyProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnergyRetailer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of EnergyRetailer SEAS players. Sell or Buy Energy to the End-Customer and purchases it on the electricity market. It charges the customer based on the flexibility, duration and power. It communicates to the customer the energy metering values, in accordance with the DSO or TSO metering.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnergyRetailer</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnergyRetailer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy Retailer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnergyRetailer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ForecastProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of ForecastProvider SEAS players. Provides through forecasts the value of power system variables such as loads and production from renewables or performs and updates the forecast values, which are transmitted to the network operator. Kind of value : weather, price, consumption, generation,...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ForecastProvider</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ForecastProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Forecast Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ForecastProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/GenerationEquipment</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of GenerationEquipment SEAS players. A customer of the network injecting electricity. Examples found in the different UCs are PV producer, CHP, and Wind producer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/GenerationEquipment</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/GenerationEquipment</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Generation Equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/GenerationEquipment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/HomeAndBuildingManagementSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of HomeAndBuildingManagementSystem SEAS players. A Home and Building Manager System is a hardware device with communication ability, allowing access to a residential home or building and offering energy related services based on actions/command and data collection/restitution. Connects in-home digital devices, such as PCs, mobile phones, entertainment technology, thermostats, home security systems and smart appliances, into a common network. Extracts useful knowledge about consumption behaviour to be used in management methodologies, balancing demand and supply and possibly considering renewable sources available at buildings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/HomeAndBuildingManagementSystem</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/HomeAndBuildingManagementSystem</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home and Building Management System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/HomeAndBuildingManagementSystem</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/IntradayElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Intraday market offers the opportunity to continuously trade power products in hourly intervals as well as freely definably block orders up to 5 minutes prior to delivery.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/IntradayElectricityMarket</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/IntradayElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Intraday Electricity Market</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/IntradayElectricityMarket</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/LongTermElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Market where electricity is traded long before it is delivered.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/LongTermElectricityMarket</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/LongTermElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Long-term Electricity Market</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/LongTermElectricityMarket</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/MarketOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Market Operator is an actor that regulates operations of electric players on the market.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/MarketOperator</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/MarketOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Market Operator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/MarketOperator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Operator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Operator is an actor that regulates operations of players in the system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Operator</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Operator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Operator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Operator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Player</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">One of the important people, companies etc involved in a particular industry, market, situation etc. (source: the Longman Business Dictionary).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Player</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Player</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Player</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Player</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SmartChargingProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of SmartChargingProvider SEAS players.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SmartChargingProvider</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SmartChargingProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Smart Charging Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https://w3id.org/seas/SmartChargingProvider</IRI>
+        <IRI>http://purl.org/goodrelations/v1#BusinessEntity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SmartChargingProvider</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/TransmissionSystemOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A transmission system operator (TSO) is an entity entrusted with transporting energy in the form of natural gas or electrical power on a national or regional level, using fixed infrastructure. (source: Wikipedia)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/TransmissionSystemOperator</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/TransmissionSystemOperator</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Transmission System Operator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/TransmissionSystemOperator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WholesaleElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wholesaling is the sale of goods or merchandise to retailers; to industrial, commercial, institutional, or other professional business users; or to other wholesalers and related subordinated services. In general, it is the sale of goods to anyone other than a standard consumer. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WholesaleElectricityMarket</IRI>
+        <IRI>https://w3id.org/seas/PlayerOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WholesaleElectricityMarket</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wholesale Electricity Market</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WholesaleElectricityMarket</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

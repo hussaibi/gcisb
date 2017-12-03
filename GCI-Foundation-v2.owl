@@ -1,0 +1,2576 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.w3.org/2006/time</Import>
+    <Import>http://ontology.eil.utoronto.ca/trust.owl</Import>
+    <Import>http://ontology.eil.utoronto.ca/icontact.owl</Import>
+    <Import>http://ontology.eil.utoronto.ca/organization.owl</Import>
+    <Import>http://ontology.eil.utoronto.ca/govstat.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Foundation Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mark S. Fox (msf@eil.utoronto.ca)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Foundation Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Foundation Ontology developed by the Information Engineering Group, Mechanical &amp; Industrial Engineering, University of Toronto. 
+
+Contains the foundation ontologies required to represent ISO 37120 city indicators, including Placenames, Time, Measurement, Provenance, Statistics, Validity and Trust.
+
+See: Fox, M.S., (2013), &quot;A Foundation Ontology for Global City Indicators&quot;, Global City Institute Working Paper, Vol. 1, No.4, pp. 1-45. Global Cities Institute, University of Toronto.
+
+Latest Version: http://eil.utoronto.ca/smartcities/papers/GCI-Foundation-Ontology.pdf
+
+Designed to represent the ISO 37120 Sustainable development of communities — Indicators for city services and quality of life.
+
+Contact: Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://eil.utoronto.ca/smartcities/papers/GCI-Foundation-Ontology.pdf</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1.14 30 September 2017
+- removed provenance and validity links from om:Measure and moved to gci:GCI_quantity
+
+1.13 14 May 2017
+- Added &apos;Resident&apos; to refer to someone who lives in the city
+- Added &apos;City_Population_Size&apos; as a Quantify that refers to the cardinality of the city&apos;s population
+- Added &apos;City_Population&apos; as the Population for the city that is defined by the &apos;Resident&apos;
+- corrected &apos;100K_Population_Size&apos; to specify Resident
+
+1.12 16 April 2017
+- added Quanitity &apos;100K_Population_Size&apos; that represents the  that represents the multiple of 100,000 people in a city
+- added unit of measure individuals: hecto_kilo_pc, pc_per_hecto_kilo_pc, minute_time_per_occurrence, occurrence_per_hecto_kilo_pc
+
+1.11 7 February 2017
+- Modified gs:Population and GCI_Quantity so that they are a ot:DateTimeInterval with a DateTimeDescription and 
+   hasBeginning and hasEnd Instants. This is to make it more compatable with OWL-Time.
+- Removed for_time_interval from GCI_Quantity.
+- Added Difference_Quantity that specifies the quantity of subtracting term_2 from term_1
+
+1.10: 18 January 2017
+- Added kwh_per_pc instance of Unit_Division
+
+1.9: 16 January 2017
+- Added Quantity Sum_Quantity to represent a Quanity that is the sum of the Quantities in the property sum_term
+   The values of sum_term are restricted to having the same unit_of_measure as the Sum_Quantity
+- Added unit_of_measure_of to represent inverse of unit_of_measure so that the Sum_Quanitity restriction can be specified
+- Added Quantity Product_Quantity to represent a Quanity that is the product of the Quantity values of term_1 and term_2.
+   The value of term_1 is restricted to having the same unit_of_measure as the Product_Quantity
+
+1.8: 4 January 2017
+- Corrected Population_cardinality_unit, kilopc, megapc and gigapc by converting them into individuals
+- Corrected Population_ratio_unit by converting into an individual (population_ratio_unit)
+   NOTE: this has an impact on all indicator definitions based on this on ontology
+
+1.7: 27 December 2016
+- added individuals: hour_per_interruption, interruption_per_year, kwh_per_year
+- copied from OM: kilowatt_hour, hour, square_metre
+
+1.6: 26 July 2016
+- changed Decibel to decibel as an instance of singular unit
+
+1.4: 3 February 2016
+- Added microgram per cubic metre as a Unit_of_measure
+- Added Decibel as a subclass of om:Sound_power_level
+- Added Sum which is a subclassof Quantity
+
+1.3: 1 June 2015
+- Added Monetary_unit and Monetary_ratio_unit for financial indicators.
+
+1.2: 16 May 2015
+- Fixed missing PROV-O and OM properties due to their removal as an imported ontology
+
+1.1: 28 April 2015
+- Added Population multiplier unit of measure</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="#denominator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pc_per_hecto_kilo_pc"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#month"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="geo:6252001"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/exponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCI_measurement_scale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hour_per_interruption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#for_city_service"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/area-dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monetary_unit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/volume-dimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerical_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/timezone#TimeZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Population_size"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/_1.0e-3_kilogram"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/micro"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#numerator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#minute_time_per_occurrence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCI_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasBeginning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/gram"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/singular_unit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/_3.1536e7_second-time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProvThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/mass-dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monetary_scale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kwh_per_pc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fixed_zero_cardinality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/prefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Fixed_zero_point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OMThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#occurrence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/microgram"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#dayOfWeek"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#megapc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/energy_or_torque_or_moment_of_force-dimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Product_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OTThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/minute_time"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasEnd"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Difference_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#student_def"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Population"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dollar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/kp.owl#KP_prop"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#for_city"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasDateTimeDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#teacher_def"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#Year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cardinality_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City_Population_Size"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kilopc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/State"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#week"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Population_Product_Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#testDataProp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/_3.6e3_second-time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.w3.org/2006/time#unitYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#100K_Population_Size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_exponentiation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#gciDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CityService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#day"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/definition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unit_summation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#occurrence_per_hecto_kilo_pc"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/longcomment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City_Population"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/alternative_symbol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/joule_per_second-time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/time-dimension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#population_ratio_unit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interruption_per_year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time_unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/factor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCI_statistics"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gci_population_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resident"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defined_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Euro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#square_metre_per_pc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monetary_ratio_unit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kwh_per_metre_squared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#microgram_per_cubic_metre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#generatedAtTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#US_dollar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Population_measure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/power-dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#unit_of_measure_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#for_data_prop"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#second"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#unitType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#minute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interruption"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gigapc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_Primary_Residence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sum_term"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/zero_element"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#for_object_prop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kwh_per_year"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="gn:6251999"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/year"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/alternative_label"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hecto_kilo_pc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#ISO37120_Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CDN_dollar"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/time#dayOfYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Ratio_scale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/mega"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#TemporalUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#DayOfWeek"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeDescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/giga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cardinality_scale"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#located_in"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sum_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#term"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#for_Year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCI_measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/SI_prefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCIThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#for_time_interval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCI_quantity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#decibel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hecto_kilo"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Year"/>
+        <ObjectExactCardinality cardinality="0">
+            <ObjectProperty IRI="http://www.w3.org/2006/time#dayOfWeek"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Activity"/>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_exponentiation"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/base"/>
+            </ObjectExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/exponent"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#CDN_dollar"/>
+        <Class IRI="#Dollar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CDN_dollar"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/icontact.owl#hasCountry"/>
+            <Class IRI="http://schema.org/Country"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CDN_dollar"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">$</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardinality_scale"/>
+        <Class IRI="#GCI_measurement_scale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardinality_scale"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Ratio_scale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardinality_scale"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="#Cardinality_unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardinality_scale"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/zero_element"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Fixed_zero_point"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardinality_unit"/>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardinality_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="#GCIThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="http://schema.org/City"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CityService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CityService"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#for_city"/>
+            <Class IRI="#City"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_Population"/>
+        <Class IRI="#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#located_in"/>
+            <Class IRI="#City"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_Population"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#defined_by"/>
+            <Class IRI="#Resident"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_Population_Size"/>
+        <Class IRI="#Population_size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_Population_Size"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="#population_cardinality_unit"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_Population_Size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#cardinality_of"/>
+            <Class IRI="#City_Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_Population_Size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="#Population_measure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Difference_Quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Difference_Quantity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+                <ObjectHasSelf>
+                    <ObjectProperty IRI="#unit_of_measure_of"/>
+                </ObjectHasSelf>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Difference_Quantity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+                <ObjectHasSelf>
+                    <ObjectProperty IRI="#unit_of_measure_of"/>
+                </ObjectHasSelf>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dollar"/>
+        <Class IRI="#Monetary_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Euro"/>
+        <Class IRI="#Monetary_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Euro"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">€</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fixed_zero_cardinality"/>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_measure"/>
+        <Class IRI="#GCI_measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/kp.owl#KP_prop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_measure"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_measurement"/>
+        <Class IRI="#GCIThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_measurement_scale"/>
+        <Class IRI="#GCI_measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_quantity"/>
+        <Class IRI="#GCI_measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#for_city"/>
+            <Class IRI="#City"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#for_city_service"/>
+            <Class IRI="#CityService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#for_time_interval"/>
+            <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_statistics"/>
+        <Class IRI="#GCIThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_unit_of_measure"/>
+        <Class IRI="#GCI_measurement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GCI_unit_of_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_ratio_unit"/>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_ratio_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_ratio_unit"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+            <Class IRI="#Monetary_unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_ratio_unit"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+            <Class IRI="#Monetary_unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_scale"/>
+        <Class IRI="#GCI_measurement_scale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_scale"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Ratio_scale"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_scale"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="#Monetary_unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_unit"/>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monetary_unit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/icontact.owl#hasCountry"/>
+            <Class IRI="http://schema.org/Country"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <Class IRI="#GCIThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#located_in"/>
+            <Class IRI="#City"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#defined_by"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#for_time_interval"/>
+            <Class IRI="http://www.w3.org/2006/time#DateTimeDescription"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population_Product_Unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population_Product_Unit"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+            <Class IRI="#Population_size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population_measure"/>
+        <Class IRI="#GCI_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population_measure"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="#population_cardinality_unit"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population_size"/>
+        <Class IRI="#GCI_quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Cardinality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product_Quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product_Quantity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+                <ObjectHasSelf>
+                    <ObjectProperty IRI="#unit_of_measure_of"/>
+                </ObjectHasSelf>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product_Quantity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resident"/>
+        <Class IRI="#GCIThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resident"/>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class IRI="#GCIThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sum_Quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sum_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#sum_term"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+                    <ObjectHasSelf>
+                        <ObjectProperty IRI="#unit_of_measure_of"/>
+                    </ObjectHasSelf>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#US_dollar"/>
+        <Class IRI="#Dollar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#US_dollar"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">$</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unit_summation"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unit_summation"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#term"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.w3.org/2006/time#unitType"/>
+            <NamedIndividual IRI="http://www.w3.org/2006/time#unitYear"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="0">
+            <DataProperty IRI="http://www.w3.org/2006/time#day"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="0">
+            <DataProperty IRI="http://www.w3.org/2006/time#dayOfYear"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="0">
+            <DataProperty IRI="http://www.w3.org/2006/time#hour"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="0">
+            <DataProperty IRI="http://www.w3.org/2006/time#minute"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="0">
+            <DataProperty IRI="http://www.w3.org/2006/time#month"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="0">
+            <DataProperty IRI="http://www.w3.org/2006/time#second"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="0">
+            <DataProperty IRI="http://www.w3.org/2006/time#week"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/2006/time#year"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#100K_Population_Size"/>
+        <Class IRI="#Population_size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#100K_Population_Size"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="#hecto_kilo_pc"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#100K_Population_Size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#cardinality_of"/>
+            <Class IRI="#City_Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#ISO37120_Indicator"/>
+        <Class IRI="#GCI_quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#ISO37120_Indicator"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2006/time#hasDateTimeDescription"/>
+            <Class IRI="http://www.w3.org/2006/time#Year"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Parameter"/>
+        <Class IRI="#GCI_quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#defined_by"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#located_in"/>
+            <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/City"/>
+        <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/Country"/>
+        <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/State"/>
+        <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <Class IRI="#OTThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2006/time#hasBeginning"/>
+            <Class IRI="http://www.w3.org/2006/time#DateTimeDescription"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2006/time#hasEnd"/>
+            <Class IRI="http://www.w3.org/2006/time#DateTimeDescription"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#DayOfWeek"/>
+        <Class IRI="#OTThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+        <Class IRI="#OTThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+        <Class IRI="#OTThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#TemporalUnit"/>
+        <Class IRI="#OTThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/timezone#TimeZone"/>
+        <Class IRI="#OTThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+        <Class IRI="#ProvThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        <Class IRI="#ProvThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+        <Class IRI="#ProvThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAttributedTo"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#generatedAtTime"/>
+            <Class IRI="http://www.w3.org/2006/time#DateTimeDescription"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+            <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+        <Class IRI="#ProvThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_Primary_Residence"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Fixed_zero_point"/>
+        <Class IRI="#OMThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+        <Class IRI="#OMThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerical_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        <Class IRI="#OMThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Ratio_scale"/>
+        <Class IRI="#OMThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/SI_prefix"/>
+        <Class IRI="#OMThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_exponentiation"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/definition"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+                <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+                <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        <Class IRI="#OMThing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#GCI_measure"/>
+        <Class IRI="#GCI_measurement_scale"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_measure"/>
+        <Class IRI="#GCI_quantity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_measure"/>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_measurement"/>
+        <Class IRI="#GCI_statistics"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_measurement"/>
+        <Class IRI="#Service"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_measurement_scale"/>
+        <Class IRI="#GCI_quantity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_measurement_scale"/>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_quantity"/>
+        <Class IRI="#GCI_unit_of_measure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GCI_statistics"/>
+        <Class IRI="#Service"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://schema.org/Country"/>
+        <NamedIndividual IRI="geo:6252001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://schema.org/Country"/>
+        <NamedIndividual IRI="gn:6251999"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="#decibel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <NamedIndividual IRI="#gigapc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/SI_prefix"/>
+        <NamedIndividual IRI="#hecto_kilo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <NamedIndividual IRI="#hecto_kilo_pc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#hour_per_interruption"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="#interruption"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#interruption_per_year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <NamedIndividual IRI="#kilopc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#kwh_per_metre_squared"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#kwh_per_pc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#kwh_per_year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <NamedIndividual IRI="#megapc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#microgram_per_cubic_metre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#minute_time_per_occurrence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="#occurrence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#occurrence_per_hecto_kilo_pc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#pc_per_hecto_kilo_pc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cardinality_unit"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#population_ratio_unit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#square_metre_per_pc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_exponentiation"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/SI_prefix"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/giga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/gram"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/SI_prefix"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/SI_prefix"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/mega"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/SI_prefix"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/micro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/microgram"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/minute_time"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_exponentiation"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/year"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/prefix"/>
+        <NamedIndividual IRI="#gigapc"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/giga"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/singular_unit"/>
+        <NamedIndividual IRI="#gigapc"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/prefix"/>
+        <NamedIndividual IRI="#hecto_kilo_pc"/>
+        <NamedIndividual IRI="#hecto_kilo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/singular_unit"/>
+        <NamedIndividual IRI="#hecto_kilo_pc"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#hour_per_interruption"/>
+        <NamedIndividual IRI="#interruption"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#hour_per_interruption"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#interruption_per_year"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/year"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#interruption_per_year"/>
+        <NamedIndividual IRI="#interruption"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/prefix"/>
+        <NamedIndividual IRI="#kilopc"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/singular_unit"/>
+        <NamedIndividual IRI="#kilopc"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#denominator"/>
+        <NamedIndividual IRI="#kwh_per_metre_squared"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#numerator"/>
+        <NamedIndividual IRI="#kwh_per_metre_squared"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#denominator"/>
+        <NamedIndividual IRI="#kwh_per_pc"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#numerator"/>
+        <NamedIndividual IRI="#kwh_per_pc"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#kwh_per_year"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/year"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#kwh_per_year"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/prefix"/>
+        <NamedIndividual IRI="#megapc"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/mega"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/singular_unit"/>
+        <NamedIndividual IRI="#megapc"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#microgram_per_cubic_metre"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#microgram_per_cubic_metre"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/microgram"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#minute_time_per_occurrence"/>
+        <NamedIndividual IRI="#occurrence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#minute_time_per_occurrence"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/minute_time"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#occurrence_per_hecto_kilo_pc"/>
+        <NamedIndividual IRI="#hecto_kilo_pc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#occurrence_per_hecto_kilo_pc"/>
+        <NamedIndividual IRI="#occurrence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#pc_per_hecto_kilo_pc"/>
+        <NamedIndividual IRI="#hecto_kilo_pc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#pc_per_hecto_kilo_pc"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#denominator"/>
+        <NamedIndividual IRI="#population_ratio_unit"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#numerator"/>
+        <NamedIndividual IRI="#population_ratio_unit"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+        <NamedIndividual IRI="#square_metre_per_pc"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+        <NamedIndividual IRI="#square_metre_per_pc"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/base"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/volume-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/definition"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/gram"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/_1.0e-3_kilogram"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/gram"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/mass-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/definition"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/_3.6e3_second-time"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/time-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/power-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/prefix"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/singular_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/energy_or_torque_or_moment_of_force-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/microgram"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/mass-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/prefix"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/microgram"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/micro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/singular_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/microgram"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/gram"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/base"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/area-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/definition"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/joule_per_second-time"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/power-dimension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/definition"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/year"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/_3.1536e7_second-time"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/dimension"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/year"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/time-dimension"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="#gigapc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gigapc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="#kilopc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kilopc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="#megapc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">megapc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="#population_cardinality_unit"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">L_W</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/exponent"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">m3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/factor"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/giga"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0E9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/gram"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">g</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">h</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/factor"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/kilowatt"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kW</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/factor"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/mega"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1000000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/factor"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/micro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0E-6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/micro"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">μ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/microgram"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">μg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/minute_time"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">min</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/exponent"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/longcomment"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Square metre is a unit of area defined as the area of a square whose sides measure exactly one metre. Square metre is a derived unit in the International System of Units.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/square_metre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/symbol"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/watt"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">W</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defined_by"/>
+        <ObjectProperty IRI="#gci_population_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#denominator"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#for_city"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#for_city"/>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#for_city_service"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#for_time_interval"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#gci_population_property"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_Primary_Residence"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#located_in"/>
+        <ObjectProperty IRI="#gci_population_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#numerator"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#student_def"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sum_term"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#teacher_def"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#term"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#unit_of_measure_of"/>
+        <ObjectProperty IRI="#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#unit_of_measure_of"/>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defined_by"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#for_city"/>
+        <Class IRI="#GCI_quantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#located_in"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#for_city"/>
+        <Class IRI="http://schema.org/City"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#located_in"/>
+        <Class IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#for_Year"/>
+        <DataProperty IRI="#gciDataProperty"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>geo:6252001</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">United States</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>gn:6251999</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Canada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CDN_dollar</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Canadian Dollar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Cardinality_scale</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The gci:Cardinality_unit is a ratio scale: gci:Cardinality_scale, which is a subclass of om:Ratio_scale and is has a zero element (namely zero).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cardinality_scale</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cardinality Scale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cardinality_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Just as the meter is the unit of measure for length, a gci:Cardinality_unit is the unit of measure for the size of a set. The gci:Cardinality_unit is a ratio scale: gci:Cardinality_scale, which is a subclass of om:Ratio_scale and is has a zero element (namely zero).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cardinality_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cardinality Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CityService</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">City Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#City_Population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">City_Population is a generic Population used throughout the indicators.  It is defined by a Resident.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Difference_Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Difference_Quantity defines a Quantity that subtracts term_2 from term_1.  Both these terms are restricted to being Quantities, and unit_of_measure of the value of term_1 must be equal to the unit_of_measure of this Product_Quantity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Fixed_zero_cardinality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Zero point for the cardinality scale.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fixed_zero_cardinality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fixed Zero Cardinality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#GCIThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Acts as class that groups all Global City Indicator Classes. Makes it easier to peruse in Protege.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GCI_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The GCI_measure is a subclass of om:Measure and links the measure to its meta-data, including provenance, validity and trust.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GCI_quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">All ISO37120 Indicators are a subclass of the GCI_Quantity.  They then inherit all of the properties including placenames, populations, provenance, trust, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GCI_quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GCI Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Monetary_ratio_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The ratio of two Monetary Units, e.g., debt to revenue ratio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Monetary_ratio_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Monetary Ratio Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Monetary_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Represents any time of monetary unit, such as dollars, euros, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Monetary_unit</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Monetary Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The govstat Population is specialized for indicator use to include what defines a member of the population, the location of the population, and the time the population was measured.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Population_Product_Unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It is the product of some number (term_1) and a population count (term_2).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Population_Product_Unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population Product Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Population_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci:Cardinality_unit is the unit of measure for the size of a set. The gci:Cardinality_unit is a ratio scale: gci:Cardinality_scale, which is a subclass of om:Ratio_scale and is has a zero element (namely zero).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Population_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Population_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci:Population_size is a subclass of om:Quantity.  Its om:unit_of_measure is the gci:population_cardinality_unit. It is also a subclass of gs:Cardinality which provides the cardinality_of property that links to a gs:Population.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Population_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Product_Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Product_Quantity defines a Quantity that is the product of term_1 and term_2.  Both these terms are restricted to being Quantities, and unit_of_measure of the value of term_1 must be equal to the unit_of_measure of this Product_Quantity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Resident</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Resident is a prov:Person that resides in the city for which the indicator is begin measured. The city of the primary residence is constrained to be the city of the indicator, which cannot be specified in OWL.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sum_Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies a quantity that is the sum of the quantities specified by the sum_term property.  Note that the unit_of_measure for the Sum_Quantity and the unit of measure for the quantities specified by the sum_term have the be the same.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#US_dollar</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">United States Dollar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Unit_summation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Denotes the summation of two or more quantities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Unit_summation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#for_Year</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The year for which the indicator applies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#for_Year</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#for_city</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The city for which the indicator has been defined. The indicator is a om:Quantity that points to a om:Phenomenon using the om:phenomenon object property.  Therefore for_City is a subclass of om:phenomenon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#for_city</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for city</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#for_city_service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The city service that this indicator applies to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#for_city_service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for city service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#interruption</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cessation of something, usually a service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#occurrence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Occurence of an Event or Activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#population_cardinality_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci:Population_cardinality_unit which is the unit of measure for the cardinality of set defined by a Population (defined in the next section), and associate the symbol “pc” with it.  For example, 1100pc represents a population cardinality (or size) of 1100. We can take full advantage of prefix notations available in OM to scale the numbers by defining units of measures: gci:kilopc, gci:megapc and gci:gigapc which are multiples of gci:Population_cardinality_unit. 1.1 kilopc represents 1100 pc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#population_ratio_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ratio of two populations.  Core to city indicators.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#term</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">term</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#100K_Population_Size</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quanity that specifies the size of population as a unit of measure of 100,000 (hecto_kilo).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/govstat.owl#Population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gs:Population must identify the area in which the population resides, i.e., the city, and  what characterizes a member of the population, namely the characteristics of a Student or Teacher. For example, the characteristics of a Teacher could be:
+•	Fulltime, defined as teaching 30 or more hours per week, and
+•	Teaches at the primary or secondary level, where primary spans grades 1 thru 8 and secondary spans 9 thru 12.
+
+As depicted in Figure 11, we have extended the GovStat ontology as follows:
+•	Added a property to gs:Population, gs:located_in, that identifies the area that the Population is drawn from.
+•	Added a property to gs:Population, gs:defined_by, that identifies the class that all members of the Population are subsumed by.
+
+A Population is also a ot:DateTimeInterval. An interval of time is defined for when the Population is defined. The interval has a beginning and end Instant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://schema.org/City</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From schema.org - general City concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/City</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://schema.org/Country</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From schema.org - general concept of Country.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/Country</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://schema.org/State</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From schema.org - general concept of State.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/State</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From Geonames ontology.  Covers all types of geonames.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.w3.org/ns/prov#Entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Entity as defined in the PROV provenance ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#Entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OM compound unit that is used to represent divisions, ratios, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Compound Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Compound_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">compound unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">om:Measure is the superclass of all values pointed to by the property om: value.  Its individuals hold the actual indicator values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From the OM ontology.  Defines quantities such as Length, and in GCI all indicators are a subclass of Quantity and inherit its property of om:value and om:unit_of_measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Ratio_scale</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From OM ontology.  Ratio scale (versus ordinal, nominal).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Ratio_scale</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ratio Scale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Sound_power_level</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sound power level</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_exponentiation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unit exponentiation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From the OM ontology. Denotes multiples of a unit, such as kilo or giga X.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit Multiple or Submultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unit multiple or submultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the units that the instance of Measure uses, e.g., meters or pc (population count)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit of Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cubic metre is a unit of volume defined as the volume of a cube whose sides measure exactly one metre.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cubic metre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre</IRI>
+        <Literal xml:lang="nl" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kubieke meter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre</IRI>
+        <Literal xml:lang="zh" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">立方米</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/gram</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The gram is a unit of mass defined as 1.0e-3 kilogram.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/gram</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gram</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/gram</IRI>
+        <Literal xml:lang="nl" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gram</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/gram</IRI>
+        <Literal xml:lang="zh" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">克</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/hour</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The hour is a unit of time defined as 3600 second.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/hour</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/kilowatt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kilowatt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/kilowatt</IRI>
+        <Literal xml:lang="nl" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kilowatt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kilowatt hour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/micro</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">micro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/micro</IRI>
+        <Literal xml:lang="nl" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">micro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/micro</IRI>
+        <Literal xml:lang="zh" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">微</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/microgram</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The microgram is a unit of mass defined as 1.0e-6 gram.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/microgram</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">microgram</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/microgram</IRI>
+        <Literal xml:lang="nl" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">microgram</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/microgram</IRI>
+        <Literal xml:lang="zh" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">微克</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/numerical_value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From OM ontology, the numerical value of a Measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/numerical_value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">numerical value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/square_metre</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Square metre is a unit of area defined as the area of a square whose sides measure exactly one metre.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/square_metre</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">square metre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OM object property that links a Quantity to a Measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/watt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The watt is a unit of power defined as joule divided by second = newton times metre divided by second = volt times ampere = kilogram times square metre divided by second to the power 3.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/watt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">watt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/watt</IRI>
+        <Literal xml:lang="nl" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">watt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/year</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The year is a unit of time defined as 3.1536e7 second.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/year</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">year</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

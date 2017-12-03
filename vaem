@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.linkedmodel.org/1.2/schema/vaem"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.linkedmodel.org/1.2/schema/vaem"
+     versionIRI="http://www.linkedmodel.org/1.2/schema/vaem">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#name"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">VAEM</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vocabulary for Attaching Essential Metadata</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/author"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ralph Hodgson</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$Id: SCHEMA_vaem-v1.2.ttl 6563 2013-08-28 11:43:24Z RalphHodgson $</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vocabulary for Attaching Essential Metadata</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Irene Polikoff</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Metadata</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasCatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#numericUnion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#LicenseModel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#comment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#revision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#withAttributionTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isRefinedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#reifiableBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#owningParty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#owner"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/author"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#dateUnion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#releaseDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#url"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasGraphRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#Attribution"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#todo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasLicenseType"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Resource"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#ownedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#AnnotationsGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#VAEM-CatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#TopQuadrantAttribution"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Ontology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#BridgeGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#CC-SHAREALIKE_3PT0-US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#BridgeGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#AnnotationsGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
+            <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#Attribution"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#Attribution"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#LicenseModel"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#LicenseModel"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#url"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#dateUnion"/>
+        <Class abbreviatedIRI="rdfs:Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#numericUnion"/>
+        <Class abbreviatedIRI="rdfs:Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasGraphRole"/>
+            <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasLicenseType"/>
+            <Class IRI="http://www.linkedmodel.org/schema/vaem#LicenseModel"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+            <Class abbreviatedIRI="rdfs:Resource"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#withAttributionTo"/>
+            <Class IRI="http://www.linkedmodel.org/schema/vaem#Attribution"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasCatalogEntry"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasLicenseType"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#owner"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#owningParty"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#name"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Ontology"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#revision"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#LicenseModel"/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#CC-SHAREALIKE_3PT0-US"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#Attribution"/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#TopQuadrantAttribution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#VAEM-CatalogEntry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#AnnotationsGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#BridgeGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.linkedmodel.org/schema/vaem#GraphRole"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasCatalogEntry"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#VAEM-CatalogEntry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasGraphRole"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#TopQuadrantAttribution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#VAEM-CatalogEntry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#withAttributionTo"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#TopQuadrantAttribution"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/voag#TopQuadrantAttribution"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">LinkedModel Ontologies and Vocabularies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to TopQuadrant, Inc.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.linkedmodel.org/schema/vaem#dateUnion">2011-04-20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">VAEM stands for &quot;Vocabulary for Attaching Essential Metadata&quot;. The purpose of VAEM is to provide, by import, a foundation for commonly needed resources when building an ontology. An effort has been made to restrict these resources to a minimal level.   What VAEM regards as &apos;essential metadata&apos; is data about dates and times, confidentiality, and other characterisitic qualifiers of the ontology, but also references to where a ontology is documented and where to find ontology Governance, Attribution and Provenance. VAEM also defines classes for representing enumerations and enumerated values.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.linkedmodel.org/schema/vaem#dateUnion">2013-08-28</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.linkedmodel.org/1.2/schema/vaem#</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">vaem</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#revision"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A graph that specifies a transformation of a graph into another graph or graphs. Invariably this is a SPINMap graph using SPARQL Rules (SPIN) to express the transforms.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An RDF/OWL Graph that is a controlled set of instances.</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#owner"/>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#ownedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#owningParty"/>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#ownedBy"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <Class abbreviatedIRI="rdfs:Resource"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#releaseDate"/>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#date"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#date"/>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#dateUnion"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#dateUnion"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#dateUnion"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#owner"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#releaseDate"/>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#dateUnion"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#revision"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#url"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/elements/1.1/author</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/elements/1.1/contributor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">contributor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/elements/1.1/description</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/elements/1.1/subject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/elements/1.1/title</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://voag.linkedmodel.org/voag#CC-SHAREALIKE_3PT0-US</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution-Share Alike 3.0 United States License</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://voag.linkedmodel.org/voag#TopQuadrantAttribution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TopQuadrant attribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://voag.linkedmodel.org/voag#VAEM-CatalogEntry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">VAEM catalog entry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#AnnotationsGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Annotations Graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#Attribution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A mininal treatment of attribution. This serves as a placeholder class for voag:Attribution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#Attribution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Attribution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#BridgeGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bridge graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#CatalogEntry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">VAEM Governed Object class is a placeholder for concepts that are fully defined by the voag:GovernedObject concept hierarchy for building a catalog of ontologies and graphs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#CatalogEntry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Governed object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#CollectionGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Collection graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#CurationGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A curation graph is one whose purpose is to hold metadata that is needed to describe, govern and provision another graph. A curation graph will likely use VOAG and VAEM for this purpose. The property &apos;vaem:curationGraph&apos; is used to link to the graph (or graphs) being curated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#CurationGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Curation graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#DataGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Data graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#FunctionsGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Functions graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#GraphRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GraphRole is used to characterize how a graph of resources participates in an ontology set.  For example, a graph can be a schema, vocabulary, dataset, script, or ruleset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#GraphRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Graph role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#LicenseModel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The VAEM Licence Model class is a placeholder for concepts that are fully defined by VOAG.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#LicenseModel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">License model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#MappingGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mapping graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#ProxyGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Proxy graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#RulesGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rules Graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#SchemaGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Schema graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#ScriptGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Script graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#ViewGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">View graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#VocabularyGraph</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vocabulary graph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#comment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An annotation property that can be freely used on any kind of resource. The range of the property is &apos;xsd:string&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#comment</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#date</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:date&apos; is intended for general use as the name implies.  The range of the property is set as &apos;vaem:dateUnion&apos; so as to allow a value to have a number of forms from a  year only to a full timestamp. The property is also the parent of all dates so that queries can be made for any date on an ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#date</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#dateCreated</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:dateCreated&apos; is intended for general use as the name implies.  The range of the property is set as &apos;vaem:dateUnion&apos; so as to allow a value to have a number of forms from a  year only to a full timestamp.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#dateCreated</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">date created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#dateUnion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A datatype that is the union of date xsd data types. &apos;dateUnion&apos; is equivalent to the xsd specification that uses an xsd:union of memberTypes=&apos;xsd:date xsd:dateTime xsd:float xsd:gYear&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#dateUnion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">date union</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#description</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:description&apos; is intended for general use as the name implies.  Unlike &apos;rdfs:comment&apos;,  &apos;vaem:description&apos; is an &apos;owl:DatatypeProperty&apos;. As such it can play a stronger role in the model, for example, as a predicate in an axiom.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#description</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#hasCatalogEntry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has catalog entry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#hasGraphRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;lms:hasGraphRole&apos; is used to characterize how a resource participates in an ontology set.  The property is used to specify the role that a graph plays, for example, an ontology graph can be a schema, vocabulary, dataset, script, or ruleset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#hasGraphRole</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has graph role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#hasLicenseType</IRI>
+        <Literal xml:lang="en-us" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has license type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#isRefinedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A refinement of the subject resource. Modelled after rdfs:isDefinedBy for the purpose of referring to layered graphs that further define a subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#isRefinedBy</IRI>
+        <IRI>http://www.linkedmodel.org/schema/vaem</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#isRefinedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">isRefinedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#lastUpdated</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:lastUpdated&apos; is intended for general use as the name implies.  The range of the property is set as &apos;vaem:dateUnion&apos; so as to allow a value to have a number of forms from a  year only to a full timestamp.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#lastUpdated</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">last updated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#name</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:name&apos; is intended for general use. In many cases &apos;rdfs:label&apos; could be used give names to resources. In the case where compliance with a specific naming rule is needed,  &apos;vaem:name&apos; allows  a resource to carry a name that is used in more specific contexts. Making &apos;vaem:name&apos; a sub-property of &apos;rdfs:label&apos; allows &apos;vaem:name&apos; to serve in the same way as an &apos;rdfs:label&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#name</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#namespace</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:namespace&apos; provides a means to specify the onotlogy URI with which a graph is primarily associated. The intent is to allow multiple graphs to define statements for resources in the same Ontology namespace. For example, a foundation level graph with the base URI of &apos;http://www.somesite.com/1.0/schema/OurOntology&apos;  may define general  concepts for &apos;OurOntology&apos;. Another graph with the base URI &apos;http://www.somesite.com/1.0/schema/level2/OurOntology&apos;  may add more specific details to the same &apos;OurOntology&apos;. Each of these two graphs would carry the same value for &apos;vaem:namespace&apos;, that is, &apos;http://www.somesite.com/schema/OurOntology&apos;.    In other words, an ontology URI is the URI associated with the resources of a controlled namespace. On the other hand the graph URIs (the base URIs) identify the graphs that hold resources that make up an ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#namespace</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">namespace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#namespacePrefix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:namespacePrefix&apos; specifes a short handle or label for the URI of an Ontology.  Multiple graphs can define statements for resources in the same Ontololgy namespace. For example, a foundation level graph with the base URI of &apos;http://www.somesite.com/1.0/schema/OurOntology&apos;  may define general  concepts for &apos;OurOntology&apos;. Another graph with the base URI &apos;http://www.somesite.com/1.0/schema/level2/OurOntology&apos;  may add more specific details to the same &apos;OurOntology&apos;. Each of these two graphs would carry the same value for &apos;vaem:namespacePrefix&apos;, for this example, perhaps, &apos;ourOntology&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#namespacePrefix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">namespace prefix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#numericUnion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A datatype that is the union of numeric xsd data types. &apos;numericUnion&apos; is equivalent to the xsd specification that uses an xsd:union of memberTypes=&apos;xsd:decimal xsd:double xsd:float xsd:integer&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#numericUnion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">numeric union</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#ownedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:ownedBy&apos; is a general property that in some cases could have scalar values or may refer to some concept of &apos;Party&apos;.  For this reason, the  type of this property is set as &apos;rdf:Property&apos; and the property is rangeless. There are two sub-properties of &apos;vaem:ownedBy&apos;, namely &apos;vaem:owner&apos; for string values and &apos;vaem:owningParty&apos; for referencing a &apos;party&apos;.  Ownership applies to thos ontologies that are proprietary. Other governance and provenance specifications are held in the VOAG ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#ownedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">owned by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#owner</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#owningParty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:owningParty&apos; is used to refer to some concept of &apos;Party&apos; and is a sub-property of &apos;vaem:ownedBy&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#owningParty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">owning party</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#reifiableBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">To express how statements in a model can be reifiable, this property is used to explicitly associate a property with a user-defined sub-class of &apos;rdf:Statement&apos;. A recommended way of using this is to declare the properties that share the same reification constructs as sub-properties of a parent property that carries the &apos;vaem:reifiableBy&apos; property. The parent property should be of type &apos;rdf:Property&apos; so that it can have both datatype and object properties as sub-properties. By this means use and transformations of a model can be understood through a fully specified metamodel. &apos;vaem:reifiableBy&apos; is rangeless in order to comply with OWL DL semantics. Its range would have been rdfs:Class in order to refer to &apos;rdf:Statement&apos; sub-classes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#reifiableBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">reifiable by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#releaseDate</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:releaseDate&apos; is intended for general use as the name implies.  The range of the property is set as &apos;vaem:dateUnion&apos; so as to allow a value to have a number of forms from a  year only to a full timestamp.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#releaseDate</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">release date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#revision</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:revision&apos; is a property intended for general use as the name implies. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#revision</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">revision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#title</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#todo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">As it name implies, a way to attach an annotation about a &apos;todo&apos; task</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#todo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">todo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#url</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;vaem:url&apos; is intended for general use as the name implies.  The range of the property is set as an XSD URI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#url</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#usesNonImportedResource</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A property that is used to express dependencies on resources from graphs that are not imported.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#usesNonImportedResource</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">uses non-imported resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#withAttributionTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">with attribution to</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isRefinedBy"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#name"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </SubAnnotationPropertyOf>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/author"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#comment"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isRefinedBy"/>
+        <AbbreviatedIRI>rdfs:Resource</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#todo"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#isRefinedBy"/>
+        <AbbreviatedIRI>rdfs:Resource</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+    <DatatypeDefinition>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#dateUnion"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:date"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+            <Datatype abbreviatedIRI="xsd:gYear"/>
+        </DataUnionOf>
+    </DatatypeDefinition>
+    <DatatypeDefinition>
+        <Datatype IRI="http://www.linkedmodel.org/schema/vaem#numericUnion"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataUnionOf>
+    </DatatypeDefinition>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

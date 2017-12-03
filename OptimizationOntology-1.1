@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/OptimizationOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/OptimizationOntology"
+     versionIRI="https://w3id.org/seas/OptimizationOntology-1.1">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/pep/</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-08-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS OptimizationProcedure ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-08-29</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>-1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS OptimizationProcedure ontology extends the [Procedure Execution ontology (PEP)](https://w3id.org/pep/) and defines:
+
+- `seas:OptimizationExecutor` that implement `seas:OptimizationProcedure` procedures and do `seas:OptimizationExecution`s
+
+Sub types of `seas:OptimizationExecutor`, `seas:OptimizationProcedure`, and `seas:OptimizationExecution`, may constrain the type of the value of the property. For instance ontology `seas:BooleanOntology` may define `seas:BooleanOptimizationExecutor`,  `seas:BooleanOptimizationProcedure`, and  `seas:BooleanOptimizationExecution`, that constrain the optimized property to be a `seas:BooleanProperty`.
+
+
+
+Figure below provides an overview of the concepts in this ontology:
+
+[![Overview of the Optimization ontology](https://w3id.org/seas/optimization.png)](https://w3id.org/seas/optimization.png)
+
+
+</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>-1.1</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/OptimizationExecution"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/OptimizationExecutor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/OptimizationProcedure"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/usedProcedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="_:genid1139"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/Procedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/ProcedureExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="_:genid1149"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/madeBy"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/OptimizationExecution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/usedProcedure"/>
+            <Class IRI="https://w3id.org/seas/OptimizationProcedure"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/OptimizationExecutor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <Class IRI="https://w3id.org/seas/OptimizationProcedure"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/OptimizationExecution"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/OptimizationExecution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/madeBy"/>
+            <Class IRI="https://w3id.org/seas/OptimizationExecutor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/OptimizationExecution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/usedProcedure"/>
+            <Class IRI="https://w3id.org/seas/OptimizationProcedure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/OptimizationExecution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+            <Class IRI="https://w3id.org/seas/Property"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/OptimizationExecutor"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/OptimizationExecutor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <Class IRI="https://w3id.org/seas/OptimizationProcedure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/OptimizationProcedure"/>
+        <Class IRI="https://w3id.org/pep/Procedure"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizes"/>
+        <Class IRI="_:genid1139"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+        <Class IRI="_:genid1149"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizes"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="https://w3id.org/pep/implements"/>
+            <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="https://w3id.org/pep/madeBy"/>
+            <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="https://w3id.org/pep/usedProcedure"/>
+            <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="https://w3id.org/seas/optimizesProperty"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/OptimizationExecution</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Optimization execution is the execution of some Optimization procedure by some Optimization executor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/OptimizationExecution</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/OptimizationExecution</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Optimization Execution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/OptimizationExecution</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/OptimizationExecutor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Optimization Executor implements some Optimization procedure, and may generate Optimization execution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/OptimizationExecutor</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/OptimizationExecutor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Optimization Executor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/OptimizationExecutor</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/OptimizationProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Optimization Procedure is the procedure of optimizing a property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/OptimizationProcedure</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/OptimizationProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Optimization Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/OptimizationProcedure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/optimizes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an OptimizationProcedure, OptimizationExecutor, or OptimizationExecution, to the feature of interest a property of which it optimizes.
+
+If `x` optimizes a property, then it also optimizes the feature of interest of this property:
+
+```
+seas:optimizesProperty &lt; seas:optimizes o seas:isPropertyOf .
+```
+
+If an OptimizationProcedure optimizes a feature of interest, then any OptimizationExecutor that implements this OptimizationProcedure also optimizes this feature of interest, and any OptimizationExecution that used this OptimizationProcedure also optimizes this feature of interest. Furthermore, if an OptimizationExecutor optimizes a feature of interest, then any OptimizationExecution executed by this OptimizationExecutor also optimizes this feature of interest:
+
+```
+seas:optimizes &lt; pep:usedProcedure o seas:optimizes .
+seas:optimizes &lt; pep:usedProcedure o seas:optimizes .
+seas:optimizes &lt; pep:madeBy o seas:optimizes .
+```
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/optimizes</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/optimizes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">optimizes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/optimizes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/optimizesProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an OptimizationProcedure, OptimizationExecutor, or OptimizationExecution, to the property it optimizes.
+
+If an OptimizationProcedure optimizes a property, then any OptimizationExecutor that implements this OptimizationProcedure also optimizes this property, and any OptimizationExecution that used this OptimizationProcedure also optimizes this property. Furthermore, if an OptimizationExecutor optimizes a property, then any OptimizationExecution executed by this OptimizationExecutor also optimizes this property:
+
+```
+seas:optimizesProperty &lt; pep:implements o seas:optimizesProperty .
+seas:optimizesProperty &lt; pep:usedProcedure o seas:optimizesProperty .
+seas:optimizesProperty &lt; pep:madeBy o seas:optimizesProperty .
+```</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/optimizesProperty</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/optimizesProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">optimizes property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/optimizesProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

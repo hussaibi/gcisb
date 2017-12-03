@@ -1,0 +1,2283 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://qudt.org/1.1/schema/quantity"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://qudt.org/1.1/schema/quantity"
+     versionIRI="http://qudt.org/1.1/schema/quantity">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.linkedmodel.org/1.0/schema/dtype</Import>
+    <Import>http://qudt.org/1.1/schema/qudt</Import>
+    <Import>http://www.linkedmodel.org/1.2/schema/vaem</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasAspectScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Basic treatment of quantities and units. No dimensional treatment in this graph.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+        <IRI>http://voag.linkedmodel.org/schema/voag#TopQuadrantAttribution</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$Id: OSG_quantity-(v1.1).ttl 4988 2011-06-01 20:34:19Z RalphHodgson $</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ralph Hodgson</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDomainScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Science, Medicine and Engineering</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">James E. Masters</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT Quantity Ontology Version 1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The QUDT Ontologies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to NASA Ames Research Center and TopQuadrant, Inc.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantities, Units, and Dimensions</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasRole"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#SchemaGraph</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Daniel Mekonnen</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+        <IRI>voag:CC-SHAREALIKE_3PT0-US</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">David Price</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Irene Polikoff</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantity Schema</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDisciplineScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">All disciplines</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+        <IRI>http://qudt.org/schema/qudt#NASA-ARC-Attribution</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The intent of the QUDT Quantity Ontology is to specify an OWL schema for describing the attributes and fundamental relationships of quantities. A quantity is a kind of property which exists as a magnitude or multitude with a unit of measure. When a quantity is associated with some thing it becomes a property of that thing.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#SolidMechanicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#PhysicalConstant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#RadiometryQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#InformationQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#PhotometryQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#RadiologyQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#ContinuumMechanicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#FluidMechanicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#QuantumMechanicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#BiologyQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#ChemistryQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#ConstantValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#FinancialQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#ThermodynamicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#ProportionalityConstant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#CommunicationsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MagnetomotiveForce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#DoseEquivalent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearThermalExpansion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearEnergyTransfer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Area"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalInsulance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#CommunicationsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AngularAcceleration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalDiffusivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#RadiometryQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MolarEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ForcePerElectricCharge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCharge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyAndWorkPerMassAmountOfSubstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Resistance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#RadiologyQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#DynamicViscosity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalEnergyLength"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasRole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#numericUnion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#SpecificHeatCapacity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AmountOfSubstancePerUnitVolume"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricChargeVolumeDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Permeability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Force"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#CoefficientOfHeatTransfer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyAndWork"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LengthByForce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MolarHeatCapacity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ForcePerLength"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaAngle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Capacitance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectromotiveForce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#SpecificEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Curvature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Activity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Currency"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Density"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#InformationQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCurrentDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#KinematicViscosity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AbsorbedDoseRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThrustToMassRatio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassPerLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AmountOfSubstancePerUnitMass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalConductivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#VolumeThermalExpansion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MicrobialFormation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#PhotometryQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricChargeLineDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricChargePerAmountOfSubstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearAcceleration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Volume"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LengthTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaThermalExpansion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Exposure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#PowerPerAreaAngle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#SolidAngle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Inductance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#SignalDetectionThreshold"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#TemperatureAmountOfSubstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Angle"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasAspectScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricDipoleMoment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Frequency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermodynamicTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AngularMomentum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Length"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricDisplacementField"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Dimensionless"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#RF-Power"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Luminance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AtomicCharge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#HeatFlowRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCurrent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MagneticField"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#ThermodynamicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#BiologyQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassPerArea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Turbidity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#CatalyticActivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LengthTemperatureTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearVelocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#DataRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCurrentPerAngle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassAmountOfSubstanceTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#ChemistryQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MagneticFlux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AmountOfSubstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalResistance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#GravitationalAttraction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Velocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#PolarizationField"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LuminousFlux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassPerTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Stress"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassAmountOfSubstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#InformationEntropy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaTimeTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#TimeSquared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AuxillaryMagneticField"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDomainScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MomentOfInertia"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricField"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#FinancialQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Mass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearMomentum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#HeatCapacity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Power"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyPerArea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#HeartRate"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/catalog/qudt#QUDT-QUANTITY-SchemaCatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AbsorbedDose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Permittivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#RadiantIntensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#PowerPerArea"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDisciplineScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#LuminousIntensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#Illuminance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalResistivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#RespiratoryRate"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#VideoFrameRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricConductivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#SerumOrPlasmaLevel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#VolumePerUnitTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#AngularVelocity"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#AtomicPhysicsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#ChemistryUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#ChemistryQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#FinancialUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#FinancialQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#MechanicsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#OpticsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#RadiologyUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#RadiologyQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#SpaceAndTimeUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://qudt.org/schema/qudt#ThermodynamicsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#ThermodynamicsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AbsorbedDoseRateUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AbsorbedDoseRate"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AbsorbedDoseUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AbsorbedDose"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ActivityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Activity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AmountOfSubstanceTemperatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#TemperatureAmountOfSubstance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AmountOfSubstanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AmountOfSubstance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AngleUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Angle"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AngularAccelerationUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AngularAcceleration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AngularMassUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MomentOfInertia"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AngularMomentumUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AngularMomentum"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AngularVelocityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AngularVelocity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AreaAngleUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaAngle"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AreaTemperatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaTemperature"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AreaThermalExpansionUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaThermalExpansion"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AreaTimeTemperatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaTimeTemperature"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AreaUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Area"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AtomicChargeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AtomicCharge"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#AtomicPhysicsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#BendingMomentOrTorqueUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LengthByForce"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#BiologyQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#CapacitanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Capacitance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#CatalyticActivityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#CatalyticActivity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ChemistryQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ChemistryUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#ChemistryQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#CoefficientOfHeatTransferUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#CoefficientOfHeatTransfer"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#CommunicationsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ConcentrationUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AmountOfSubstancePerUnitVolume"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ConductanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricConductivity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ConstantValue"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ContinuumMechanicsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#CurrencyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Currency"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#CurrentPerAngleUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCurrentPerAngle"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#CurvatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Curvature"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DataRateUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#DataRate"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DimensionlessUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Dimensionless"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DoseEquivalentUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#DoseEquivalent"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#DynamicViscosityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#DynamicViscosity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricChargeAreaDensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#PolarizationField"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricChargeLineDensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricChargeLineDensity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricChargePerAmountOfSubstanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricChargePerAmountOfSubstance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricChargeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCharge"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricChargeVolumeDensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricChargeVolumeDensity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricCurrentDensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCurrentDensity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricCurrentUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricCurrent"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricDipoleMomentUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricDipoleMoment"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricFieldStrengthUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricField"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricFluxDensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectricDisplacementField"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#EnergyAndWorkPerMassAmountOfSubstance"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyAndWorkPerMassAmountOfSubstance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#EnergyAndWorkUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyAndWork"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#EnergyDensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyDensity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#EnergyPerAreaUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyPerArea"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#EnergyPerElectricChargeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ElectromotiveForce"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ExposureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Exposure"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#FinancialQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#FinancialUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#FinancialQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#FluidMechanicsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#ContinuumMechanicsQuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ForcePerElectricChargeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ForcePerElectricCharge"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ForcePerLengthUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ForcePerLength"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ForceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Force"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#FrequencyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Frequency"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#GravitationalAttractionUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#GravitationalAttraction"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#HeartRateUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#HeartRate"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#HeatCapacityAndEntropyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#HeatCapacity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#HeatFlowRateUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#HeatFlowRate"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#HeatFlowRateUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Power"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#IlluminanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Illuminance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#InductanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Inductance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#InformationEntropyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#InformationEntropy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#InformationQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#KinematicViscosityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#KinematicViscosity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LengthTemperatureTimeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LengthTemperatureTime"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LengthTemperatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LengthTemperature"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LengthUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Length"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LinearAccelerationUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearAcceleration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LinearEnergyTransferUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearEnergyTransfer"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LinearMomentumUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearMomentum"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LinearThermalExpansionUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearThermalExpansion"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LinearVelocityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LinearVelocity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LuminanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Luminance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LuminousFluxUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LuminousFlux"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#LuminousIntensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#LuminousIntensity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MagneticFieldStrengthUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AuxillaryMagneticField"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MagneticFluxDensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MagneticField"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MagneticFluxUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MagneticFlux"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MagnetomotiveForceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MagnetomotiveForce"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassAmountOfSubstanceTemperatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassAmountOfSubstanceTemperature"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassAmountOfSubstanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassAmountOfSubstance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassPerAreaUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassPerArea"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassPerLengthUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassPerLength"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassPerTimeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassPerTime"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassPerVolumeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Density"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassTemperatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MassTemperature"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MassUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Mass"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MechanicsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MicrobialFormationUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MicrobialFormation"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MolalConcentrationUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AmountOfSubstancePerUnitMass"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MolarConcentrationUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AmountOfSubstancePerUnitVolume"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MolarEnergyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MolarEnergy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#MolarHeatCapacityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#MolarHeatCapacity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#OpticsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PermeabilityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Permeability"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PermittivityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Permittivity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PhotometryQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PhysicalConstant"/>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PowerPerAreaUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#PowerPerArea"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PowerUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Power"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PrefixUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Dimensionless"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#PressureOrStressUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Stress"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ProportionalityConstant"/>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityValue"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityValue"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#description"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#EnumeratedValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#generalization"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#generalization"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityType"/>
+        <Class IRI="http://qudt.org/schema/qudt#Enumeration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityType"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#default"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityType"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#element"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityType"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#elementKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityType"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#elementKind"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#numericValue"/>
+            <Class IRI="http://qudt.org/schema/qudt#numericUnion"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#unit"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#valueQuantity"/>
+            <Class IRI="http://qudt.org/schema/qudt#Quantity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#valueQuantity"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://qudt.org/schema/qudt#relativeStandardUncertainty"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://qudt.org/schema/qudt#standardUncertainty"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#numericValue"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#relativeStandardUncertainty"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityValue"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#standardUncertainty"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#QuantumMechanicsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#RF-PowerUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#RF-Power"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#RadianceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#PowerPerAreaAngle"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#RadiantIntensityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#RadiantIntensity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#RadiologyQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#RadiologyUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#RadiologyQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#RadiometryQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ResistanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Resistance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#RespiratoryRateUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#RespiratoryRate"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SerumOrPlasmaLevelUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#SerumOrPlasmaLevel"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SignalDetectionThresholdUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#SignalDetectionThreshold"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SolidAngleUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#SolidAngle"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SolidMechanicsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#ContinuumMechanicsQuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SpaceAndTimeUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SpecificEnergyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#SpecificEnergy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SpecificHeatCapacityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#SpecificHeatCapacity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#baseDimensionEnumeration"/>
+            <Class IRI="http://qudt.org/schema/qudt#Enumeration"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#systemDimension"/>
+            <Class IRI="http://qudt.org/schema/qudt#Dimension"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#systemQuantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#unitSystem"/>
+            <Class IRI="http://qudt.org/schema/qudt#SystemOfUnits"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#systemQuantityKind"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#SystemOfQuantities"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#baseDimensionEnumeration"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#TemperatureUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermodynamicTemperature"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalConductivityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalConductivity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalDiffusivityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalDiffusivity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalEnergyLengthUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalEnergyLength"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalEnergyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#EnergyAndWork"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalEnergyUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalEnergy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalInsulanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalInsulance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalResistanceUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalResistance"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermalResistivityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThermalResistivity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermodynamicsQuantityKind"/>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThermodynamicsUnit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#ThermodynamicsQuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#ThrustToMassRatioUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#ThrustToMassRatio"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#TimeAreaUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#AreaTime"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#TimeSquaredUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#TimeSquared"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#TimeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Time"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#TurbidityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Turbidity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <Class IRI="http://qudt.org/schema/qudt#QuantityKind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#VelocityUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Velocity"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#VideoFrameRateUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#VideoFrameRate"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#VolumePerTimeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#VolumePerUnitTime"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#VolumeThermalExpansionUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#VolumeThermalExpansion"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://qudt.org/schema/qudt#VolumeUnit"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+            <NamedIndividual IRI="http://qudt.org/vocab/quantity#Volume"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#BiologyQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#ChemistryQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#CommunicationsQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#FinancialQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#InformationQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#MechanicsQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#OpticsQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#RadiologyQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://qudt.org/schema/qudt#QuantityKindCategory"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#ThermodynamicsQuantityKind"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#hasCatalogEntry"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://qudt.org/catalog/qudt#QUDT-QUANTITY-SchemaCatalogEntry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2011-01-04T14:44:26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The &apos;Quantity&apos; Ontology provides a schema for defining quantities. A quantity is a measure of an observable phenomenon, that, when associated with something, becomes a property of that thing; a particular object, event, or physical system. A quantity has meaning in the context of a measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc.  Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$LastChangedDate: 2011-06-01 13:34:19 -0700 (Wed, 01 Jun 2011) $</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">http://qudt.org/schema/quantity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">quantity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#description"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#PhotometryQuantityKind"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Photometry is the science of the measurement of light, in terms of its perceived brightness to the human eye. It is distinct from radiometry, which is the science of measurement of radiant energy (including light) in terms of absolute power.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#description"/>
+        <NamedIndividual IRI="http://qudt.org/schema/qudt#RadiometryQuantityKind"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Photometry is the field that studies the measurement of electromagnetic radiation, including visible light. Note that light is also measured using the techniques of photometry, which deal with brightness as perceived by the human eye, rather than absolute power.</Literal>
+    </DataPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#AtomicPhysicsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Atomic Physics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#BiologyQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Biology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#ChemistryQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chemistry quantity kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#ChemistryQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Chemistry</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#CommunicationsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Communications</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#CommunicationsQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Communication</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#ConstantValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Constant value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#ContinuumMechanicsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Continuum Mechanics Quantity Kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#ElectricityAndMagnetismQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Electricity and Magnetism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#FinancialQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Financial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#FinancialQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Finance</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#FluidMechanicsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Fluid Dynamics Quantity Kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#InformationQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#InformationQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Information</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#MechanicsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mechanics Quantity Kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#MechanicsQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Mechanics</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#OpticsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Optics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#OpticsQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Light</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#PhotometryQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Photometry quantity kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#PhysicalConstant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton&apos;s gravitational constant G, Planck&apos;s constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#PhysicalConstant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Physical Constant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#PhysicalConstant</IRI>
+        <IRI>http://dbpedia.org/resource/Physical_constant</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#ProportionalityConstant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Two quantities proportional if they vary in such a way that one of the quantities is a constant multiple of the other. The multiple is the constant of proportionality between the two quantities. Constants of proportionality may be dimensioned in some quantity systems and dimensionless in others. For example, in the SI system, the permittivity of a vacuum has the dimensions L^-3 M^-1 T^4 I^2 and is measured in Farads per Meter; in the CGS-EMU system it has dimensions L^-2T^2 and is measured in Abfarads per Centimeter; in the CGS-ESU system it is dimensionless.
+
+Constants of proportionality are important in the definition of systems of natural units, where units are chosen in order to make certain constants of proportionality dimensionless and equal to 1.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#ProportionalityConstant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Constant of Proportionality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <IRI>http://qudt.org/schema/qudt#ProportionalityConstant</IRI>
+        <IRI>http://dbpedia.org/resource/Proportionality_%28mathematics%29</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#Quantity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck&apos;s constant, the electric permittivity of free space, and the fine structure constant. Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as &quot;fundamental&quot; in this sense.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#Quantity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#Quantity</IRI>
+        <IRI>http://dbpedia.org/resource/Quantity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#QuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A Quantity Kind is an aspect common to mutually comparable quantities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#QuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantity Kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <IRI>http://qudt.org/schema/qudt#QuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Category:Physical_quantities</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#QuantityType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A quantity type is an enumeration of units that are measures of the same quantity kind.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#QuantityType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantity type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#QuantityValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A quantity value expresses the numerical value of a quantity with respect to a chosen unit of measure. For example, the value of Planck&apos;s constant in Joule-Seconds (J s) is approximately 6.62606896E-34, whereas the value in Erg-Seconds (erg s) is approximately 6.62606896E-27.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#QuantityValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantity value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#QuantumMechanicsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quantum Mechanics Quantity Kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#RadiologyQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Radiology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#RadiologyQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Radiology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#RadiometryQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Radiometry quantity kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#SolidMechanicsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Solid Mechanics Quantity Kind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#SpaceAndTimeQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Space and Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/schema/qudt#SystemOfQuantities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position. 
+
+In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#SystemOfQuantities</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">System of Quantity Kinds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://qudt.org/schema/qudt#ThermodynamicsQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thermodynamics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <IRI>http://qudt.org/schema/qudt#ThermodynamicsQuantityKind</IRI>
+        <IRI>http://dbpedia.org/resource/Thermodynamics</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <AnonymousIndividual nodeID="_:genid1463"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">a reference to the dimension that quantifies the property</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

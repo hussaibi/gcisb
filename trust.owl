@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/trust.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/trust.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">tr</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ontology.eil.utoronto.ca/trust.owl#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Version of the Trust Ontology defined in:
+Huang, J., and Fox, M.S., (2006). &quot;An Ontology of Trust - Formal Semantics and Transitivity&quot;, Proceedings of the International Conference on Electronic Commerce, Association of Computing Machinery, pp. 259-270.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.eil.utoronto.ca/km/papers/huang-ec06.pdf</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">21 April 2015</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust Ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Trust_b"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_trust_for"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrustThing"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/rights"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trusted_activity_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trustee_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trustee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_trusted_certainty_degree"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trust_p"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trust"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_trusted_certainty_degree_for"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/kp.owl#KP_prop"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_trust"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trustor_for"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#certainty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trusted_certainty_degree"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trusted_entity_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trustor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trusted_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trusted_activity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#trust_Degree"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/kp.owl#KP_prop"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_trusted_certainty_degree"/>
+            <Class IRI="#Trusted_certainty_degree"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust"/>
+        <Class IRI="#TrustThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#trustee"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#trustor"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#trust_Degree"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust_b"/>
+        <Class IRI="#Trust"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust_b"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#trusted_entity"/>
+            <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust_b"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#trustee"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust_p"/>
+        <Class IRI="#Trust"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust_p"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#trusted_activity"/>
+            <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trust_p"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#trustee"/>
+            <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trusted_certainty_degree"/>
+        <Class IRI="#TrustThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trusted_certainty_degree"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_trust"/>
+            <Class IRI="#Trust"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trusted_certainty_degree"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#certainty"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Trust_b"/>
+        <Class IRI="#Trust_p"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_trust"/>
+        <ObjectProperty IRI="#has_trust_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_trusted_certainty_degree"/>
+        <ObjectProperty IRI="#has_trusted_certainty_degree_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#trusted_activity"/>
+        <ObjectProperty IRI="#trusted_activity_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#trusted_entity"/>
+        <ObjectProperty IRI="#trusted_entity_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#trustee"/>
+        <ObjectProperty IRI="#trustee_for"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#trustor"/>
+        <ObjectProperty IRI="#trustor_for"/>
+    </InverseObjectProperties>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#has_trust"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#has_trusted_certainty_degree"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#trusted_activity"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#trusted_entity"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#trustee"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#trustor"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#has_trust"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#has_trusted_certainty_degree"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#trusted_activity"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#trusted_entity"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#trustee"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#trustor"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_trust"/>
+        <Class IRI="#Trusted_certainty_degree"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_trusted_certainty_degree"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/kp.owl#KP_prop"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#trusted_activity"/>
+        <Class IRI="#Trust_p"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#trusted_entity"/>
+        <Class IRI="#Trust_b"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#trustee"/>
+        <Class IRI="#Trust"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#trustor"/>
+        <Class IRI="#Trust"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_trust"/>
+        <Class IRI="#Trust"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_trusted_certainty_degree"/>
+        <Class IRI="#Trusted_certainty_degree"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_trusted_certainty_degree_for"/>
+        <Class IRI="#Trust"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#trusted_entity"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#trustee"/>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#trustor"/>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#certainty"/>
+        <Class IRI="#Trusted_certainty_degree"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trust_Degree"/>
+        <Class IRI="#Trust"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#certainty"/>
+        <Datatype abbreviatedIRI="owl:real"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trust_Degree"/>
+        <Datatype abbreviatedIRI="owl:real"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/kp.owl#KP_prop</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">KP Proposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Trust</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contains two types of trust, in belief and performance.
+The &apos;trustor&apos; is the agent is is doing the trusting.  The &apos;trustee&apos; is the agent that is being trusted.
+&apos;trust_degree&apos; is a number between zero and one that signifies the degree to which the trustor trusts the trustee.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Trust</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Trust_b</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust based on an agent believing in what another agent believes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Trust_b</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust in Belief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Trust_p</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust based on believing that another agent will perform an activity correctly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Trust_p</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust in Performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Trusted_certainty_degree</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The degree to which a KP_prop (i.e, Proposition) and therefore any Measure is believed. It links to a Trust class that defines the trustor, trustee and degree of trust.
+The value of &apos;certainty&apos; is usually the product of the KP_prop &apos;assigned_certainty_degree&apos; and the Trust &apos;trust_degree&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Trusted_certainty_degree</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trusted Certainty Degree</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

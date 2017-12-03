@@ -1,0 +1,2303 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alanna Komisar, alanna.komisar@mail.utoronto.ca
+Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Energy Ontologies - Service Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ontology.eil.utoronto.ca/GCI/Energy/Service.owl#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1.0 31 December 2016</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.eil.utoronto.ca/applications/smartcities/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">service</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Energy Ontologies - Service Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Service Ontology developed by the Enterprise Integration Lab,  Mechanical &amp; Industrial Engineering, University of Toronto. http://eil.utoronto.ca
+
+Extends the Foundation Ontology for Global City Indicators to cover the Environment Indicators.
+
+See: Fox, M.S., (2013), &quot;A Foundation Ontology for Global City Indicators&quot;, Global City Institute Working Paper, Global Cities Institute, University of Toronto
+
+All papers can be found at: http://www.eil.utoronto.ca/applications/smartcities/
+
+Contact: Alanna Komisar, alanna.komisar@mail.utoronto.ca
+                Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_CarrierValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/ontology/service#ServiceConsumer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#hasResFloorArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#impactAccount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PercentageDerivedFromRenewables"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/ineligibleRegion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/icontact.owl#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RenewableSource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/mpn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceConsumerGroup"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wave"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Mix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerical_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.6/hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalConsumer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Nuclear"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/eligibleRegion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#impactProvider"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasBeginning"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_SourceValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/warranty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceConsumer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceInterruption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nuclear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/ontology/service#provides"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#LPG"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#relatedDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#accountActive"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/kilowatt_hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coal"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/itemOffered"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/areaServed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasEnd"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/ontology/service#consumedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceDurationMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#authorizes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBeginning"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#services"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/gtin14"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#expiry_Date"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#serviceInterruptionVar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasServiceArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasServiceAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#used_as"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/makesOffer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#Organization_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Environment.owl#preferredNamespaceURI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/sku"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Environment.owl#preferrredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/acceptedPaymentMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Neutralising_Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceInterruptionMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reported_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Wind_Energy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasServiceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dcterms:description#c5fb1c3c_8d0e_4c1f_89cd_d50e572e9c61"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/eligibleDuration"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/rights"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fossil_Fuel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Residence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Gasoil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Buthane"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/availabilityEnds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceAreaQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#PhysicalSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#providedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#forService"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Biomass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#PercentageResidentialFloorSpace"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEnd"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEmission_Coefficient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#forBuilding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/priceSpecification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#consumedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#electricalProductionVar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceAreaMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Natural_Gas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service_Production_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#distributedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#related_to"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonResidentialElectricalConsumer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonRenewableSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/ontology/service#providedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalServiceInterruption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/inventoryLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/addOn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#GovernmentOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Carrier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalConsumerGroup"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#certification_Date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/price"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/gtin8"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#hasUnitAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/acceptedOffer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hydro_Energy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PercentageDerivedFromNuclear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Solar_Energy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#hasBuildingClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCIServiceThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#derivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceAccount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#distributes"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Coal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/availability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonResidentialElectricalConsumerGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/offers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hot_Dry_Rock_Thermal_Energy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#num_accounts"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fuel_Oil"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasShare_Energy_Mix_Electricity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConsumption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/Building"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/offeredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#legallyAuthorizedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#hasMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#electricalConsumptionVar"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PercentageDerivedFromFossilFuels"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service_Consumption_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/ontology/service#ServiceProvider"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/itemCondition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/validFrom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/tonne"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/eligibleQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#using"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#has_Ownership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeothermalEnergy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/ontology/service#Service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/reviews"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#ProperInterval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResidentialElectricalConsumerHousehold"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/businessFunction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hydrothermal_Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/availableAtOrFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/eligibleTransactionVolume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Oil"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#hasHouseholds"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/seller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#Organization_Division_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/deliveryLeadTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Natural_Gas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#for_Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electrical_Service_Measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represents_a"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/priceValidUntil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#quantityOfProduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceProduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service_Measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Offer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalServiceAccount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Solar_Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalServiceConsumptionQuantity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#preferredNamespaceURI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/advanceBookingRequirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Shallow_Geothermal_Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hydro_Energy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#serviceDurationVar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/availabilityStarts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#owned_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/eligibleCustomerType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/expectsAcceptanceOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceAreaThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2006/time#hasDurationDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalServiceProductionQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interruptions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/serialNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/priceCurrency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Person"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/gtin13"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#hasBuildingAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTransaction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResidentialElectricalConsumer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#goalOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connectedthrough"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasServiceInterruption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Biomass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#causedByWeather"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consist_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccessTo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/gtin12"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#hasFloorArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#authorizedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/category"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owned_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Propane"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#impactsAccounts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/availableDeliveryMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind_Energy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#floorAreaVar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#experienceServiceInterruption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://schema.org/includesObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Heat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalPowerGenerationSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oil"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/validThrough"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Electricity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#impactConsumer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kWh"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#Organization_Division_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/BuildingOccupancy/GCI-BuildingOccupancy.owl#Organization_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biomass"/>
+        <Class IRI="#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biomass"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Biomass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coal"/>
+        <Class IRI="#NonRenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coal"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Coal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalConsumer"/>
+        <Class IRI="#ServiceConsumer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalConsumer"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalConsumerGroup"/>
+        <Class IRI="#ServiceConsumerGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalConsumerGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalPowerGenerationSource"/>
+        <Class IRI="#ServiceProduction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalPowerGenerationSource"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#quantityOfProduction"/>
+            <Class IRI="#ElectricalServiceProductionQuantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalService"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalService"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#distributes"/>
+            <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Electricity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceAccount"/>
+        <Class IRI="#ServiceAccount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceAccount"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasServiceType"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceConsumptionQuantity"/>
+        <Class IRI="#Service_Consumption_Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceConsumptionQuantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#forService"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceConsumptionQuantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#reported_by"/>
+            <Class IRI="#ElectricalServiceProvider"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceConsumptionQuantity"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/kilowatt_hour"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceInterruption"/>
+        <Class IRI="#ServiceInterruption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceInterruption"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#forService"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceProductionQuantity"/>
+        <Class IRI="#Service_Production_Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceProductionQuantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#forService"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceProductionQuantity"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/kilowatt_hour"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceProvider"/>
+        <Class IRI="#ServiceProvider"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalServiceProvider"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#distributes"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrical_Service_Measure"/>
+        <Class IRI="#Service_Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrical_Service_Measure"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/kilowatt_hour"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeothermalEnergy"/>
+        <Class IRI="#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeothermalEnergy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hydro_Energy"/>
+        <Class IRI="#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hydro_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hydro_Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interruptions"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Natural_Gas"/>
+        <Class IRI="#NonRenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Natural_Gas"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Natural_Gas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonRenewableSource"/>
+        <Class IRI="#ElectricalPowerGenerationSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonRenewableSource"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonResidentialElectricalConsumer"/>
+        <Class IRI="#ElectricalConsumer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonResidentialElectricalConsumerGroup"/>
+        <Class IRI="#ElectricalConsumerGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonResidentialElectricalConsumerGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#represents_a"/>
+            <ObjectUnionOf>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonResidentialElectricalConsumerGroup"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#consist_of"/>
+            <Class IRI="#NonResidentialElectricalConsumer"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nuclear"/>
+        <Class IRI="#NonRenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nuclear"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Nuclear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oil"/>
+        <Class IRI="#NonRenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oil"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Oil"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RenewableSource"/>
+        <Class IRI="#ElectricalPowerGenerationSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumer"/>
+        <Class IRI="#ElectricalConsumer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#connectedthrough"/>
+            <Class IRI="#ElectricalServiceAccount"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumer"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#authorizedBy"/>
+            <Class IRI="#ElectricalServiceProvider"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumer"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+            <Class IRI="#ElectricalService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumerHousehold"/>
+        <Class IRI="#ElectricalConsumerGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumerHousehold"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumerHousehold"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#consist_of"/>
+            <Class IRI="#ResidentialElectricalConsumer"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialElectricalConsumerHousehold"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#connectedthrough"/>
+            <Class IRI="#ResidentialElectricalConsumer"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#distributedBy"/>
+            <Class IRI="http://purl.org/ontology/service#ServiceProvider"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#authorizedBy"/>
+            <Class IRI="#ServiceProvider"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasServiceArea"/>
+            <Class IRI="#ServiceAreaMeasure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasServiceInterruption"/>
+            <Class IRI="#ServiceInterruption"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasServiceType"/>
+            <Class IRI="#Service"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasConsumption"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasServiceAddress"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#owned_by"/>
+            <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#consumedBy"/>
+            <Class IRI="#ServiceConsumer"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#providedBy"/>
+            <Class IRI="#ServiceProvider"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAccount"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#accountActive"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAreaMeasure"/>
+        <Class IRI="#ServiceAreaThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAreaMeasure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAreaMeasure"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAreaQuantity"/>
+        <Class IRI="#ServiceAreaThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAreaQuantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceAreaThing"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumer"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumer"/>
+        <Class IRI="http://purl.org/ontology/service#ServiceConsumer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumer"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumer"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#experienceServiceInterruption"/>
+            <Class IRI="#ServiceInterruption"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumer"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#authorizedBy"/>
+            <Class IRI="#ServiceProvider"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumer"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#connectedthrough"/>
+            <Class IRI="#ServiceAccount"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumer"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+            <Class IRI="http://purl.org/ontology/service#Service"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#represents_a"/>
+            <ObjectUnionOf>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#experienceServiceInterruption"/>
+            <Class IRI="#ServiceInterruption"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#authorizedBy"/>
+            <Class IRI="#ServiceProvider"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#consist_of"/>
+            <Class IRI="#ServiceConsumer"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#legallyAuthorizedBy"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#using"/>
+            <Class IRI="#ServiceAccount"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceConsumerGroup"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+            <Class IRI="#Service"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceDurationMeasure"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceDurationMeasure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceDurationMeasure"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruption"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruption"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#forService"/>
+            <Class IRI="#Service"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruption"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#impactAccount"/>
+            <Class IRI="#ServiceAccount"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruption"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#impactProvider"/>
+            <Class IRI="http://purl.org/ontology/service#ServiceProvider"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruption"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2006/time#hasDurationDescription"/>
+            <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruption"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#causedByWeather"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruption"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#num_accounts"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruptionMeasure"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruptionMeasure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceInterruptionMeasure"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#interruption"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProduction"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProduction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#forService"/>
+            <Class IRI="#Service"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProvider"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProvider"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProvider"/>
+        <Class IRI="http://purl.org/ontology/service#ServiceProvider"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProvider"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/icontact.owl#hasAddress"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProvider"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#authorizes"/>
+            <Class IRI="#ServiceAccount"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceProvider"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/ontology/service#provides"/>
+            <Class IRI="#Service"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Consumption_Quantity"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Consumption_Quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Consumption_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#forService"/>
+            <Class IRI="#Service"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Consumption_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#consumedBy"/>
+            <ObjectUnionOf>
+                <Class IRI="#ServiceConsumer"/>
+                <Class IRI="#ServiceConsumerGroup"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Consumption_Quantity"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#forService"/>
+            <Class IRI="#Service"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Measure"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Production_Quantity"/>
+        <Class IRI="#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service_Production_Quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Solar_Energy"/>
+        <Class IRI="#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Solar_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Solar_Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tide"/>
+        <Class IRI="#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wave"/>
+        <Class IRI="#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_Energy"/>
+        <Class IRI="#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Wind_Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Service"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#goalOf"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#providedBy"/>
+            <Class IRI="http://purl.org/ontology/service#ServiceProvider"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#consumedBy"/>
+            <Class IRI="http://purl.org/ontology/service#ServiceConsumer"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#certification_Date"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#expiry_Date"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#hasMember"/>
+            <Class IRI="http://schema.org/Person"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Biomass"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Buthane"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Coal"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Coal"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fossil_Fuel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Electricity"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Neutralising_Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#PhysicalSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Neutralising_Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+        <Class IRI="http://www.ontologyportal.org/SUMO.owl#PhysicalSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fossil_Fuel"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fuel_Oil"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Gasoil"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Heat"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hot_Dry_Rock_Thermal_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hydro_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hydrothermal_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#LPG"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Mix"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Natural_Gas"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Natural_Gas"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fossil_Fuel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Nuclear"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Oil"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fossil_Fuel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Propane"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Shallow_Geothermal_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Solar_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Wind_Energy"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2006/time#Interval"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.6/hour"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEmission_Coefficient"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasShare_Energy_Mix_Electricity"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Carrier"/>
+            </ObjectInverseOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Source"/>
+            </ObjectInverseOf>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        <Class IRI="http://www.w3.org/2006/time#ProperInterval"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Variable"/>
+        <NamedIndividual IRI="#electricalConsumptionVar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Variable"/>
+        <NamedIndividual IRI="#electricalProductionVar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Variable"/>
+        <NamedIndividual IRI="#floorAreaVar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        <NamedIndividual IRI="#kWh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Variable"/>
+        <NamedIndividual IRI="#serviceDurationVar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Variable"/>
+        <NamedIndividual IRI="#serviceInterruptionVar"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#has_Name"/>
+        <NamedIndividual IRI="#electricalConsumptionVar"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasElectricalConsumption</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#has_Name"/>
+        <NamedIndividual IRI="#electricalProductionVar"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">quantityOfProduction</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#has_Name"/>
+        <NamedIndividual IRI="#floorAreaVar"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasFloorArea</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#has_Name"/>
+        <NamedIndividual IRI="#serviceDurationVar"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HasDurationDescription</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#has_Name"/>
+        <NamedIndividual IRI="#serviceInterruptionVar"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">num_accounts</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#accountActive"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#authorizedBy"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#authorizes"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#connectedthrough"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#consist_of"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#derivedFrom"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#distributedBy"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#distributes"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#experienceServiceInterruption"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#forBuilding"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#forService"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#forService"/>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAccessTo"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAddress"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasConsumption"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDuration"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasName"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasServiceAddress"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasServiceArea"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasServiceInterruption"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasServiceType"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTransaction"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#impactAccount"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#impactConsumer"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#impactProvider"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#impactsAccounts"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#legallyAuthorizedBy"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#owned_by"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#quantityOfProduction"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reported_by"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#represents_a"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#services"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#using"/>
+        <ObjectProperty IRI="#gciServiceObjectProperties"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#authorizedBy"/>
+        <ObjectProperty IRI="#authorizes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/ontology/service#consumedBy"/>
+        <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.org/ontology/service#providedBy"/>
+        <ObjectProperty IRI="http://purl.org/ontology/service#provides"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#accountActive"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#authorizedBy"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#authorizes"/>
+        <Class IRI="http://purl.org/ontology/service#ServiceProvider"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConsumption"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasServiceAddress"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasServiceType"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#impactsAccounts"/>
+        <Class IRI="#ServiceInterruption"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#services"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#related_to"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+        <Class IRI="http://purl.org/ontology/service#ServiceConsumer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://schema.org/addOn"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://schema.org/offeredBy"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#authorizedBy"/>
+        <Class IRI="http://purl.org/ontology/service#ServiceProvider"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#authorizes"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#authorizes"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasServiceAddress"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasServiceType"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#impactsAccounts"/>
+        <Class IRI="#ServiceAccount"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.org/ontology/service#consumes"/>
+        <Class IRI="http://purl.org/ontology/service#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://schema.org/acceptedOffer"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://schema.org/addOn"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://schema.org/expectsAcceptanceOf"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://schema.org/makesOffer"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://schema.org/offers"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://schema.org/priceValidUntil"/>
+        <Class IRI="http://schema.org/Offer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_CarrierValue"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_SourceValue"/>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dcterms:description#c5fb1c3c_8d0e_4c1f_89cd_d50e572e9c61</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">causedByWeather</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ElectricalServiceConsumptionQuantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElectricalServiceConsumptionQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Electrical_Service_Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElectricalServiceConsumptionMeasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">serv:Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#ServiceAccount</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The term ServiceAccount is introduced as a subclass of APurchase. It authorizes a legal connection between a service provider and a consumer. The definition was extended to indicate whether the account is currently active and also provide measurement of the total amount of the service that is consumed. It also addresses that a single transaction can be connected to multiple addresses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#ServiceConsumer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A service consumer is an individual who has an authorized service connection. In the case of many different types of services, a single service account will benefit a group who lives or works at the address that it is servicing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ServiceConsumer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">serv:ServiceConsumer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#ServiceConsumerGroup</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a single service account will benefit a group who lives or works at the address that it is servicing. This is described by ServiceConsumerGroups, where this can be defined as a household, organization, or a division of a greater organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#ServiceInterruption</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The ServiceInterruption class specifies both the service accounts and service consumers impacted by an interruption. ISO37120 excludes all interruptions caused by extreme weather events so “causedbyWeather” was added so that extreme weather events can be filtered out. The num_accounts property identifies the number of ServiceAccount&apos;s affected by the interruption.  These accounts may be listed in the impactAccount property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">serv:ServiceProvider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Service_Consumption_Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ServiceConsumptionQuantity defines the numerical value of service consumed by either a service consumer or a service consumer group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service_Consumption_Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ServiceConsumptionQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Service_Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ServiceConsumptionMeasure defines the numerical value used by an agent accompanied by the unit of representation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#forService</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">forService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">APurchase gurantees that a connection is made since someone is paying for that service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#consumedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gcii:consumedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#providedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gcii:providedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/ontology/service#Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SO:Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/ontology/service#ServiceConsumer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SO:ServiceConsumer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/ontology/service#ServiceProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SO:ServiceProvider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.org/ontology/service#consumes</IRI>
+        <IRI>http://purl.org/ontology/service</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/ontology/service#consumes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">consumes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.org/ontology/service#providedBy</IRI>
+        <IRI>http://purl.org/ontology/service</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/ontology/service#providedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">providedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://purl.org/ontology/service#providedBy</IRI>
+        <IRI>http://schema.org/provider</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/Offer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\n\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/Offer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Offer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alvaro Sicilia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO/IEC DIS 13273-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Carrier</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">substance or phenomenon that can be used to produce mechanical work or heat or to operate a process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alvaro Sicilia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO/IEC DIS 13273-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">material, natural resource or technical system from which energy can be extracted or recovered either directly or by means of energy conversion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Fossil_Fuel</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Michael</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alvaro Sicilia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO/IEC DIS 13273-2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Geothermal_Energy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">renewable energy harnessed from within the earth&apos;s crust, usually in the form of hot water, steam or heat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alvaro Sicilia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO/IEC DIS 13273-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Not-Renewable_Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">energy source depleted by extraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alvaro Sicilia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO/IEC DIS 13273-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Renewable_Energy_Source</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">energy source not depleted by extraction and naturally replenished at a rate faster that it is extracted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">om:Measure is the superclass of all values pointed to by the property om: value.  Its individuals hold the actual indicator values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From the OM ontology. Denotes multiples of a unit, such as kilo or giga X.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit Multiple or Submultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the units that the instance of Measure uses, e.g., meters or pc (population count)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit of Measure</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

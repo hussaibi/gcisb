@@ -1,0 +1,2718 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Environment.owl#preferrredNamespacePrefix"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gcibo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Energy Ontologies - Building Occupancy Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1.0 31 December 2016</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Global City Indicator Service Ontology developed by the Enterprise Integration Lab,  Mechanical &amp; Industrial Engineering, University of Toronto. http://eil.utoronto.ca
+
+Extends the Foundation Ontology for Global City Indicators to cover the Energy Indicators.
+
+See: Fox, M.S., (2013), &quot;A Foundation Ontology for Global City Indicators&quot;, Global City Institute Working Paper, Global Cities Institute, University of Toronto
+
+All papers can be found at: http://www.eil.utoronto.ca/applications/smartcities/
+
+Contact: Alanna Komisar, alanna.komisar@mail.utoronto.ca
+                Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#relatedDocumentation"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.eil.utoronto.ca/applications/smartcities/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alanna Komisar, alanna.komisar@mail.utoronto.ca
+Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#preferredNamespaceURI"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://ontology.eil.utoronto.ca/GCI/Energy/BuildingOccupancy.owl#</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#impactAccount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compount_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasSize"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasConsumption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/Building"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#reside_in"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measurement_scale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/trust.owl#has_trusted_certainty_degree"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_Division_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_owner"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PercentageResidentialFloorSpace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumerGroup"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#GCISheltersThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#for_Building"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerical_value"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#government_owned"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#NonGovernmentOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_cardinality_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionThing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#has_Ownership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommercialBuilding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Division"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#hasGoal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHouseholds"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTenantSpace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#consistsOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/square_metre"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#relatedDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/kilowatt_hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/spec/Document"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTenancy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tenant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Unit_Summation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#hasProof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasResFloorArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owned_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#authorizes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#HomeAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure_or_measurement_scale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/City"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#services"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Cardinality_unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#expiry_Date"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FloorArea_Measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasServiceArea"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#preferredNamespaceURI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasServiceAddress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#charitable_owned"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FloorAreaThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#hasLegalName"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Environment.owl#preferrredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBuilding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicBuilding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#forAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#reported_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasServiceType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.6/square_metre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Residence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/GovernmentOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAreaQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#forService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasElectricalConsumption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DivisionofOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#insideBuilding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#goalOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#authorizedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#connectedthrough"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUnitIndicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization_Division_size"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#consumedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAreaMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#ForProfitOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_measure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#hasName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#related_to"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#publicly_owned"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#used_as"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TenantSpace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connectedServiceAccounts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#is_issued_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResidentialBuilding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBuildingClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#GovernmentOrganization"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#certification_Date"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUnitAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#impactsAccounts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Variable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBuildingAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occupied_by"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Percentage_unit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occupies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#GovernmentCensus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFloorArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAccount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FloorArea_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#population_cardinality_unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#accountActive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#privately_owned"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City"/>
+        <Class IRI="http://schema.org/City"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#CommercialBuilding"/>
+        <Class IRI="#building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Division"/>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Division"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Division"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#DivisionofOrganization"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Division"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasSize"/>
+            <Class IRI="#Organization_Division_size"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorAreaThing"/>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Measure"/>
+        <Class IRI="#FloorAreaThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Measure"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/square_metre"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Quantity"/>
+        <Class IRI="#FloorAreaThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Variable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Quantity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#for_Building"/>
+            <Class IRI="#building"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.6/square_metre"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FloorArea_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="#FloorArea_Measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasSize"/>
+            <Class IRI="#Organization_size"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_Division_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_Division_size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="#Organization_Division_size_measure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_Division_size_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_Division_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_size"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_size"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="#Organization_size_measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_size_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicBuilding"/>
+        <Class IRI="#building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicBuilding"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#has_Ownership"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#GovernmentOrganization"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialBuilding"/>
+        <Class IRI="#building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResidentialBuilding"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasHouseholds"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tenant"/>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tenant"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tenant"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#represents"/>
+            <ObjectUnionOf>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tenant"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#occupies"/>
+            <Class IRI="#TenantSpace"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TenantSpace"/>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TenantSpace"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#connectedServiceAccounts"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAccount"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TenantSpace"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#occupied_by"/>
+            <Class IRI="#Tenant"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TenantSpace"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasUnitIndicator"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <Class IRI="http://dbpedia.org/ontology/Building"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUnitAddress"/>
+            <Class IRI="#TenantSpace"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#occupied_by"/>
+            <ObjectUnionOf>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasElectricalConsumption"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTenancy"/>
+            <Class IRI="#Tenant"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTenantSpace"/>
+            <Class IRI="#TenantSpace"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#owned_by"/>
+            <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasFloorArea"/>
+            <Class IRI="#FloorArea_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasResFloorArea"/>
+            <Class IRI="#FloorArea_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasAddress"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#building"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#has_Ownership"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionMeasure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#forService"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/kilowatt_hour"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionQuantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasAddress"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#forService"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalService"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/kilowatt_hour"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Service"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAccount"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAccount"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#hasConsumption"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionMeasure"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAreaMeasure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceAreaQuantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumer"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumerGroup"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionMeasure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionMeasure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionQuantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionQuantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionThing"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionThing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#forService"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Service"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionThing"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#consumedBy"/>
+            <ObjectUnionOf>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumer"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumerGroup"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Cardinality_unit"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Cardinality_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Unit_Summation"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+        <Class IRI="http://xmlns.com/foaf/spec/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city"/>
+            <Class IRI="http://schema.org/City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#forAddress"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/icontact.owl#HomeAddress"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#is_issued_by"/>
+            <Class IRI="http://schema.org/GovernmentOrganization"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#certification_Date"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#expiry_Date"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#GovernmentCensus"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+        <Class IRI="http://schema.org/Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#hasProof"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#CityCurrentlyResidingIn"/>
+            <Class IRI="http://schema.org/City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#reside_in"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#GCISheltersThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#population_cardinality_unit"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#GCISheltersThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_cardinality_unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+        <Class IRI="#GCIBuildingOccupancyThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasSize"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#consistsOf"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#GCISheltersThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_cardinality_unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#GCISheltersThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_cardinality_unit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#ForProfitOrganization"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#GovernmentOrganization"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#NonGovernmentOrganization"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#consistsOf"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Division"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#has_Ownership"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Organization"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/organization.owl#hasLegalName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.6/square_metre"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Compount_unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiplication"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/cubic_metre"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measurement_scale"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measure"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_unit_of_measure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_measurement_scale"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_unit_of_measure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_unit_of_measure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#ForProfitOrganization"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#NonGovernmentOrganization"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#GovernmentOrganization"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#NonGovernmentOrganization"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#charitable_owned"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#government_owned"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#privately_owned"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://ontology.eil.utoronto.ca/organization.owl#Ownership"/>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/organization.owl#publicly_owned"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#connectedServiceAccounts"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#for_Building"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBuilding"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBuildingClass"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasElectricalConsumption"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFloorArea"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHouseholds"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasResFloorArea"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTenancy"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTenantSpace"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_owner"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#insideBuilding"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#occupied_by"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#occupies"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#represents"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#used_as"/>
+        <ObjectProperty IRI="#BuildingOccupancyProperties"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#occupied_by"/>
+        <ObjectProperty IRI="#occupies"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasBuildingAddress"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#related_to"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#related_to"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#reside_in"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/phenomenon"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </ObjectPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#CityCurrentlyResidingIn"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dcterms:description#c5fb1c3c_8d0e_4c1f_89cd_d50e572e9c61</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">causedByWeather</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dcterms:description#40c925fb_7849_4058_97be_a84207f4d785</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>geo:6252001</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">United States</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>gn:6251999</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Canada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+An event consists of some temporal and spatial boundaries subjectively
+imposed on the flux of reality or imagination, that we wish to treat
+as an entity for the purposes of making statements about it. In
+particular, we may wish to make statements that relate people, places,
+or things to an event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+Note that, unlike some defintions of &quot;event,&quot; this definition does not
+specify that an event involves a change of state, nor does it attempt
+to distinguish events from processes or states.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/atPlace</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+This property relates an event to some meaningful place, which may
+have a name (e.g. &quot;Paris&quot;) or may be defined relative to some other
+entity or entities (e.g. &quot;the unincorporated area between Carson and
+Harbor Gateway&quot;). An event may be related to more than one such
+place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/atPlace</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">at place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/atTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+Equivalent definitions from other ontologies:
+
+* C4DM Event ontology: &quot;Relates an event to a time object, classifying
+  a time region (either instantaneous or having an extent).&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/atTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+This property relates an event to some subjectively imposed temporal
+boundaries, i.e. a span of time. An event can be related to only one
+such span of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/atTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">at time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/circa</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+This property relates a span of time that cannot be precisely located
+in a chronological series to another span of time that can be
+precisely located, thus asserting that the latter is an approximation
+of the former.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/circa</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An temporal relation expressing nearness in time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/circa</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">circa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/illustrate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+This property relates any thing (typically a media object) to an event which it
+illustrates, documents or comments upon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/illustrate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">illustrate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/inSpace</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+Note that a statement that relates an event to a region of space using
+this property only asserts that an event occurred somewhere within
+the region and does not assert that it occurred everywhere within the
+region.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/inSpace</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+This property relates an event to some subjectively imposed spatial
+boundaries, i.e. a region of space. An event can be related to only
+one such region of space.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/inSpace</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">in space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/involved</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+This property relates an event to any physical, social, or mental
+object or substance. It does not imply any causal relationship or
+influence or any other kind of explanatory relationship such as
+creation, destruction, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/involved</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">involved</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://linkedevents.org/ontology/involvedAgent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+This property relates an event to anything with agency, such as a
+(legal or natural) person, a group, an organization, a computational
+agent, etc. It does not imply any causal relationship, influence,
+intentionality, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://linkedevents.org/ontology/involvedAgent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">involved agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Division</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gcibo:Division</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#FloorArea_Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The FloorArea_Quantity represents the quantity of the area of the floor within a building. This is associated to the total FloorArea_Measure with consist of the quantity of the floor area and the unit of measurement with is om:square_metre for this ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#FloorArea_Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The FloorArea_Quantity represents the quantity of the area of the floor within a building. This is associated to the total FloorArea_Measure with consist of the quantity of the floor area and the unit of measurement with is om:square_metre for this ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gcibo:Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PublicBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defined as a building owned by the government.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ResidentialBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defined as a building with more than 50% of the total floor space used for residential purposes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#Tenant</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Tenant occupies TenantSpace in a Building.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>#building</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">dbepdia defines a building as a free standing structure that comprises of one or more rooms and spaces, covered by a roof, and enclosed with external walls or dividing walls that extend from the foundation to the roof.  A Building has one main BuildingAddress. However, within the building may be multiple units that host different households and organizations. These tenants may have different services and accounts. 
+
+The definition of a “ResidentialBuilding” is regionally specific. The OECD (Residential Building, 2002) defines buildings with more than half of their floor space allocated to residential usage as residential buildings. The ResidentialBuilding class has specified the amount of Residental_FloorArea to ensure that the definitions match across data sets.
+
+ISO37120 also states that PublicBuildings are defined as buildings that are owned by the government. By this logic, social housing would fit under the classes of ResidentialBuilding and PublicBuilding.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElectricalServiceConsumptionMeasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceConsumptionQuantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ServiceConsumptionQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#forService</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">forService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#CDN_dollar</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Canadian Dollar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Cardinality_scale</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cardinality Scale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Cardinality_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Just as the meter is the unit of measure for length, a gci:Cardinality_unit is the unit of measure for the size of a set. The gci:Cardinality_unit is a ratio scale: gci:Cardinality_scale, which is a subclass of om:Ratio_scale and is has a zero element (namely zero).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Cardinality_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cardinality Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Fixed_zero_cardinality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fixed Zero Cardinality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">All ISO37120 Indicators are a subclass of the GCI_Quantity.  They then inherit all of the properties including placenames, populations, provenance, trust, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GCI Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Monetary_unit</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Monetary Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_Product_Unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population Product Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_cardinality_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci:Population_cardinality_unit which is the unit of measure for the cardinality of set defined by a Population (defined in the next section), and associate the symbol “pc” with it.  For example, 1100pc represents a population cardinality (or size) of 1100. We can take full advantage of prefix notations available in OM to scale the numbers by defining units of measures: gci:kilopc, gci:megapc and gci:gigapc which are multiples of gci:Population_cardinality_unit. 1.1 kilopc represents 1100 pc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci:Cardinality_unit is the unit of measure for the size of a set. The gci:Cardinality_unit is a ratio scale: gci:Cardinality_scale, which is a subclass of om:Ratio_scale and is has a zero element (namely zero).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_ratio_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci:Population_ratio_unit is defined to be a subclass of om:Unit_division.  It has two properties:
+•	om:numerator whose range is restricted to being a gci:Population_cardinality_unit.
+•	om:denominator whose range is restricted to being a gci:Population_cardinality_unit.
+In other words, a population ratio is derived from two population cardinalities.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_ratio_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population Ratio Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gci:Population_size is a subclass of om:Quantity.  Its om:unit_of_measure is the gci:Population_cardinality_unit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#US_dollar</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">United States Dollar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Unit_Summation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_Year</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for city</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city_service</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for city service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#term</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">term</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#ISO37120_Energy_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO37120_Energy_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#function_of</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">function_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#related_to</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">related_to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#7.1_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.1_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#7.2_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.2_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#7.3_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.3_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#7.4_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.4_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#7.5_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.5_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#7.6_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.6_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl#7.7_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.7_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#APurchase</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">APurchase gurantees that a connection is made since someone is paying for that service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#AcceptedResidencyDocument</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This class defines the necessary content for which residency can be proved. For specific city resident classes, the document type can vary from a drivers licence, to a permit card.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Innovation/GCI-Innovation.owl#Resident</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">allows each individual city the ability to create their own definition of a resident.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Absolute_homeless_person</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Absolute Homeless Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#All_female_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">All Female Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#All_male_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">All Male Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The &apos;Average Household Size&apos; class is a subclass of om:Quantity that represents a city&apos;s (gic:for_city) average household size. Its value (om:value) is a subclass of om:Measure denoted by the class &apos;Average Household Size Measure&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average Household Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">&apos;Average Household Size Measure&apos; is a subclass of om:Measure that is the om:value of &apos;Average Household Size&apos; class with a pr:WasDerivedFrom property from the PROV-O ontology . This property relates the gcis:Average_household_size_measure class with gcis:Household_size_measure class since the result of the former class is always based on the latter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average Household Size Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Emergency_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Emergency Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Family_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Family Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Homeless_person</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Homeless Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Homeless_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Homeless shelters have the following types listed in its subclasses. More categories could be added in future.
+
+A single shelter can act as one or more of these, as long as the definitions do not conflict with each other. e.g. A shelter can be an over-night, drop-in centre, that services men and women. (Gajderowicz B.)
+
+Source: &quot;Toronto Shelter Standards&quot; Community &amp; Neighbourhood Services</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Homeless_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Homeless Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#House</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">House hasAddress Address
+
+equivelantTo sumo:House</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Household is subclass of &apos;Social Unit&apos;
+
+&apos;The householder refers to the person (or one of the people) in whose name the housing unit is owned or rented (maintained) or, if there is no such person, any adult member, excluding roomers, boarders, or paid employees. If the house is owned or rented jointly by a married couple, the householder may be either the husband or the wife. The person designated as the householder is the &quot;reference person&quot; to whom the relationship of all other household members, if any, is recorded. &apos;
+
+Source:  U.S. Census Bureau | Current Population Survey (CPS) http://www.census.gov/cps/about/cpsdef.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A gcis:Household_size represents the quantity (om:Quantity) of number of members of a household. It has a measure (gcis:Household_size_measure) which is a subclass of om:Measure that consists of the actual numerical value and a unit of measure. The household size needs to be derived from (pr:wasDerivedFrom) an official document such as a census (cyc:census).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Household Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A sublcass of om:Measure which is the value of &apos;Household Size&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_size_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Household Size Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_unregistered_legal_titles</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Household_unregistered_legal_titles must have at least 1 place to live (i.e. livesIn sumo:&apos;residential building&apos;) and has at least 1 unregisted legal title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Household_unregistered_legal_titles</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Household_unregistered_legal_titles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Long_term_housing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Longterm Houshing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Overnight_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Overnight Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Refugee_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Refugee Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Relative_homeless_person</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relative Homeless Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Single_adult_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Single Adult Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Slum</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Slum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Slum_household</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Slum Household</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Substance_use_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Substance Use Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Temporary_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Temporary Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Toronto_household</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toronto Household</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Toronto_slum_household</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toronto Slum Household</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Transgender_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Transgender Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Transitional_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Transitional Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Youth_shelter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Youth Shelter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasBuilding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasGeoShape</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasGeoShape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasHouse</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasHouse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasHouseholder</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasHouseholder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasLegalTitle</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasLegalTitle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasSize</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasSize</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#hasTenureType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasTenureType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#isLackOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isLackOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#livesIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">livesIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#livingConditionFor</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">livingConditionFor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl.owl#SocialUnit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">social unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#Energy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy Indicators</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.1</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total residential electrical energy use per capita (kWh/year)  (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.2</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Percentage of city population with authorized electrical service  (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.3</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy consumption of public buildings per year (kWh/m2) (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.4</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The percentage of total energy derived from renewable sources, as a share of the city’s total energy consumption  (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.5</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total electrical energy use per capita (kWh/year) (supporting indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.6</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average number of electrical interruptions per customer per year (supporting indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.7</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average length of electrical interruptions (in hours)  (supporting indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/govstat.owl#Population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gs:Population must identify the area in which the population resides, i.e., the city, and  what characterizes a member of the population, namely the characteristics of a Student or Teacher. For example, the characteristics of a Teacher could be:
+•	Fulltime, defined as teaching 30 or more hours per week, and
+•	Teaches at the primary or secondary level, where primary spans grades 1 thru 8 and secondary spans 9 thru 12.
+
+As depicted in Figure 11, we have extended the GovStat ontology as follows:
+•	Added a property to gs:Population, gs:located_in, that identifies the area that the Population is drawn from.
+•	Added a property to gs:Population, gs:defined_by, that identifies the class that all members of the Population are subsumed by.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Address</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#AddressType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Address Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Avenue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Avenue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Boulevard</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Boulevard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#CellNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mobile Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#CellPhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cell Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Circle</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Circle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Cottage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cottage Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#CottageAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cottage Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Crescent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Crescent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#DaysOfWeek</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Days of the Week</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Drive</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#East</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">East</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#FaxNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fax Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#FaxPhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fax Line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Friday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Friday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Home</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#HomeAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#HomeNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#HomePhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Home Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Monday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Monday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#North</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">North</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#PhoneNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#PhoneType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phone Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Road</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Road</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Saturday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Saturday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#South</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">South</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Street</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#StreetDirection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Direction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#StreetType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Street Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Sunday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sunday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Thursday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thursday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#TollFreeNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toll  Free Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#TollFreePhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toll Free Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Tuesday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tuesday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Wednesday</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wednesday</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#West</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">West</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#Work</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WorkAddress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#WorkAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Work Address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#WorkNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Work Telephone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#WorkPhone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Work Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#dayofWeek</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies the day of the week, e.g., Monday, that the times apply to.  This is the default for that day and can be overidden by the &quot;hasDate&quot; property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasAddress links any class to the Address class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasAddressType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Address Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasAreaCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Area Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasCitySection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has City Section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasClosingTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Closing Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasCountry</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasCountryCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Country Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasGeoCoordinates</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Geo Coordinates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasOpeningTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Opening Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasOperatingHours</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Operating Hours</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasPersonalEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Personal Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasPhoneNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Phone Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasPhoneType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Phone Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasPostalCode</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Postal Code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasStreet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasStreetDirection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street Direction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasStreetNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasStreetType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Street Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasTelephone</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Telephone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasUnitNumber</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Unit Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasWebSite</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Web Site</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/icontact.owl#hasWorkEmail</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has Work Email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#ActivityEmpowerment</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Activity empowerment specifies the range of stati through which an oa may take an activity by performing the appropriate actions, such as execute and suspend. Even though an activity may be enabled, the oa whose role contains the process which contains the activity may not be empowered to start its execution.
+
+forActivity: defines the Activity that the agent is being empowered for.
+forAction: defines the action on the Activity the agent is being empowered for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#AndState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">And State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#CommunicationLink</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Communication Link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#ConsumeState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Consume State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#ForProfitOrganization</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">For Profit Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#GovernmentOrganization</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Government Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#NonGovernmentOrganization</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Non Government Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#OrState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Or State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#Organization</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An organization is a set of constraints on the activities performed by agents. An organization consists of a set of divisions and subdivisions (recursive definition), a set of organization-agents (said to be members of a division of the organization), a set of roles that the members play in the organization, and an organization-goal tree that specifies the goals (and their decomposition into subgoals) the members try to achieve.
+
+The hasOwnership property takes as values individuals of Ownership.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#Organization</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">org:Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#OrganizationThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Communication-links are established among organizational agents in various roles. Communication-links capture the notion of benevolent communication in which agents regard each other as peers volunteer information that they believe relevant to other agents. This exchange does not create obligations for any agent.
+
+The communication-link is a unidirectional link used to communicate information from one agent to another. It describes, for an agent in a given organizational role, the information it is interested in receiving and the information it can benevolently distribute to others.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#ProduceState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Produce State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#ReleaseState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Release State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#StateEmpowerment</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">State empowerment specifies the range of stati through which an oa may take a state by performing the appropriate actions, such as commit. State empowerment not only specifies allowable status changes but may be used to restrict the set of resources an oa is empowered to commit to a use/consume state. An oa may be empowered for any type of resource, including other oas. The implication being the first oa may commit the second to a state.
+
+forState: defines the state that the agent is being empowered for.
+forAction: defines the action on the state the agent is being empowered for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#TerminalState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Terminal State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#UseState</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Use State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#dependsOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A goal g1 is said to depend on goal g2 if g1 can not be achieved unless g2 has been achieved previously.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#hasMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines that an OrganizationAgent is a member of an Organization and/or some type of work.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#hasRole</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a Communication Link to a Role, and a Division to a Role.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/organization.owl#subordinateOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Within the organization, there is usually a hierarchy of roles where one role is subordinate of another. For example, recruiting-officer is a subordinate of human-resource-manager, which in turn is a subordinate of president.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/trust.owl#Trust</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/trust.owl#Trust_b</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust in Belief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/trust.owl#Trust_p</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trust in Performance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/City</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/Country</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/Offer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\n\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/Offer</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Offer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/State</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://sws.geonames.org/6167865/</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Toronto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#ApartmentBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">apartment building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#Building</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#CondominiumBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">condominium building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#Dormitory</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">dormitory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#ExecutiveResidence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">executive residence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#HospitalBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hospital building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#House</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">house</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#PermanentResidence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">permanent residence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#Residence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">residence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#ResidentialBuilding</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">residential building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#SingleFamilyResidence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">single family residence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.adampease.org/OP/SUMO.owl#TemporaryResidence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">temporary residence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.geonames.org/ontology/ontology_v3.1.rdf#Feature</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#lat</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lattitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#long</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Compount_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OM compound unit that is used to represent divisions, ratios, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Compount_unit</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Compound Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">om:Measure is the superclass of all values pointed to by the property om: value.  Its individuals hold the actual indicator values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From the OM ontology.  Defines quantities such as Length, and in GCI all indicators are a subclass of Quantity and inherit its property of om:value and om:unit_of_measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Quantity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Ratio_scale</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ratio Scale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From the OM ontology. Denotes multiples of a unit, such as kilo or giga X.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_multiple_or_submultiple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit Multiple or Submultiple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the units that the instance of Measure uses, e.g., meters or pc (population count)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Unit of Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/numerical_value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">numerical value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OM object property that links a Quantity to a Measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.wurvoc.org/vocabularies/om-1.8/value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:genid1540"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HTML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:genid1541"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">RDF/XML</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

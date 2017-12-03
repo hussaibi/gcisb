@@ -1,0 +1,2062 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/DeviceOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/DeviceOntology"
+     versionIRI="https://w3id.org/seas/CommunicationOntology-1.0">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/seas/DeviceOntology</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-03-13</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-03-13</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Communication ontology defines:
+
+1. Communication devices that ca connect to exchange information,
+2. Communication connections between Communication devices, where information is exchanged, and
+3. Communication connection points of communication devices, through which information flows in/out the communication device.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Communication ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWirelesslyWith"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/CommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInBluetoothWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WireCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInUSBWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInSerialWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInWifiWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BLECommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInLoRaWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInSigFoxWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/CommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/USBCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInZigBeeWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInBLEWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesUsingWireWith"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationDevice"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInEnOceanWith"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnectionPoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/seas/CommunicationOntology"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/BLECommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/BLECommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/LoRaCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/SerialCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/USBCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/USBCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/WiFiCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/WireCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/WirelessCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationDevice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsAt"/>
+            <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnectionPoint"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/BLECommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/BLECommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/BLECommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BLECommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/BLECommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BLECommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/BluetoothCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/BluetoothCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/BluetoothCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/BluetoothCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/CommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/ConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/CommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/EnOceanCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/EnOceanCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/EnOceanCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/EnOceanCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/LoRaCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/LoRaCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/LoRaCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/LoRaCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/LoRaCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/SerialCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/SerialCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/SerialCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/SerialCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SerialCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/WireCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/SigFoxCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/SigFoxCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/SigFoxCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/SigFoxCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/USBCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/USBCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/USBCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/USBCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/USBCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/USBCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/WireCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/WiFiCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/WiFiCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/WiFiCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/WiFiCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WiFiCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/CommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/WireCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/CommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/WireCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WireCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/WireCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WireCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/CommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/WirelessCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/WirelessCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/CommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/WirelessCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/WirelessCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/WirelessCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnection"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystem"/>
+            <Class IRI="https://w3id.org/seas/ZigBeeCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemAt"/>
+            <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnectionPoint"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnectionPoint"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationConnectionPoint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectionPointOf"/>
+            <Class IRI="https://w3id.org/seas/ZigBeeCommunicationDevice"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnectionPoint"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/seas/connectsSystemThrough"/>
+            <Class IRI="https://w3id.org/seas/ZigBeeCommunicationConnection"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/ZigBeeCommunicationDevice"/>
+        <Class IRI="https://w3id.org/seas/RadioCommunicationDevice"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI="https://w3id.org/seas/CommunicationOntology"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInBLEWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInBluetoothWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInEnOceanWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInLoRaWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWirelesslyWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInSerialWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesUsingWireWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInSigFoxWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInUSBWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesUsingWireWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInWifiWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInZigBeeWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesUsingWireWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWirelesslyWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWith"/>
+        <ObjectProperty IRI="https://w3id.org/seas/connectedTo"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInBLEWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInBluetoothWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInEnOceanWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInLoRaWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInRadioWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInSerialWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInSigFoxWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInUSBWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInWifiWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesInZigBeeWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesUsingWireWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWirelesslyWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWith"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWith"/>
+        <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/communicatesWith"/>
+        <Class IRI="https://w3id.org/seas/CommunicationDevice"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of BLE communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BLE Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of BLE communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BLE Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BLECommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BLECommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the BLE protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BLECommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BLECommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BLE Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BLECommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Bluetooth communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bluetooth Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Bluetooth communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bluetooth Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the Bluetooth protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bluetooth Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/BluetoothCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/CommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication connections between communication devices.
+  a communication connection describes the information flows between the communication devices it connects.
+  For example, the following RDF graph states that a 802.11a (WiFi) connection connects two :
+
+```
+  &lt;wifi_connection_12&gt; a seas:CommunicationConnection ;
+    seas:connectsSystem &lt;waterSmartMeter&gt; , &lt;smartHMS&gt; .
+```
+
+  Only communication devices and communication connection points are connected through a communication connection.
+  A connection between communication devices is not necessarily a communication connection.
+
+  Any communication device that exchanges information through a communication connection is connected at least through one of its communication connection points to the communication connection:
+  if:
+
+```
+  &lt;waterSmartMeter&gt; a seas:CommunicationDevice .
+  &lt;wifi_connection_12&gt; a seas:CommunicationConnection .
+  &lt;waterSmartMeter&gt; seas:connectedThrough &lt;wifi_connection_12&gt; .
+```
+
+  then there exists `_:communicationConnectionPoint` such that:
+
+```
+  _:communicationConnectionPoint a seas:CommunicationConnectionPoint ;
+    seas:connectionPointOf &lt;waterSmartMeter&gt; ;
+    seas:connectsSystemThrough &lt;wifi_connection_12&gt; .
+```
+
+    SEAS defines a taxonomy of communication connections used by SEAS partners. If another user requires some addition to this list, please contact us.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/CommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/CommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/CommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/CommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication connection points of communication devices, at which they may be connected to other systems.
+  For example, a water smart meter may have three communication connection points: Wireless M-Bus, Zigbee and LoRa:
+
+```
+  &lt;waterSmartMeter&gt; a seas:CommunicationDevice ;
+    seas:connectsAt &lt;waterSmartMeter_mbus&gt; , &lt;waterSmartMeter_zigbee&gt; , &lt;waterSmartMeter_lora&gt; .
+```
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/CommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/CommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/CommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/CommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices, i.e., devices that exchange information with other communication devices.
+
+  These exchange are only possible through information connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/CommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/CommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/CommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of EnOcean communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EnOcean Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of EnOcean communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EnOcean Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the EnOcean protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EnOcean Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/EnOceanCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of LoRa communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LoRa Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of LoRa communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LoRa Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the LoRa protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LoRa Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/LoRaCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of radio communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Radio Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Radio communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Radio Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using radio waves.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Radio Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/RadioCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Serial communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Serial Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of Serial communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Serial Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the serial protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Serial Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SerialCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of SigFox communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SigFox Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of SigFox communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SigFox Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the SigFox protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SigFox Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/SigFoxCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of USB communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">USB Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of USB communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">USB Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/USBCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/USBCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the USB protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/USBCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/USBCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">USB Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/USBCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of WiFi communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WiFi Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of WiFi communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WiFi Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the WiFi protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WiFi Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WiFiCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of wire communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wire Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of wire communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wire Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WireCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WireCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating through a wire.
+
+    SEAS defines a taxonomy of communication devices used by SEAS partners. If another user requires some addition to this list, please contact us.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WireCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WireCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wire Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WireCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of wireless communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wireless Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of wireless communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wireless Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating wirelessly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Wireless Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/WirelessCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of ZigBee communication connections between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnection</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ZigBee Communication Connection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnection</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of ZigBee communication connection points between communication devices.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnectionPoint</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnectionPoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ZigBee Communication Connection Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationConnectionPoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The class of communication devices capable of communicating using the ZigBee protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationDevice</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ZigBee Communication Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/ZigBeeCommunicationDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInBLEWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using the Bluetooth Low Energy protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInBLEWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInBLEWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in BLE With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInBLEWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInBluetoothWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using the Bluetooth protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInBluetoothWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInBluetoothWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in Bluetooth With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInBluetoothWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInEnOceanWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using the EnOcean protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInEnOceanWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInEnOceanWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in EnOcean With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInEnOceanWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInLoRaWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using the LoRa protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInLoRaWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInLoRaWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in LoRa With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInLoRaWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInRadioWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using Radio Waves.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInRadioWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInRadioWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in Radio With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInRadioWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInSerialWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using Serial protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInSerialWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInSerialWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in Serial With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInSerialWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInSigFoxWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using the SigFox protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInSigFoxWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInSigFoxWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in SigFox With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInSigFoxWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInUSBWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using USB protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInUSBWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInUSBWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in USB With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInUSBWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInWifiWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using the Wifi protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInWifiWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInWifiWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in Wifi With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInWifiWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesInZigBeeWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using the Zig Bee protocol.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesInZigBeeWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesInZigBeeWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates in Zig Bee With</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesInZigBeeWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesUsingWireWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with using some wire.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesUsingWireWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesUsingWireWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates using wire with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesUsingWireWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesWirelesslyWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with wirelessly.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesWirelesslyWith</IRI>
+        <IRI>https://w3id.org/seas/SmartMeterOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesWirelesslyWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates wirelessly with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesWirelesslyWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/communicatesWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a communication device to another communication device it exchanges information with. 
+
+  For example, for information to flow between a water smart meter and a smart home management system, then they must share a communication connection:
+
+```
+  &lt;waterSmartMeter&gt; a seas:CommunicationDevice .
+  &lt;smartHMS&gt; a seas:CommunicationDevice .
+  &lt;waterSmartMeter&gt; seas:communicatesWith &lt;smartHMS&gt; . 
+```
+
+  This property can be further specialized to describe the communication protocol used. For example, sub property `seas:communicatesIn80211aWith` links a communication device to another communication device it exchanges information with using WiFi 802.11a norm.
+
+  This property can be qualified using class seas:CommunicationConnection, which connects (at least) the two communication systems.
+  If there is a communication connection between several communication devices, then one may infer these communication devices can exchange information.
+
+    SEAS defines a some communicatesWith sub properties used by SEAS partners. If another user requires some addition to this list, please contact us.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/communicatesWith</IRI>
+        <IRI>https://w3id.org/seas/CommunicationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/communicatesWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">communicates with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/communicatesWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

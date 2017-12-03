@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/ns/sosa/prov"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3.org/ns/sosa/prov">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.w3.org/ns/prov-o#</Import>
+    <Import>http://www.w3.org/ns/sosa/</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Simon J D Cox</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>http://www.opengeospatial.org/ogc/Software</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-04-13</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alignment of SOSA with PROV-O</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alignment of the the W3C/OGC SOSA Ontology with the W3C PROV-O Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/created"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-12-14</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <AnonymousIndividual nodeID="_:genid1465"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/rights"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Copyright 2017 W3C/OGC.</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="/eventAssociation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hadProcedure"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+        <Class IRI="http://www.w3.org/ns/prov#Plan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Result"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sampler"/>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sampler"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sampling"/>
+        <Class IRI="http://www.w3.org/ns/prov#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Agent"/>
+        <AnonymousIndividual nodeID="_:genid1465"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#used"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#generated"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isResultOf"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isSampleOf"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySampler"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/eventAssociation"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedAssociation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hadProcedure"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#hadPlan"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/eventAssociation"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+            <Class IRI="http://www.w3.org/ns/sosa/Sampling"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hadProcedure"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="/eventAssociation"/>
+            <ObjectProperty IRI="/hadProcedure"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/usedProcedure"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+        <DataProperty IRI="http://www.w3.org/ns/prov#endedAtTime"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid1465"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">W3C/OGC Spatial Data on the Web Working Group</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/seas/FeatureOfInterestOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/seas/FeatureOfInterestOntology"
+     versionIRI="https://w3id.org/seas/EvaluationOntology-1.0">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/seas/FeatureOfInterestOntology</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seas</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-06-08</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SEAS Evaluation ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-09-21</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Evaluation ontology describes evaluation of [`seas:Property`ies](https://w3id.org/seas/Property). There may be:
+
+- direct evaluations, or
+- qualified evaluations.
+
+
+Figure below provides an overview of the concepts in this ontology:
+
+[![Overview of the Evaluation ontology](https://w3id.org/seas/evaluation.png)](https://w3id.org/seas/evaluation.png)
+
+
+### Direct evaluations
+
+The `seas:Property` may be given a unique, constant, quality or quantity value. This is done using properties:
+
+ - [`seas:value`](https://w3id.org/seas/value), if the value is modeled as a RDF IRI or blank node;
+ - [`seas:simpleValue`](https://w3id.org/seas/simpleValue), if the value is modeled as a RDF Literal.
+
+A quality value may be any resource. 
+
+A quantity value may use external vocabularies such as QUDT (it would then be a [qudt:Quantity](https://qudt.org/schema/qudt#QuantityValue)), or OM (it would then be a [om:Quantity](http://www.wurvoc.org/vocabularies/om-1.8/)), or be directly encoded as a literal using an appropriate datatype. 
+
+#### Using QUDT
+
+The SEAS ontologies are compatible with the QUDT ontologies. The alignment between SEAS and QUDT is expressed in [an external module](https://w3id.org/seas/QUDTAlignment) that imports the Evaluation ontology:
+
+- `qudt:Quantity` is a subclass of `seas:Property`;
+- `qudt:quantityValue` is a subproperty of `seas:evaluation`;
+- `qudt:QuantityValue` is a subclass of `seas:Evaluation`;
+- `qudt:numericValue` is a subproperty of `seas:evaluatedValue`.
+
+#### Using OM
+
+The SEAS ontologies are compatible with the OM ontologies. The alignment between SEAS and OM has not yet been expressed in an external module. Please [get in contact with us](https://w3id.org/seas/team-list.html) if this is of interest to your project.
+
+#### Expressing values using custom datatypes 
+
+We are working on a custom datatype identified by `cdt:ucum`. The
+lexical value of a cdt:ucum is defined as follows :
+
+```
+unum ::= number ’ ’ unit
+number ::= noDecimalPtNumeral | decimalPtNumeral |
+scientificNotationNumeral
+unit ::= (see the Unified Code of Units of Measure specification)
+```
+
+`noDecimalPtNumeral`, `decimalPtNumeral` and `scientificNotationNumeral` are defined
+in the XSD 1.1 recommendation. This datatype should either be hardcoded in RDF engines, or could be specified as a [Linked Datatype](https://w3id.org/lindt/), making it easy for any SPARQL engine to support the comparison of quantity values.
+
+For example, the following triples quantify the consumption of a fridge using `cdt:ucum` literals:
+
+```
+&lt;fridge/1/consumption/frequency&gt; seas:simpleValue &quot;50.1 Hz&quot;^^cdt:ucum .
+&lt;fridge/1/consumption/voltage&gt; seas:simpleValue &quot;231 V&quot;^^cdt:ucum . 
+&lt;fridge/1/consumption/tension&gt; seas:simpleValue &quot;2432 mA&quot;^^cdt:ucum .
+&lt;fridge/1/consumption/voltageTensionPhase&gt; seas:simpleValue &quot;1.68 RAD&quot;^^cdt:ucum .
+```
+
+### Qualified evaluations
+
+Because property values may evolve in space and time, or because they can be approximate measures or forecasts, class [`seas:Evaluation`](https://w3id.org/seas/Evaluation) qualifies the link [`seas:value`](https://w3id.org/seas/value). In particular, an instance of seas:Evaluation may hold metadata about:
+
+1. the type of evaluation;
+2. the context of validity of the evaluation;
+3. provenance information or any other data.
+
+Let us shortly describe each of these categories.
+
+#### The type of evaluation
+
+The type of evaluation is defined by the hierarchy of `seas:Evaluation` sub classes. This hierarchy includes classes such as:
+
+- [seas:TimeAverageEvaluation](https://w3id.org/seas/TimeAverageEvaluation): the given value is the average of the property value over its temporal context;
+- [seas:MaximumOperatingEvaluation](https://w3id.org/seas/MaximumOperatingEvaluation): the given value is the maximum operating value for the property in all of its validity context.
+
+#### The evaluation validity context
+
+An evaluation validity context is described using functional sub properties of [seas:hasValidityContext](https://w3id.org/seas/hasValidityContext). The SEAS ontologies define two such properties:
+
+- [seas:hasTemporalContext](https://w3id.org/seas/hasTemporalContext) links an entity to its temporal validity context, a [time:TemporalEntity](http://www.w3.org/2006/time#TemporalEntity);
+- [seas:hasSpatialContext](https://w3id.org/seas/hasSpatialContext) links an entity to its spatial validity context, a [geo:SpatialThing](http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing).
+
+#### Provenance or other metadata
+
+Other metadata may be added to describe an evaluation instance. For example the W3C [PROV Ontology](https://www.w3.org/TR/prov-o/) enables to describe the activity that generated the evaluation, or its generation time.
+
+Other vocabularies may be used to further describe evaluations. See the [Linked Open Vocabulary cloud](http://lov.okfn.org/dataset/lov/).
+
+#### Examples
+
+The day-ahead forecasted temperature at Aeroport de Lyon is 28.3 °C:
+
+```
+&lt;air/temperature&gt; seas:evaluation [
+  a seas:TemperatureEvaluation , seas:exactEvaluation , seas:Forecast ;
+  prov:wasGeneratedBy &lt;algorithm/1/execution/234&gt; ;
+  prov:generatedAtTime &quot;2016-08-12T12:00:00Z&quot;^^xsd:dateTime ;
+  seas:hasTemporalContext [ a time:Instant ; time:inXSDDateTime &quot;2016-08-13T12:00:00Z&quot;^^xsd:dateTime ] ;
+  seas:hasSpatialContext [ a geo:Point ; geo:lat 45.7242502 ; geo:long 5.0914517 ] ;
+  seas:evaluatedSimpleValue &quot;28.3 °C&quot;^^cdt:ucum ] .
+```
+
+The average frequency of property `&lt;fridge/1/consumption/frequency&gt;` over time interval 12:00 - 13:00, as generated by `&lt;algorithm/1/execution/12&gt;`, is 50.1054 Hz:
+
+```
+&lt;fridge/1/consumption/frequency&gt; seas:evaluation [
+  a seas:FrequencyEvaluation , seas:TimeAverageEvaluation ;
+  prov:wasGeneratedBy &lt;algorithm/2/execution/12&gt; ;
+  seas:hasTemporalContext [ a time:Interval ; time:hasBeginning [ time:inXSDDateTime &quot;2016-09-10T12:00:00Z&quot;^^xsd:dateTime ] ; time:hasEnd [ time:inXSDDateTime &quot;2016-09-10T13:00:00Z&quot;^^xsd:dateTime ] ] ;
+  seas:evaluatedSimpleValue &quot;50.1054 Hz&quot;^^cdt:ucum ] .
+```
+
+The minimal operating value of `&lt;fridge/1/consumption/frequency&gt;` is 47.0 Hz:
+
+```
+&lt;fridge/1/consumption/frequency&gt; seas:evaluation [
+  a seas:MinimalOperatingValueEvaluation ;
+  seas:evaluatedSimpleValue &quot;47.0 Hz&quot;^^cdt:ucum ;
+] .
+```
+
+</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/MaximumEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/AverageEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/seas/simpleValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/hasSpatialContext"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/hasValidityContext"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluatedValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluationOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/seas/evaluatedSimpleValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/seas/hasTemporalContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/MinimumEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/seas/EvaluationOntology"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/AverageEvaluation"/>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/MaximumEvaluation"/>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/seas/MinimumEvaluation"/>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+        <Class IRI="https://w3id.org/seas/FeatureOfInterest"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI="https://w3id.org/seas/EvaluationOntology"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/hasSpatialContext"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasValidityContext"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/seas/hasTemporalContext"/>
+        <ObjectProperty IRI="https://w3id.org/seas/hasValidityContext"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluation"/>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluationOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluationOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/hasSpatialContext"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/hasTemporalContext"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluation"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluatedValue"/>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluation"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluationOf"/>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/seas/value"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluation"/>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/evaluationOf"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/hasSpatialContext"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/seas/hasTemporalContext"/>
+        <Class IRI="http://www.w3.org/2006/time#TemporalEntity"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="https://w3id.org/seas/evaluatedSimpleValue"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://w3id.org/seas/evaluatedSimpleValue"/>
+        <Class IRI="https://w3id.org/seas/Evaluation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://w3id.org/seas/simpleValue"/>
+        <Class IRI="https://w3id.org/seas/Property"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/AverageEvaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average Evaluation is an Evaluation wich evaluate  the sum of a list 
+                  of evaluations divided by the number of evalautions in the list.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/AverageEvaluation</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/AverageEvaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average Evaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/AverageEvaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/Evaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evaluations qualify the link [`seas:value`](https://w3id.org/seas/value). In particular, they may hold metadata about:
+
+1. the type of evaluation;
+2. the context of validity of the evaluation;
+3. provenance information or any other data.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/Evaluation</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/Evaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/Evaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/MaximumEvaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maximum Evaluation is an Evaluation which is the maximum value that the evaluation 
+                can take for the evaluated property.
+                </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/MaximumEvaluation</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/MaximumEvaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maximum Evaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/MaximumEvaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/MinimumEvaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Minimum Evaluation is an Evaluation which is the minimum value that the evaluation 
+              can take for the evaluated property.
+                </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/MinimumEvaluation</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/MinimumEvaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Minimum Evaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/MinimumEvaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/evaluatedSimpleValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an evaluation to the literal that qualifies some aspect of the property, modeled as a RDF Literal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/evaluatedSimpleValue</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/evaluatedSimpleValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">evaluated simple value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/evaluatedSimpleValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/evaluatedValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an evaluation to the literal that qualifies some aspect of the property, modeled as a RDF IRI or blank node.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/evaluatedValue</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/evaluatedValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">evaluated value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/evaluatedValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/evaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a property to one of its evaluations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/evaluation</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/evaluation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">evaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/evaluation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/evaluationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an evaluation to the one and only property it evaluates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/evaluationOf</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/evaluationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">evaluation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/evaluationOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/hasSpatialContext</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an evaluation to its spatial validity context, a [geo:SpatialThing](http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/hasSpatialContext</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/hasSpatialContext</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has spatial context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/hasSpatialContext</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/hasTemporalContext</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links an evaluation to its temporal validity context, a [time:TemporalEntity](http://www.w3.org/2006/time#TemporalEntity).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/hasTemporalContext</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/hasTemporalContext</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has temporal context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/hasTemporalContext</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/hasValidityContext</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links some object to one of its validity contexts.
+
+A validity context is described using functional sub properties of [seas:hasValidityContext](https://w3id.org/seas/hasValidityContext). There are two such properties defined:
+
+- [seas:hasTemporalContext](https://w3id.org/seas/hasTemporalContext) links an entity to its temporal validity context, a [time:TemporalEntity](http://www.w3.org/2006/time#TemporalEntity);
+- [seas:hasSpatialContext](https://w3id.org/seas/hasSpatialContext) links an entity to its spatial validity context, a [geo:SpatialThing](http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing).
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/hasValidityContext</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/hasValidityContext</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has validity context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/hasValidityContext</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/simpleValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a property to a unique, constant, quality or quantity value for that property, modeled as a RDF Literal.
+
+For example, the exact length of `&lt;car/1&gt;` is  4.27 m, and this is true in the validity context of the RDF graph.
+
+```
+  &lt;car/1/length&gt; a seas:Property ;
+    seas:simpleValue &quot;4.27 m&quot;^^cdt:ucum .
+```
+
+This property is a shortcut for an exact evaluation with all context being the most generic contexts (although this notion is not planned to be formalized).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/simpleValue</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/simpleValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">simple value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/simpleValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/seas/value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a property to a unique, constant, quality or quantity value for that property, modeled as a RDF IRI or blank node.
+
+For example, the exact length of `&lt;car/1&gt;` is  4.27 m, and this is true in the validity context of the RDF graph.
+
+```
+  &lt;car/1/length&gt; a seas:Property ;
+    seas:value [ a qudt:QuantityValue ; qudt:numericalValue 4.27 ; qudt:unit qudt-unit:meter ] .
+```
+
+This property is a shortcut for an exact evaluation with all context being the most generic contexts (although this notion is not planned to be formalized).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/seas/value</IRI>
+        <IRI>https://w3id.org/seas/EvaluationOntology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/seas/value</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <IRI>https://w3id.org/seas/value</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

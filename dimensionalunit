@@ -1,0 +1,1511 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://qudt.org/1.1/vocab/dimensionalunit"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://qudt.org/1.1/vocab/dimensionalunit"
+     versionIRI="http://qudt.org/1.1/vocab/dimensionalunit">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://qudt.org/1.1/schema/qudt</Import>
+    <Import>http://qudt.org/1.1/vocab/unit</Import>
+    <Import>http://qudt.org/1.1/schema/dimension</Import>
+    <Import>http://qudt.org/1.1/vocab/quantity</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$Id: OVG_dimensionalunits-qudt-(v1.1).ttl 4988 2011-06-01 20:34:19Z RalphHodgson $</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+        <IRI>http://voag.linkedmodel.org/schema/voag#TopQuadrantAttribution</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ralph Hodgson</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDomainScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Science, Medicine and Engineering</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">James E. Masters</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT Dimensional Units Version 1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT Dimensional Units</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The QUDT Ontologies are issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to NASA Ames Research Center and TopQuadrant, Inc.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Units of Measure with Dimensional Analysis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Daniel Mekonnen</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Irene Polikoff</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">To provide the dimension vectors for all QUDT units</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDisciplineScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">All disciplines</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">QUDT</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+        <IRI>http://qudt.org/schema/qudt#NASA-ARC-Attribution</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasRole"/>
+        <IRI>http://www.linkedmodel.org/schema/vaem#VocabularyGraph</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasAspectScope"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Full treatment of quantities and units including support for dimensional analysis over quantities.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasCatalogEntry"/>
+        <IRI>http://qudt.org/catalog/qudt#QUDT-DIMENSIONALUNITS-VocabCatalogEntry</IRI>
+    </Annotation>
+    <Declaration>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Newton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Siemens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Coulomb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchOfWater"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Angstrom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootOfWater"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Joule"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#RadianPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PicoFarad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Kelvin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MicroFarad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Henry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerFoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Sievert"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Clo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SlugPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Watt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicFootPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtmosphereStandard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KiloPond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#NauticalMile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Yard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasRole"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareFootPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankinePerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PascalSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerFootSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Erg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KiloHertz"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtomicMassUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Farad"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Kilogram"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicYard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchPerSecondSquared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Dyne"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasCatalogEntry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#ErgPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AstronomicalUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#NanoFarad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Rem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerCubicInch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KilogramPerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Foot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MicroHenry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gray"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerMoleKelvin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gram"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Curie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#UnifiedAtomicMassUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheitPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MilePerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MicroSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKilogram"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Poise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Inch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Becquerel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SlugPerFootSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#OuncePerSquareYard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerCubicFoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheitPerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Barn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#GrayPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Millibar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Slug"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KilogramPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKelvin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchOfMercury"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankinePerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Mole"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasAspectScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#WattPerSteradian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKilogramKelvin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Katal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Knot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Torr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Rad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheitPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Lux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MilliSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Pascal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Weber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerSquareFoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicFoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareFoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#LightYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Hour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Mho"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Acre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#GallonUSPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AmpereHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerSecondSquared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsiusPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareInch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#ErgPerGram"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#GigaHertz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MilliHenry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#LumenPerWatt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Are"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#RadianPerSecondSquared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Grain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#LumenSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsiusPerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MolePerKilogram"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Ampere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Hertz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KiloPascal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareMile"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Steradian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Parsec"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CoulombPerMole"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicInch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Volt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreePerSecond"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Stere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerMole"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicYardPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsiusPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtmosphereTechnical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CoulombPerKilogram"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDomainScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankinePerHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JouleSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Candela"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Ohm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#RadianPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Decibel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareYard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Hectare"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MolecularMass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerWatt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Centipoise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Lumen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#OuncePerSquareFoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerFootHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Fathom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MegaHertz"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#hasDisciplineScope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KilogramPerMole"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Stokes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicInchPerMinute"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Roentgen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SlugPerCubicFoot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerCubicYard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Grade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Radian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Centistokes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#VoltPerSecond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Kilowatt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Tesla"/>
+    </Declaration>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/author"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/description"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/title"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://qudt.org/schema/qudt#quantityKind"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtomicMassUnit"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/quantity#MolecularMass"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2011-01-02T01:16:11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The QUDT Dimensional Units is a vocabulary that extens the basic treatment of units with quantities and their dimensions. A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. A dimension is a relationship between a quantity system, a quantity kind of that system, and one or more dimension vectors. There is one dimension vector for each of the system&apos;s base quantity kinds. The vector&apos;s magnitude determines the exponent of the base dimension for the referenced quantity kind.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#lastUpdated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">$LastChangedDate: 2011-06-01 13:34:19 -0700 (Wed, 01 Jun 2011) $</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">http://qudt.org/vocab/dimensionalunit</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">qudt-dimensionalunit</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Acre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ACR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Ampere"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">AMP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AmpereHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">AMH</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Angstrom"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Are"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ARE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AstronomicalUnit"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtmosphereStandard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ATM</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#AtmosphereTechnical"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ATT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Barn"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Becquerel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">BQL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Candela"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">CDL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Centipoise"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Centistokes"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">4C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Clo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J83</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Coulomb"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">COU</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CoulombPerKilogram"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">CKG</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CoulombPerMole"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicFoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FTQ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicFootPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2L</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicInch"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">INQ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicInchPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">G57</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicYard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">YDQ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#CubicYardPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">M15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Curie"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">CUR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Day"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DAY</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Decibel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2N</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsius"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">CEL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsiusPerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">H12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsiusPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">H13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeCelsiusPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">H14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheit"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FAH</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheitPerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheitPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeFahrenheitPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreePerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">E96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A48</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankinePerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J28</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankinePerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J29</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#DegreeRankinePerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Dyne"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DU</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Erg"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A57</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#ErgPerGram"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A61</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#ErgPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A63</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Farad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FAR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Fathom"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">AK</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Foot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FOT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootOfWater"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">K24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">K14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#FootPerSecondSquared"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A73</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gal"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A76</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#GallonUSPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">G2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#GigaHertz"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A86</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gon"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A91</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Grade"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A91</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Grain"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GRN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gram"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GRM</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Gray"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#GrayPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Hectare"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">HAR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Henry"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">81</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Hertz"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">HTZ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Hour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">HUR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Inch"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">INH</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchOfMercury"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">F79</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchOfWater"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">F78</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IU</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#InchPerSecondSquared"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">IV</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Joule"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">JOU</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKelvin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">JE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKilogram"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">J2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerKilogramKelvin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerMole"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JoulePerMoleKelvin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#JouleSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Katal"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KAT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Kelvin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KEL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">F10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">F11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">F12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KelvinPerWatt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KiloHertz"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KHZ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KiloPascal"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KPA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KiloPond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B51</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Kilogram"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KGM</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KilogramPerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">E93</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KilogramPerMole"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">D74</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#KilogramPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KGS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Kilowatt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KWT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Knot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">KNT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#LightYear"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B57</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Lumen"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">LUM</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#LumenPerWatt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B61</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#LumenSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B62</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Lux"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">LUX</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MegaHertz"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MHZ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Mho"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NQ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MicroFarad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">4O</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MicroHenry"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MicroSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">B98</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MilePerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">HM</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MilliHenry"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MilliSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Millibar"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MBR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Mole"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C34</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#MolePerKilogram"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C19</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#NanoFarad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C41</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#NauticalMile"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NMI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Newton"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">NEW</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Ohm"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">OHM</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#OuncePerSquareFoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">37</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#OuncePerSquareYard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ON</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Parsec"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C63</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Pascal"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">PAL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PascalSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PicoFarad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">4T</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Poise"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">89</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerCubicFoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">87</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerCubicInch"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">LA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerCubicYard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">K84</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerFoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">P2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerFootHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">K67</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerFootSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">K68</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerHour"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">4U</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#PoundPerSquareFoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Rad"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Radian"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">C81</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#RadianPerMinute"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#RadianPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#RadianPerSecondSquared"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2B</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Rem"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">D91</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Roentgen"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Siemens"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SIE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Sievert"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">D13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Slug"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">F13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SlugPerCubicFoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">L65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SlugPerFootSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">L64</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SlugPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">L68</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareFoot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">FTK</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareFootPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">S3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareInch"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">INK</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareMile"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MIK</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#SquareYard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">YDK</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Steradian"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">D27</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Stere"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">G26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Stokes"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">91</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Tesla"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">D33</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Torr"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">UA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#UnifiedAtomicMassUnit"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">D43</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Volt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">VLT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#VoltPerSecond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">H46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Watt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">WTT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#WattPerSteradian"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">D57</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Weber"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">WEB</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://qudt.org/schema/qudt#uneceCommonCode"/>
+        <NamedIndividual IRI="http://qudt.org/vocab/unit#Yard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">YRD</Literal>
+    </DataPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>http://qudt.org/vocab/unit#SystemOfUnits_CGS-ESU</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The electrostatic system of units is a system of units used to measure electrical quantities of electric charge, current, and voltage, within the centimeter gram second (or &quot;CGS&quot;) metric system of units. In electrostatic units, electrical charge is defined via the force it exerts on other charges.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

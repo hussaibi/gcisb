@@ -1,0 +1,913 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/ns/prov-dictionary#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3.org/ns/prov-dictionary#">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.w3.org/TR/prov-dictionary/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.w3.org/ns/prov</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">W3C PROVenance Interchange Ontology (PROV-O) Dictionary Extension</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
+
+If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome.</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#hadDictionaryMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Removal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#KeyEntityPair"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedRemoval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByInsertionFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#EmptyDictionary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#insertedKeyEntityPair"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/prov#pairKey"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/prov#removedKey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Insertion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByRemovalFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedInsertion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#dictionary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#pairEntity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#EmptyCollection"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedDerivation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Derivation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#unqualifiedForm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#entity"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#EmptyDictionary"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#EmptyDictionary"/>
+        <Class IRI="http://www.w3.org/ns/prov#EmptyCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Insertion"/>
+        <Class IRI="http://www.w3.org/ns/prov#Derivation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Insertion"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#insertedKeyEntityPair"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Insertion"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#dictionary"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#KeyEntityPair"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#pairEntity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#KeyEntityPair"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/ns/prov#pairKey"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Removal"/>
+        <Class IRI="http://www.w3.org/ns/prov#Derivation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Removal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#dictionary"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/prov#Removal"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/ns/prov#removedKey"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByInsertionFrom"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByRemovalFrom"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#dictionary"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#entity"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedInsertion"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedDerivation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedRemoval"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedDerivation"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#pairEntity"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByInsertionFrom"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByRemovalFrom"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#dictionary"/>
+        <Class IRI="http://www.w3.org/ns/prov#Insertion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#dictionary"/>
+        <Class IRI="http://www.w3.org/ns/prov#Removal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#hadDictionaryMember"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#insertedKeyEntityPair"/>
+        <Class IRI="http://www.w3.org/ns/prov#Insertion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#pairEntity"/>
+        <Class IRI="http://www.w3.org/ns/prov#KeyEntityPair"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedInsertion"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedRemoval"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByInsertionFrom"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#derivedByRemovalFrom"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#dictionary"/>
+        <Class IRI="http://www.w3.org/ns/prov#Dictionary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#hadDictionaryMember"/>
+        <Class IRI="http://www.w3.org/ns/prov#KeyEntityPair"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#insertedKeyEntityPair"/>
+        <Class IRI="http://www.w3.org/ns/prov#KeyEntityPair"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#pairEntity"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedInsertion"/>
+        <Class IRI="http://www.w3.org/ns/prov#Insertion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#qualifiedRemoval"/>
+        <Class IRI="http://www.w3.org/ns/prov#Removal"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.w3.org/ns/prov#pairKey"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/ns/prov#pairKey"/>
+        <Class IRI="http://www.w3.org/ns/prov#KeyEntityPair"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/ns/prov#removedKey"/>
+        <Class IRI="http://www.w3.org/ns/prov#Removal"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/ns/prov#pairKey"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/ns/prov#removedKey"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A given dictionary forms a given structure for its members. A different structure (obtained either by insertion or removal of members) constitutes a different dictionary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Dictionary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A dictionary is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the dictionary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-conceptual-definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#Dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Empty Dictionary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An empty dictionary (i.e. has no members).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-conceptual-definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#EmptyDictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Insertion is a derivation that describes the transformation of a dictionary into another, by insertion of one or more key-entity pairs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#unqualifiedForm"/>
+        <IRI>http://www.w3.org/ns/prov#Insertion</IRI>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Key-Entity Pair</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A key-entity pair. Part of a prov:Dictionary through prov:hadDictionaryMember. The key is any RDF Literal, the value is a prov:Entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#KeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Removal is a derivation that describes the transformation of a dictionary into another, by removing one or more keys.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#unqualifiedForm"/>
+        <IRI>http://www.w3.org/ns/prov#Removal</IRI>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">derivedByInsertionFrom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The dictionary was derived from the other by insertion. Can be qualified with prov:qualifiedInsertion, which shows details of the insertion, in particular the inserted key-entity pairs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByInsertionFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">derivedByRemovalFrom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The dictionary was derived from the other by removal. Can be qualified with prov:qualifiedRemoval, which shows details of the removal, in particular the removed keys.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#derivedByRemovalFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">dictionary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property used by a prov:Insertion and prov:Removal to cite the prov:Dictionary that was prov:derivedByInsertionFrom or prov:derivedByRemovalFrom another dictionary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#dictionary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hadDictionaryMember</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Describes the key-entity pair that was member of a prov:Dictionary. A dictionary can have multiple members.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#hadDictionaryMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">insertedKeyEntityPair</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An object property to refer to the prov:KeyEntityPair inserted into a prov:Dictionary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#insertedKeyEntityPair</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pairKey</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The entity of a prov:KeyEntityPair, which is an element of a prov:Dictionary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#pairEntity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pairKey</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The key of a prov:KeyEntityPair, which is an element of a prov:Dictionary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#pairKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">qualifiedInsertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">prov:qualifiedInsertion shows the details of an insertion, in particular the inserted key-entity pairs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedInsertion</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">qualifiedRemoval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">prov:qualifiedRemoval shows the details of a removal, in particular the removed keys.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#qualifiedRemoval</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <IRI>http://www.w3.org/ns/prov#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">removedKey</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#category"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#component"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collections</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#constraints"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#definition"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The key removed in a Removal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#dm"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/ns/prov#n"/>
+        <IRI>http://www.w3.org/ns/prov#removedKey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

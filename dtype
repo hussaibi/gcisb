@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.linkedmodel.org/1.0/schema/dtype"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.linkedmodel.org/1.0/schema/dtype"
+     versionIRI="http://www.linkedmodel.org/1.0/schema/dtype">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.linkedmodel.org/1.2/schema/vaem</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+        <IRI>http://voag.linkedmodel.org/schema/voag#TopQuadrantAttribution</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DTYPE</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+        <IRI>http://voag.linkedmodel.org/schema/voag#CC-SHAREALIKE_3PT0-US</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Created with TopBraid Composer</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">To provide a foundation for data types.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+        <Literal datatypeIRI="http://www.linkedmodel.org/schema/vaem#integer_1to5">1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Datatype Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Datatypes</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Datatype Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The LinkedModel DTYPE Ontology is issued under a Creative Commons Attribution Share Alike 3.0 United States License. Attribution should be made to &lt;a href=&quot;http://www.topquadrant.com&quot;&gt;TopQuadrant, Inc.&lt;/a&gt;.</Literal>
+    </Annotation>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#compositeOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CompositeCodeList"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#order"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#refersTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#derivedFrom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/dtype#orderIndex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#ValueReference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#SimpleCodeList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CodeList"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#hasMember"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#literal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#Enumeration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#code"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#DerivedCodeList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#position"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:anySimpleType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error3"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#intent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#defaultValue"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#acronym"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#revisionNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#hasGovernance"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#specificity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="voag:TopQuadrantAttribution"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CodeList"/>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#Enumeration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CompositeCodeList"/>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CodeList"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CompositeCodeList"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#compositeOf"/>
+            <Class IRI="http://www.linkedmodel.org/schema/dtype#CodeList"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#DerivedCodeList"/>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CodeList"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#DerivedCodeList"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#derivedFrom"/>
+            <Class IRI="http://www.linkedmodel.org/schema/dtype#CodeList"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#DerivedCodeList"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#hasMember"/>
+            <Class IRI="http://www.linkedmodel.org/schema/dtype#ValueReference"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#DerivedCodeList"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#derivedFrom"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error2"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#url"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#code"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#order"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#position"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#name"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#Enumeration"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error3"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#Enumeration"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#Enumeration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#defaultValue"/>
+            <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#Enumeration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#value"/>
+            <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#SimpleCodeList"/>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CodeList"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#SimpleCodeList"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#hasMember"/>
+            <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#ValueReference"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#ValueReference"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#refersTo"/>
+            <Class IRI="http://www.linkedmodel.org/schema/dtype#EnumeratedValue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#ValueReference"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.linkedmodel.org/schema/dtype#refersTo"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#ValueReference"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#position"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CompositeCodeList"/>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#DerivedCodeList"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#CompositeCodeList"/>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#SimpleCodeList"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#DerivedCodeList"/>
+        <Class IRI="http://www.linkedmodel.org/schema/dtype#SimpleCodeList"/>
+    </DisjointClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#hasGovernance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#hasLicenseType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://voag.linkedmodel.org/schema/voag#withAttributionTo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="voag:CC-SHAREALIKE_3PT0-US"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.linkedmodel.org/schema/vaem#usesNonImportedResource"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="voag:TopQuadrantAttribution"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#dateCreated"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.linkedmodel.org/schema/vaem#dateUnion">2011-29-05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#description"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The ontology &apos;dtype&apos; provides a specification of simple data types such as enumerations. These are needed in support of the conversion of XML Schemas and UML Models to OWL. Codelists are also defined in &apos;dtype&apos;.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespace"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://www.linkedmodel.org/schema/dtype</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#namespacePrefix"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">dtype</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#code"/>
+        <Datatype abbreviatedIRI="xsd:anySimpleType"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#literal"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#order"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.linkedmodel.org/schema/dtype#position"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#CodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A codelist is a controlled vocabulary of terms that are used to represent permissible values of a variable in information systems. The representaiton of codes in &apos;dtype&apos; has been influenced by CCTS and UBL.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#CodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Enumeration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#CompositeCodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A composite codelist is a codelist made up of other codelists. It does not introduce any new codes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#CompositeCodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Composite code list</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#DerivedCodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A derived codelist is a sublist of another codelist. The members that it has must be members of the source list.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#DerivedCodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Derived Code List</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#EnumeratedValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The base class for datatypes that have values that are restriced to a set of literals or tokens. The members of the restriction may themselve be restriced by facets that apply to scalar data types.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#EnumeratedValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Metadata Enumerated value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#Enumeration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A type that serves as a container for the enumerated values of an enumeration. This enables the enumeration itself to be referenceable. One need for this is in determing the default value of an enumeration , another need is in the management of sub-enumerations and composite enumerations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#Enumeration</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">VAEM Enumeration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#SimpleCodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A simple codelist is one made up only of enumerated values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#SimpleCodeList</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Simple code list</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#ValueReference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A value reference is a pointer to an Enumerated Value. The original position of the value can be overridden by the position attribute.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#ValueReference</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Value Reference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#code</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A property for expressing an encoded value. The range has been set to &apos;xsd:anySimpleType&apos; to allow for a variety of scalar datatypes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#code</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#compositeOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Aproperty for constructing composite data structures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#compositeOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">composite of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#defaultValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;dtype:defaultValue&apos; is a general property for specifying a value in situations where none is specified, or can be determined. In some cases of use, this property could have a scalar value and in other cases may need to refer to a first class concept that holds a &apos;value object&apos;.  For this reason, the  type of this property is set as &apos;rdf:Property&apos; and the property is rangeless.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#defaultValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">default value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#derivedFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A property for specifying a derivation relationship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#derivedFrom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">derived from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#hasMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A property for specifying how member elements make up a data structure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#hasMember</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#literal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A general purpose property for holding string literals.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#literal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#order</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;dtype:order&apos; provides a means to specify a precedence. One use of order is in specifying ordered enumerations such as &apos;voag:ConfidentialityLevel&apos;.  A similar property, but with an important type difference, is &apos;vaem:orderIndex&apos;. This is for use on property occurrences in class axioms where it can be placed on a restriction to specify how that property may be transformed into other representations where ordering has some importance, for example, in XML Schema sequences.  Whereas &apos;vaem:order&apos; is a datatype property, &apos;vaem:orderIndex&apos; is an annotation property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#order</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">order</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#order</IRI>
+        <IRI>http://www.linkedmodel.org/schema/dtype#orderIndex</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#orderIndex</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;dtype:orderIndex&apos; is an annotation property to specify a position that some value or structure will have. One use is to specify the place that a resource has in a sequence. One use is on property occurrences in class axioms. Here &apos;vaem:orderIndex&apos; is placed on a restriction to specify how that property may be transformed into a representation where ordering has some importance, for example, in XML Schema sequences.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#orderIndex</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">order index</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#position</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#refersTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An indirection pointer for relating a slot in am occurrence data structure, such as &apos;dtype:ValueReference&apos; with another resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#refersTo</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">refers to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/vaem#definition"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#value</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The property &apos;dtype:value&apos; is a general property that in some cases could have scalar values and in other cases may refer to a first class concept that is a &apos;value object&apos;. For this reason, the  type of this property is set as &apos;rdf:Property&apos; and the property is rangeless.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.linkedmodel.org/schema/dtype#value</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:cardinality"/>
+        <AnonymousIndividual nodeID="_:genid1455"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+        <AnonymousIndividual nodeID="_:genid1456"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:maxCardinality"/>
+        <AnonymousIndividual nodeID="_:genid1457"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://www.linkedmodel.org/schema/dtype#orderIndex"/>
+        <AbbreviatedIRI>xsd:nonNegativeInteger</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

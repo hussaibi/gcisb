@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/QUDTAlignment-1.0" uri="https://w3id.org/seas/QUDTAlignment-1.0"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/QUDTAlignment-1.0" uri="https://w3id.org/seas/QUDTAlignment"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/CommunicationOntology-1.0" uri="https://w3id.org/seas/CommunicationOntology"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/FeatureOfInterestOntology-1.0" uri="https://w3id.org/seas/FeatureOfInterestOntology"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/OfferingOntology-1.1" uri="https://w3id.org/seas/OfferingOntology"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/SystemOntology-1.1" uri="https://w3id.org/seas/SystemOntology"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/ElectricPowerSystemOntology-1.0" uri="https://w3id.org/seas/ElectricPowerSystemOntology"/>
+    <uri id="Imports Wizard Entry" name="https://w3id.org/seas/seas-1.1" uri="https://w3id.org/seas/"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/sosa/prov" uri="http://www.w3.org/ns/sosa/prov/"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-inverses-20130430" uri="http://www.w3.org/ns/prov#"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/sosa/om" uri="http://www.w3.org/ns/sosa/om#"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl" uri="GCI-BuildingOccupancy.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl" uri="GCI-Service.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl" uri="GCI-Foundation-v2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl" uri="Energy.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/GCI/ISO37120/Recreation.owl" uri="Recreation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/GCI/Recreation/GCI-Recreation.owl" uri="GCI-Recreation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/govstat.owl" uri="govstat.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/icontact.owl" uri="icontact.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/organization.owl" uri="organization.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/tove/activity.owl" uri="activity.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://ontology.eil.utoronto.ca/trust.owl" uri="trust.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289337935" name="http://www.semanticweb.org/hussaibi/ontologies/2017/11/GCI-Sensor-Building" uri="GCI-Sensor-Building.owl"/>
+    </group>
+</catalog>

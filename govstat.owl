@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/govstat.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/govstat.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Created by Mark S. Fox (msf@eil.utoronto.ca).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"> http://ils.unc.edu/govstat/papers/govstatontology.doc.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A version of the GovStat Ontology developed by M. Pattuelli.
+
+Pattuelli, M.C., (2003), “The GovStat Ontology: Technical Report”. The GovStat Project, Integration Design Laboratory, School of Information and Library Science, University of North Carolina at Chapel Hill.
+
+The ontology has been extended by M. Fox to support the definition of Population&apos;s.
+
+Version 0.2, 2 Jun 2017
+      - removed sum_of_var, mean_of_var, std_of_var and replaced with parameter_of_var
+
+Version 0.1, 17 Jan 2017: 
+      - Added Sum as a subclass of Parameter
+      - Added Cardinality as subclass of Parameter
+
+      - Added object property parameter_of_var to link Parameter to Variable
+      - Added sum_of_var as subproperty of parameter_of_var  to link Sum to Variable
+      - Added mean_of_var as subproperty of parameter_of_var to link Mean to Variable being summed
+      - Added std_of_var as subproperty of parameter_of_var to link Standard_deviation to Variable
+
+      - Added object property description_of as inverse of is_described_by
+      - Added sum_of property as subproperty of is_described_by to link Sum to Population
+      - Added std_of property as subproperty of is_described_by to link Standard_Deviation to Population
+      - Added mean_of property as subproperty of is_described_by to link Mean to Population
+
+      - Added Sample_sum and Sample_cardinality</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Sum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample_mean"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#parameter_of_var"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Population"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cardinality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_composed_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_an_estimate_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#std_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GovStatThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Variable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cardinality_of"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#govStatDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:DataTypeProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample_cardinality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mean_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample_standard_deviation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:ObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#description_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sample_sum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sum_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statistic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_characteristic_of"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Standard_deviation"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Cardinality"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardinality"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#cardinality_of"/>
+            <Class IRI="#Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mean"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mean"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#mean_of"/>
+            <Class IRI="#Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mean"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#parameter_of_var"/>
+            <Class IRI="#Variable"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <Class IRI="#GovStatThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parameter"/>
+        <Class IRI="#GovStatThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parameter"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#parameter_of_var"/>
+            <Class IRI="#Variable"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <Class IRI="#GovStatThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_composed_of"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_described_by"/>
+            <Class IRI="#Parameter"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <Class IRI="#GovStatThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_composed_of"/>
+            <Class IRI="#Observation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_described_by"/>
+            <Class IRI="#Statistic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_part_of"/>
+            <Class IRI="#Population"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample_cardinality"/>
+        <Class IRI="#Statistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample_mean"/>
+        <Class IRI="#Statistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample_standard_deviation"/>
+        <Class IRI="#Statistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sample_sum"/>
+        <Class IRI="#Statistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Standard_deviation"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Standard_deviation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#parameter_of_var"/>
+            <Class IRI="#Variable"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Standard_deviation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#std_of"/>
+            <Class IRI="#Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statistic"/>
+        <Class IRI="#GovStatThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statistic"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_an_estimate_of"/>
+            <Class IRI="#Parameter"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sum"/>
+        <Class IRI="#Parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sum"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#parameter_of_var"/>
+            <Class IRI="#Variable"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sum"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#sum_of"/>
+            <Class IRI="#Population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variable"/>
+        <Class IRI="#GovStatThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variable"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_characteristic_of"/>
+            <Class IRI="#Observation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variable"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#has_Name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Mean"/>
+        <Class IRI="#Standard_deviation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Observation"/>
+        <Class IRI="#Parameter"/>
+        <Class IRI="#Population"/>
+        <Class IRI="#Sample"/>
+        <Class IRI="#Statistic"/>
+        <Class IRI="#Variable"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Sample_mean"/>
+        <Class IRI="#Sample_standard_deviation"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#cardinality_of"/>
+        <ObjectProperty IRI="#description_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#description_of"/>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_an_estimate_of"/>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_characteristic_of"/>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_composed_of"/>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_described_by"/>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_part_of"/>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mean_of"/>
+        <ObjectProperty IRI="#description_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#parameter_of_var"/>
+        <ObjectProperty IRI="#govStatObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#std_of"/>
+        <ObjectProperty IRI="#description_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sum_of"/>
+        <ObjectProperty IRI="#description_of"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#description_of"/>
+        <ObjectProperty IRI="#is_described_by"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_an_estimate_of"/>
+        <Class IRI="#Statistic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_characteristic_of"/>
+        <Class IRI="#Variable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_composed_of"/>
+        <Class IRI="#Sample"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_part_of"/>
+        <Class IRI="#Sample"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_an_estimate_of"/>
+        <Class IRI="#Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_characteristic_of"/>
+        <Class IRI="#Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_composed_of"/>
+        <Class IRI="#Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_part_of"/>
+        <Class IRI="#Population"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#has_Name"/>
+        <DataProperty IRI="#govStatDataProperty"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cardinality</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cardinality of the Population.
+Note that there is no property that links Cardinality to a Variable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Observation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Parameter</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parameter is the Class of all  measures that can be made of a Population, both statistical, e.g., Mean, Starndard_devation, and others, e.g., Cardinality, Sum.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Population</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Population</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sum</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sum defines the sum over a variable possessed by members of the Population.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Variable</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property that is being measured in the population.  Since Protege is not Full DL, cannot make the property a subclass of Variable, so have to specify it as a string name using has_Name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Variable</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Variable</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

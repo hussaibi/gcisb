@@ -1,0 +1,1557 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Energy.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl</Import>
+    <Import>http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology implements the definitions of the ISO37120 Energy Theme Indicators using the following ontologys:
+
+GCI Foundation Ontologies:
+    http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl
+    (http://eil.utoronto.ca/smartcities/papers/GCI-Foundation-Ontology.pdf)
+
+GCI Energy Ontologies:
+    http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl
+    http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl
+ 
+  
+Developed by the Enterprise Engineering Lab (eil.utoronto.ca), Mechanical &amp; Industrial Engineering, University of Toronto. 
+
+Contact:  Alanna Komisar, alanna.komisar@mail.utoronto.ca
+                 Mark S. Fox, msf@eil.utoronto.ca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO37120 Energy Theme Indicators Definitions</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1.0  31 December 2016</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/licenses/by/3.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">iso37120energy</Literal>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="dcterms:description#40c925fb_7849_4058_97be_a84207f4d785"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Wind_Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.7_Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.3_Thing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#kwh_per_person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThings"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#hour_per_interruption"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#interruption_per_year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.7_Electrical_Service_Interruption_Pop"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds_size"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exclude"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#for_year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.6_ElectricalServiceInterruption"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.1_Population_of_Residential_Buildings"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.3_Population_of_Public_Buildings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceProductionMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population_size"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Biomass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.6_Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.4_Total_Building_Population_size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.2_Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#related_to"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interruption_Per_Year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/percent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.7_Electrical_Service_Interruption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.6_Population_of_ElectricalService_Interruptions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/square_metre"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#relatedDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#kwh_per_pc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#interruption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.6_Customer_Account_Pop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.5_Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GCIEnergyProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.1_Thing"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#function_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Product_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#kwh_per_year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#ISO37120_Indicator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kwh_per_square_metre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#cardinality_of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.7_Total_Count_of_Electrical_Interruptions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.5_Total_Building_Population"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#customerDefinition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#for_service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Solar_Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.4_Total_Production_Population"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reportedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.4_RenewableSources"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.4_Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#generatedFrom"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/Environment/Pollution.owl#preferredNamespaceURI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hours_per_Interruption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.3_Total_PublicBuilding_FloorSpace_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hydro_Energy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Environment.owl#preferrredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Environment.owl#preferredNamespaceURI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Hours_per_Interruption"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hours_per_Interruption"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Interruptions"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hours_per_Interruption"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.6/hour"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#for_city"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#for_year"/>
+            <Class IRI="http://www.w3.org/2006/time#Year"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interruption_Per_Year"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interruption_Per_Year"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Interruptions"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interruption_Per_Year"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/numerator"/>
+            <Class IRI="http://www.wurvoc.org/vocabularies/om-1.6/hour"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Population_of_Residential_Buildings"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Population_of_Residential_Buildings"/>
+        <Class IRI="#7.1_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Population_of_Residential_Buildings"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl#ResidentialBuilding"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Thing"/>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+        <Class IRI="#7.1_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.1_Population_of_Residential_Buildings"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#electricalConsumptionVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds"/>
+        <Class IRI="#7.2_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds_size"/>
+        <Class IRI="#7.2_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds_size"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#cardinality_of"/>
+            <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service"/>
+        <Class IRI="#7.2_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ResidentialElectricalConsumerHousehold"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Product_Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+        <Class IRI="#7.2_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_measure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#population_cardinality_unit"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_1"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Shelters/GCI-Shelters.owl#Average_household_size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/term_2"/>
+            <Class IRI="#7.2_Population_of_ElectricallyServicedHouseholds_size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.2_Thing"/>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Population_of_Public_Buildings"/>
+        <Class IRI="#7.3_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Population_of_Public_Buildings"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Population_of_Public_Buildings"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl#PublicBuilding"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Thing"/>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+        <Class IRI="#7.3_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#electricalConsumptionVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.3_Population_of_Public_Buildings"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_FloorSpace_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl#FloorArea_Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_FloorSpace_Quantity"/>
+        <Class IRI="#7.3_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_FloorSpace_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_FloorSpace_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.3_Population_of_Public_Buildings"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.3_Total_PublicBuilding_FloorSpace_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl#FloorArea_Quantity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_RenewableSources"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#RenewableSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_RenewableSources"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_RenewableSources"/>
+        <Class IRI="#7.4_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_RenewableSources"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <ObjectUnionOf>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Biomass"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GeothermalEnergy"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Solar_Energy"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Tide"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Wave"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#Wind_Energy"/>
+                <Class IRI="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Hydro_Energy"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Thing"/>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Building_Population_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Building_Population_size"/>
+        <Class IRI="#7.4_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Building_Population_size"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="#7.4_Total_Production_Population"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceProductionMeasure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables"/>
+        <Class IRI="#7.4_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceProductionQuantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+        <Class IRI="#7.4_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.4_RenewableSources"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceProductionQuantity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="#7.4_Total_Electrical_Production_From_Renewables"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceProductionQuantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+        <Class IRI="#7.4_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.4_Total_Production_Population"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceProductionMeasure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#electricalProductionVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Production_Population"/>
+        <Class IRI="#7.4_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Production_Population"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.4_Total_Production_Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalPowerGenerationSource"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Thing"/>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Building_Population"/>
+        <Class IRI="#7.5_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Building_Population"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Building_Population"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <ObjectUnionOf>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl#CommercialBuilding"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl#PublicBuilding"/>
+                <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-BuildingOccupancy.owl#ResidentialBuilding"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionQuantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+        <Class IRI="#7.5_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.5_Total_Building_Population"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceConsumptionMeasure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#electricalConsumptionVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Pop"/>
+        <Class IRI="#7.6_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+        <Class IRI="#7.6_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Cardinality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#population_cardinality_unit"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#cardinality_of"/>
+            <Class IRI="#7.6_Customer_Account_Pop"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Customer_Account_Size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_measure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_ElectricalServiceInterruption"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceInterruption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_ElectricalServiceInterruption"/>
+        <Class IRI="#7.6_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_ElectricalServiceInterruption"/>
+        <DataHasValue>
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#causedByWeather"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Population_of_ElectricalService_Interruptions"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Population_of_ElectricalService_Interruptions"/>
+        <Class IRI="#7.6_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Population_of_ElectricalService_Interruptions"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="#7.6_ElectricalServiceInterruption"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Thing"/>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        <Class IRI="#7.6_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.6_Population_of_ElectricalService_Interruptions"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceInterruptionMeasure"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#serviceInterruptionVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#interruption"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Electrical_Service_Interruption"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceInterruption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Electrical_Service_Interruption"/>
+        <Class IRI="#7.7_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Electrical_Service_Interruption"/>
+        <DataHasValue>
+            <DataProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#causedByWeather"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Electrical_Service_Interruption_Pop"/>
+        <Class IRI="#7.7_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Electrical_Service_Interruption_Pop"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Electrical_Service_Interruption_Pop"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="#7.7_Electrical_Service_Interruption"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        <Class IRI="#7.7_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Sum"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of_var"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#serviceDurationVar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.8/hour"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/govstat.owl#sum_of"/>
+            <Class IRI="#7.7_Electrical_Service_Interruption_Pop"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ElectricalServiceInterruption"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Thing"/>
+        <Class IRI="#ISO37120_Energy_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Total_Count_of_Electrical_Interruptions"/>
+        <Class IRI="#7.7_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Total_Count_of_Electrical_Interruptions"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/govstat.owl#Cardinality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Total_Count_of_Electrical_Interruptions"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Total_Count_of_Electrical_Interruptions"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#interruption"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#7.7_Total_Count_of_Electrical_Interruptions"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/value"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#ServiceInterruptionMeasure"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#defined_by"/>
+            <Class IRI="http://www.w3.org/ns/prov#Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#located_in"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population_size"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#Population_size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population_size"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#population_cardinality_unit"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population_size"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#cardinality_of"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/ISO37120/Shelters.owl#City_population"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#ISO37120_Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="#7.1_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#kwh_per_pc"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#7.1_Total_Residential_Electrical_Consumption_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City_Population_Size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <Class IRI="#7.2_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/percent"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#denominator"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City_Population_Size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#7.2_Population_with_authorized_electrical_service_size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <Class IRI="#7.3_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="#kwh_per_square_metre"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#denominator"/>
+            <Class IRI="#7.3_Total_PublicBuilding_FloorSpace_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#7.3_Total_PublicBuilding_Electrical_Consumption_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <Class IRI="#7.4_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/percent"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#denominator"/>
+            <Class IRI="#7.4_Total_Electrical_Production_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#7.4_Total_Electrical_Production_From_Renewables_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+        <Class IRI="#7.5_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#kwh_per_pc"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#denominator"/>
+            <Class IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#City_Population_Size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#7.5_Total_Electrical_Consumption_Quantity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+        <Class IRI="#7.6_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#interruption_per_year"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#denominator"/>
+            <Class IRI="#7.6_Customer_Account_Size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#7.6_Total_Count_of_Electrical_Interruptions"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+        <Class IRI="#7.7_Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#Energy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/unit_of_measure"/>
+            <NamedIndividual IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#hour_per_interruption"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#numerator"/>
+            <Class IRI="#7.7_Sum_of_Duration_of_Electrical_Interruptions"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.wurvoc.org/vocabularies/om-1.8/denominator"/>
+            <Class IRI="#7.7_Total_Count_of_Electrical_Interruptions"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.1"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.2"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.3"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.4"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.5"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.6"/>
+        <Class IRI="http://ontology.eil.utoronto.ca/ISO37120.owl#7.7"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Unit_division"/>
+        <NamedIndividual IRI="#kwh_per_square_metre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Singular_unit"/>
+        <NamedIndividual IRI="http://www.wurvoc.org/vocabularies/om-1.6/percent"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="dcterms:description#40c925fb_7849_4058_97be_a84207f4d785"/>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Energy/GCI-Service.owl#GCIServiceThings"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exclude"/>
+        <ObjectProperty IRI="#GCIEnergyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#for_service"/>
+        <ObjectProperty IRI="#GCIEnergyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#for_year"/>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#generatedFrom"/>
+        <ObjectProperty IRI="#GCIEnergyProperties"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#related_to"/>
+        <ObjectProperty IRI="http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#gciObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reportedBy"/>
+        <ObjectProperty IRI="#GCIEnergyProperties"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="dcterms:description#40c925fb_7849_4058_97be_a84207f4d785"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#function_of"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#related_to"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#related_to"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Measure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#related_to"/>
+        <Class IRI="http://www.wurvoc.org/vocabularies/om-1.8/Quantity"/>
+    </ObjectPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dcterms:description#40c925fb_7849_4058_97be_a84207f4d785</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://ontology.eil.utoronto.ca/GCI/Foundation/GCI-Foundation-v2.owl#GCI_quantity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">All ISO37120 Indicators are a subclass of the GCI_Quantity.  They then inherit all of the properties including placenames, populations, provenance, trust, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ISO37120_Energy_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ISO37120_Energy_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#customerDefinition</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The definition of &quot;customer&quot; is ambiguous and the person who inputs the data will need to specify how it was dervived.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#function_of</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">function_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#related_to</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">related_to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#7.1_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.1_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#7.2_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.2_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#7.3_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.3_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#7.4_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.4_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#7.5_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.5_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#7.6_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.6_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#7.6_Total_Count_of_Electrical_Interruptions</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total count of all electrical interruptions in a city from all buildings excluding interruptions caused by extreme weather events.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#7.7_Thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">7.7_Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#7.7_Total_Count_of_Electrical_Interruptions</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total count of all electrical interruptions in a city from all buildings excluding interruptions caused by extreme weather events.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#Energy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy Indicators</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.1</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total residential electrical energy use per capita shall be calculated as the total residential electrical usage of a city in kilowatt hours (numerator) divided by the total population of the city (denominator). The result shall be expressed as the total residential electrical use per capita in kilowatt hours/year.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.1</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total residential electrical energy use per capita (kWh/year)  (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.2</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The percentage of city population with authorized electrical service shall be calculated as the number of persons in the city with lawful connection to the electrical supply system (numerator) divided by the total population of the city (denominator). The result shall then be multiplied by 100 and expressed as a percentage.
+
+The number of city households lawfully connected to the electricity grid shall be multiplied by the current average city household size to determine the number of city residents with lawful connection to the electricity supply system (the electricity grid).
+
+NOTE Most electricity supply authorities distinguish billing accounts to residential and non residential establishments. Residential establishments in most cities equate to households (although in some condominiums, the body corporate holds the account for multiple households).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.2</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Percentage of city population with authorized electrical service  (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.3</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy consumption of public buildings shall be calculated per year as the total use of electricity at final consumption stage by public buildings (kWh) within a city (numerator) divided by total floor space of these buildings in square meters (m2) (denominator). The result shall be expressed as the total energy consumption of public buildings per year in kilowatt hours per square meter.
+
+NOTE Public buildings are government owned buildings such as government offices, hospitals and schools.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.3</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Energy consumption of public buildings per year (kWh/m2) (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.4</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The share of a city’s total energy consumption derived from renewable sources shall be calculated as the total consumption of electricity generated from renewable sources (numerator) divided by total energy consumption (denominator). The result shall then be multiplied by 100 and expressed as a percentage. Consumption of renewable sources should include geothermal, solar, wind, hydro, tide and wave energy, and combustibles, such as biomass.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.4</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The percentage of total energy derived from renewable sources, as a share of the city’s total energy consumption  (core indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.5</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total electrical energy use per capita shall be calculated as the total electrical usage of a city in kilowatt hours including residential and non-residential use (numerator) divided by the total population of the city (denominator). The result shall be expressed as the total electrical use per capita in kilowatt hours/year.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.5</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Total electrical energy use per capita (kWh/year) (supporting indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.6</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The average number of electrical interruptions per customer per year shall be calculated as the total number of customer interruptions (numerator) divided by the total number of customers served (denominator). The result shall be expressed as the average number of electrical interruptions per customer per year.
+
+Electrical interruptions shall include both residential and non-residential.
+It is normal to expect interruptions in service for a number of reasons including scheduled maintenance and equipment breakdown. To establish the opportunity to have a reasonable comparison between energy providers, major storms and weather events should be excluded due to their unpredictability and randomness since they are difficult to predict, prevent or mitigate against.
+
+NOTE This indicator is affected by the age, standard of maintenance and reliability of the infrastructure that constitutes the electricity grid and the electricity transmission capacity that services the grid. The ability of both the grid and its electricity transmission capacity to provide supply on demand and to cope with peak loads is also an important consideration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.6</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average number of electrical interruptions per customer per year (supporting indicator)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.7</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The average length of electrical interruptions shall be calculated as the sum of the duration of all customer interruptions in hours (numerator) divided by the total number of customer interruptions (denominator). The result shall be expressed as the average length of electrical interruptions in hours.
+
+Electrical interruptions shall include both residential and non-residential.
+It is normal to expect interruptions in service for a number of reasons including scheduled maintenance and equipment breakdown. To establish the opportunity to have a reasonable comparison between energy providers, major storms and weather events shall be excluded due to their unpredictability as they are difficult to prevent or mitigate against.
+
+NOTE This indicator is affected by the age, standard of maintenance and reliability of the infrastructure that constitutes the electricity grid and the electricity transmission capacity that services the grid. The ability of both the grid and its electricity transmission capacity to provide supply on demand and to cope with peak loads is also an important consideration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://ontology.eil.utoronto.ca/ISO37120.owl#7.7</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Average length of electrical interruptions (in hours)  (supporting indicator)</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

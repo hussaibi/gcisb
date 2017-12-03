@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://www.w3.org/ns/ssn/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://www.w3.org/ns/ssn/"
+     versionIRI="https://w3id.org/pep/SSNAlignment-1.1">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://w3id.org/pep/SSNAlignment</Import>
+    <Import>https://www.w3.org/ns/ssn/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-08-26</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pep</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PEP-SSN Alignments</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <IRI>https://w3id.org/pep/SSNAlignment-0.9</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SSN alignment proposes alignments between the PEP ontology and the SOSA/SSN ontology.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <IRI>https://w3id.org/pep/SSNAlignment</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://www.maxime-lefrancois.info/me#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>https://www.apache.org/licenses/LICENSE-2.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-09-22</Literal>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://w3id.org/pep/hasResult"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://w3id.org/pep/usedProcedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/sosa/Sampling"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/hasInput"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeObservation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeByActuator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeBySensor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://w3id.org/pep/madeBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeActuation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/sosa/Observation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/Procedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/sosa/Sensor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeSampling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeBySampler"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://w3id.org/pep/implements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/pep/hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/sosa/Procedure"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://w3id.org/pep/hasSimpleResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/sosa/Actuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/sosa/Sampler"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/ProcedureExecution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/pep/SSNAlignment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOutput"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://w3id.org/pep/made"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/implements"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.w3.org/ns/sosa/Actuator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasInput"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/usedProcedure"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/hasSimpleResult"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/hasResult"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/pep/Procedure"/>
+        <Class IRI="https://www.w3.org/ns/sosa/Procedure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.w3.org/ns/sosa/Actuation"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.w3.org/ns/sosa/Actuator"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.w3.org/ns/sosa/Observation"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.w3.org/ns/sosa/Sampler"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.w3.org/ns/sosa/Sampling"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.w3.org/ns/sosa/Sensor"/>
+        <Class IRI="https://w3id.org/pep/ProcedureExecutor"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI="https://w3id.org/pep/SSNAlignment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+        <NamedIndividual IRI="https://w3id.org/pep/SSNAlignment"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/pep/hasInput"/>
+        <ObjectProperty IRI="hasInput"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://w3id.org/pep/hasOutput"/>
+        <ObjectProperty IRI="hasOutput"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasInput"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="hasInput"/>
+        </ObjectInverseOf>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasOutput"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="hasOutput"/>
+        </ObjectInverseOf>
+    </InverseObjectProperties>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://w3id.org/pep/hasResult"/>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/hasResult"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://w3id.org/pep/hasSimpleResult"/>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/hasSimpleResult"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/implements"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/implements"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeActuation"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/made"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeByActuator"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/madeBy"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeBySampler"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/madeBy"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeBySensor"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/madeBy"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeObservation"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/made"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/madeSampling"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/made"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="https://www.w3.org/ns/sosa/usedProcedure"/>
+        <AnnotationProperty IRI="https://w3id.org/pep/usedProcedure"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

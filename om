@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/ns/sosa/om"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3.org/ns/sosa/om">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://def.isotc211.org/iso19156/2011/Specimen</Import>
+    <Import>http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature</Import>
+    <Import>http://www.w3.org/ns/sosa/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This graph is provisional. It is the work of only one person and is provided to allow evaluation and support discussion of the potential modularization approach.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.opengeospatial.org/standards/om</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alignment of ISO 19156 O&amp;M with SOSA</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Simon J D Cox</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-01-27</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=57466</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <IRI>http://orcid.org/0000-0002-3884-3420</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Alignment of the official OWL implementation of ISO 19156 O&amp;M with the W3C/OGC SOSA Ontology;
+
+The official OWL implementation of ISO 19156 O&amp;M was generated automatically from the UML following the rules described in ISO 19150-2 
+It is available from the official ISO/TC 211 repository at https://github.com/ISO-TC211/GOM/tree/master/isotc211_GOM_harmonizedOntology 
+The ontology itself diverges considerably from idiomatic OWL. 
+However, it does provide a canonical URIs for each class and property from the UML model.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/created"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-12-14</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.iso.org/iso/catalogue_detail.htm?csnumber=32574</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https://github.com/ISO-TC211/GOM/tree/master/isotc211_GOM_harmonizedOntology</IRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#SamplingProcedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObservationProcedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActuationProcedure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.procedure"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Process"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Process"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+            <Class IRI="#ObservationProcedure"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.w3.org/ns/sosa/Sampler"/>
+            <Class IRI="#SamplingProcedure"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sampling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActuationProcedure"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObservationProcedure"/>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObservationProcedure"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SamplingProcedure"/>
+        <Class IRI="http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SamplingProcedure"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Procedure"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#ActuationProcedure"/>
+        <Class IRI="#ObservationProcedure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ActuationProcedure"/>
+        <Class IRI="#SamplingProcedure"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ObservationProcedure"/>
+        <Class IRI="#SamplingProcedure"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.procedure"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/usedProcedure"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isResultOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/usedProcedure"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime"/>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time"/>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime"/>
+        <DataProperty IRI="http://www.w3.org/ns/sosa/resultTime"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.procedure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sosa:usedProcedure covers actuation, observation and sampling, so observation procedure is a sub-property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sosa:result covers actuation, observation and sampling, so observation result is a sub-property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sosa:resultTime covers actuation, observation and sampling, so observation result time is a sub-property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://def.isotc211.org/iso19156/2011/Observation#OM_Process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sosa:Procedure includes procedures for actuation, sampling and observation, so om:Process is the union of a subclass and Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://def.isotc211.org/iso19156/2011/Specimen#SF_Process</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sosa:Procedure includes procedures for actuation, sampling and observation, so sam:Process is the union of a subclass and SamplingDevice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/sosa/Procedure</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OM_Process and SF_Process each cover both recipes and implementations, so sosa:Procedure is a union of the subsets</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActuationProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(Notional) Actuation procedure or recipe, complementing SamplingProcedure and ObservationProcedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActuationProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actuation procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ObservationProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(Notional) Observation or sensing procedure or recipe, complementing SamplingProcedure and ActuationProcedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ObservationProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observation procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SamplingProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(Notional) Sampling or sample preparation or processing procedure or recipe, complementing ObservationProcedure and ActuationProcedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SamplingProcedure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sampling procedure</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
